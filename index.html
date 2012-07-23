@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cloudcmd by coderaiser</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Cloudcmd</h1>
+        <p class="header">Two-panels node js file manager </p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/coderaiser/cloudcmd/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/coderaiser/cloudcmd/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/coderaiser/cloudcmd">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/coderaiser">coderaiser</a></p>
+
+
+      </header>
+      <section>
+        <h1>Cloud Commander <a href="http://travis-ci.org/coderaiser/cloudcmd"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
+</h1>
+
+<p><strong>Cloud Commander</strong> - two-panels file manager, totally writed on js.
+View <a href="http://demo-cloudcmd.cloudfoundry.com/" title="demo">demo</a>, <a href="http://cloudcmd.nodester.com/" title="mirror on nodester">mirror on nodester</a>,
+<a href="http://cloudcmd.jit.su/" title="mirror on jitsu">mirror on jitsu</a></p>
+
+<p>Google PageSpeed Score : <a href="https://developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fdemo-cloudcmd.cloudfoundry.com_2F&amp;mobile=false" title="score">100</a> (out of 100).</p>
+
+<h2>Benefits</h2>
+
+<ul>
+<li>full browser compatibility <em>(ie6+,chrome,safari,opera,firefox)</em>;</li>
+<li>responsible design</li>
+<li>one full page loading, <em>and then just one-time json-dir-listings loading
+(with refresh opportunity).</em>
+</li>
+<li>caching readed directories <em>to localStorage (for now)
+(so if network will disconnected or something heppen with a signal, we
+definitely will can work cached copy of directory listings)</em>;</li>
+<li>key binding</li>
+<li>disabled js support <em>(working in limited mode)</em>.</li>
+<li>automated minification <em>client js-files and onstart-reading Cloud manager files on server starting.</em>
+</li>
+</ul><p><strong>Cloud Commander</strong> uses all benefits of js, so if js is disabled,
+we moves to <em>limited mode</em>.</p>
+
+<h2>Limited-mode features:</h2>
+
+<ul>
+<li>only 1 panel available</li>
+<li>no keybinding</li>
+<li>no local caching</li>
+<li>full loading of all web page(with styles, js-scripts, html-page etc).</li>
+</ul><h2>Hot keys:</h2>
+
+<p>In all modern web browsers (but not in IE, becouse he special) hot keys works.
+There is a short list:</p>
+
+<ul>
+<li>Ctrl + r          - reload dir content</li>
+<li>Ctrl + d          - clear local cache (wich contains dir contents)</li>
+<li>Alt  + q          - disable key bindings</li>
+<li>Alt  + s          - get all key bindings back</li>
+<li>up, down, enter   - filesystem navigation</li>
+</ul><h2>Installing</h2>
+
+<p><strong>Cloud Commander</strong> installing is very easy. All you need it's just clone
+repository from github. Just 2 commands:</p>
+
+<pre><code>git clone git://github.com/coderaiser/cloudcmd.git
+cd cloudcmd
+</code></pre>
+
+<p>or</p>
+
+<pre><code>npm i cloudcmd
+mv node_modules/cloudcmd ./cloudcmd
+</code></pre>
+
+<h2>Starting</h2>
+
+<p>To start <strong>Cloud Commander</strong> only one command neaded:</p>
+
+<pre><code>node server.js
+</code></pre>
+
+<p>After thet Cloud Commander reads config file <strong>config.json</strong> and start server
+on 31337 port, if none of port varibles(<em>cloud9</em>, <em>cloudfoundry</em> and <em>nodester</em>)
+isn't exist.
+Then type in browser</p>
+
+<pre><code>http://127.0.0.1:31337
+</code></pre>
+
+<p>or</p>
+
+<pre><code>http://localhost:31337
+</code></pre>
+
+<h2>Updating</h2>
+
+<p><strong>Cloud Commander</strong> is very buggy and alfa so it's very often updated. For update
+you can just type in cloudcmd directory:</p>
+
+<pre><code>git pull
+</code></pre>
+
+<h2>Additional modules:</h2>
+
+<p><strong>Cloud Commander's Server Side</strong> not using additional modules for main functionality.
+But for minification and optimization tricks optional can be
+assingned (and installed) module: <a href="https://github.com/coderaiser/minify" title="Minify">Minify</a>.</p>
+
+<p>Install addtitional modules:</p>
+
+<pre><code>npm i
+</code></pre>
+
+<p><strong>Cloud Commander's Client Side</strong> use module jquery for ajaxing.
+We could not use this module, but this way is fast:</p>
+
+<ul>
+<li>google cdn</li>
+<li>gzip</li>
+<li>cache</li>
+</ul><p>Perhaps in the future, it will not be used, but so far it has no effect on
+start loading of Cloud Commander Client Side and do things fast and stable
+it is using now.</p>
+
+<h2>Contributing</h2>
+
+<p>If you would like to contribute - send pull request to dev branch.
+Getting dev version of <strong>Cloud Commander</strong>:</p>
+
+<pre><code>git clone cloudcmd --recursive
+git checkout dev
+</code></pre>
+
+<p>It is possible thet dev version Cloud Commander will needed dev version of Minify,
+so to get it you should type a couple more commands:</p>
+
+<pre><code>cd node_modules
+rm -rf minify
+git clone git://github.com/coderaiser/minify
+git checkout dev
+</code></pre>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-33536569-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
