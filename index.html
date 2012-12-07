@@ -34,8 +34,7 @@
 </h1>
 
 <p><strong>Cloud Commander</strong> - two-panels file manager, totally writed on js.
-View <a href="http://demo-cloudcmd.cloudfoundry.com/" title="demo">demo</a>, <a href="http://cloudcmd.nodester.com/" title="mirror on nodester">mirror on nodester</a>,
-<a href="http://cloudcmd.jit.su/" title="mirror on jitsu">mirror on jitsu</a></p>
+View <a href="http://cloudcmd.jit.su/" title="demo">demo</a>, <a href="http://cloudcmd.nodester.com/" title="mirror on nodester">mirror on nodester</a></p>
 
 <p>Google PageSpeed Score : <a href="https://developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fdemo-cloudcmd.cloudfoundry.com_2F&amp;mobile=false" title="score">100</a> (out of 100).</p>
 
@@ -49,7 +48,7 @@ View <a href="http://demo-cloudcmd.cloudfoundry.com/" title="demo">demo</a>, <a 
 </li>
 <li>caching readed directories <em>to localStorage (for now)
 (so if network will disconnected or something heppen with a signal, we
-definitely will can work cached copy of directory listings)</em>;</li>
+definitely will can work with cached copy of directory listings)</em>;</li>
 <li>key binding</li>
 <li>disabled js support <em>(working in limited mode)</em>.</li>
 <li>automated minification <em>client js-files and onstart-reading Cloud manager files on server starting.</em>
@@ -57,14 +56,14 @@ definitely will can work cached copy of directory listings)</em>;</li>
 </ul><p><strong>Cloud Commander</strong> uses all benefits of js, so if js is disabled,
 we moves to <em>limited mode</em>.</p>
 
-<h2>Limited-mode features:</h2>
+<h2>Limited-mode features</h2>
 
 <ul>
 <li>only 1 panel available</li>
 <li>no keybinding</li>
 <li>no local caching</li>
 <li>full loading of all web page(with styles, js-scripts, html-page etc).</li>
-</ul><h2>Hot keys:</h2>
+</ul><h2>Hot keys</h2>
 
 <p>In all modern web browsers (but not in IE, becouse he special) hot keys works.
 There is a short list:</p>
@@ -75,6 +74,17 @@ There is a short list:</p>
 <li>Alt  + q          - disable key bindings</li>
 <li>Alt  + s          - get all key bindings back</li>
 <li>up, down, enter   - filesystem navigation</li>
+</ul><h2>Viewer's hot keys</h2>
+
+<ul>
+<li>Shift + F3      - open viewer window</li>
+<li>Esc               - close viewer window</li>
+</ul><h2>Editor's hot keys</h2>
+
+<ul>
+<li>F3                - open CodeMirror editor in read only mode</li>
+<li>F4                - open CodeMirror editor</li>
+<li>Esc               - close CodeMirror editor</li>
 </ul><h2>Installing</h2>
 
 <p><strong>Cloud Commander</strong> installing is very easy. All you need it's just clone
@@ -87,18 +97,42 @@ cd cloudcmd
 <p>or</p>
 
 <pre><code>npm i cloudcmd
-mv node_modules/cloudcmd ./cloudcmd
+mv node_modules/cloudcmd ./
 </code></pre>
+
+<h2>Configuration</h2>
+
+<p>All main configuration could be done thrue config.json.</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"cache"</span> <span class="o">:</span> <span class="p">{</span><span class="s2">"allowed"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">},</span>   <span class="cm">/* cashing of js and css files in memory    */</span>
+    <span class="s2">"minification"</span> <span class="o">:</span> <span class="p">{</span>              <span class="cm">/* minification of js,css,html and img      */</span>
+        <span class="s2">"js"</span>    <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* minify module neaded                     */</span>
+        <span class="s2">"css"</span>   <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* npm i minify                             */</span>
+        <span class="s2">"html"</span>  <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"img"</span>   <span class="o">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">"server"</span>    <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* server mode or testing mode              */</span>
+    <span class="s2">"logs"</span>      <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* logs or console ouput                    */</span>
+    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">31337</span><span class="p">,</span>            <span class="cm">/* Cloud Commander port                     */</span>
+    <span class="s2">"ip"</span>        <span class="o">:</span> <span class="s2">"127.0.0.1"</span>       <span class="cm">/* Cloud Commander IP                       */</span>
+<span class="p">}</span>
+</pre></div>
 
 <h2>Starting</h2>
 
 <p>To start <strong>Cloud Commander</strong> only one command neaded:</p>
 
-<pre><code>node server.js
+<pre><code>node cloudcmd
+</code></pre>
+
+<p>or on win platform just</p>
+
+<pre><code>cloudcmd
 </code></pre>
 
 <p>After thet Cloud Commander reads config file <strong>config.json</strong> and start server
-on 31337 port, if none of port varibles(<em>cloud9</em>, <em>cloudfoundry</em> and <em>nodester</em>)
+on 31337 port, if none of port varibles(*cloud9*, <em>cloudfoundry</em> and <em>nodester</em>)
 isn't exist.
 Then type in browser</p>
 
@@ -118,11 +152,19 @@ you can just type in cloudcmd directory:</p>
 <pre><code>git pull
 </code></pre>
 
-<h2>Additional modules:</h2>
+<p>or check new version on npm
+    npm info cloudcmd</p>
+
+<p>and then, if there is new version
+    npm r cloudcmd
+    npm i cloudcmd</p>
+
+<h2>Additional modules</h2>
 
 <p><strong>Cloud Commander's Server Side</strong> not using additional modules for main functionality.
 But for minification and optimization tricks optional can be
-assingned (and installed) module: <a href="https://github.com/coderaiser/minify" title="Minify">Minify</a>.</p>
+assingned (and installed) modules: <a href="https://github.com/coderaiser/minify" title="Minify">Minify</a>
+and <a href="https://github.com/LearnBoost/socket.io" title="Socket.IO">socket.io</a>.</p>
 
 <p>Install addtitional modules:</p>
 
@@ -140,12 +182,22 @@ We could not use this module, but this way is fast:</p>
 start loading of Cloud Commander Client Side and do things fast and stable
 it is using now.</p>
 
-<h2>Contributing</h2>
+<h2>Extensions</h2>
+
+<p><strong>Cloud Commander</strong> desinged to easily porting extensions.
+For extend main functionality Cloud Commander use next modules:</p>
+
+<ul>
+<li><a href="http://codemirror.net" title="CodeMirror">CodeMirror</a></li>
+<li><a href="https://github.com/fancyapps/fancyBox" title="FancyBox">FancyBox</a></li>
+<li><a href="https://github.com/medialize/jQuery-contextMenu" title="jQuery-contextMenu">jQuery-contextMenu</a></li>
+<li><a href="https://github.com/jcubic/jquery.terminal" title="jquery.terminal">jquery.terminal</a></li>
+</ul><h2>Contributing</h2>
 
 <p>If you would like to contribute - send pull request to dev branch.
 Getting dev version of <strong>Cloud Commander</strong>:</p>
 
-<pre><code>git clone cloudcmd --recursive
+<pre><code>git clone git://github.com/coderaiser/cloudcmd.git
 git checkout dev
 </code></pre>
 
@@ -162,7 +214,7 @@ git checkout dev
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 		          <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
