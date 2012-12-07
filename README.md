@@ -1,4 +1,4 @@
-cloudcmd
+Cloud Commander
 ========
 
-User friendly cloud file manager site http://coderaiser.github.com/cloudcmd
+Cloud Commander's [page](http://coderaiser.github.com/cloudcmd).
