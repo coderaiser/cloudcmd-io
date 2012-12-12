@@ -20,7 +20,8 @@
         <p class="header">Two-panels node js file manager </p>
 
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/downloads/coderaiser/cloudcmd/cloudcmd-v0.1.7.zip">Download</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/coderaiser/cloudcmd/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/coderaiser/cloudcmd/tarball/master">Download TAR</a></li>
           <li><a class="buttons github" href="https://github.com/coderaiser/cloudcmd">View On GitHub</a></li>
         </ul>
 
@@ -32,10 +33,15 @@
         <h1>Cloud Commander <a href="http://travis-ci.org/coderaiser/cloudcmd"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
 </h1>
 
-<p><strong>Cloud Commander</strong> - two-panels file manager, totally writed on js.
-View <a href="http://cloudcmd.jit.su/" title="demo">demo</a>, <a href="http://cloudcmd.nodester.com/" title="mirror on nodester">mirror on nodester</a></p>
+<p><strong>Cloud Commander</strong> - user friendly cloud file manager.
+DEMO:
+<a href="http://cloudcmd.cloudfoundry.com" title="cloudfoundry">cloudfoundry</a>,
+<a href="http://cloudcmd.aws.af.cm" title="appfog">appfog</a>.</p>
 
-<p>Google PageSpeed Score : <a href="https://developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fdemo-cloudcmd.cloudfoundry.com_2F&amp;mobile=false" title="score">100</a> (out of 100).</p>
+<p>Google PageSpeed Score : <a href="https://developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.cloudfoundry.com_2F&amp;mobile=false" title="score">100</a> (out of 100)
+(or 96 if js or css minification disabled in config.json).</p>
+
+<p><img src="https://raw.github.com/coderaiser/cloudcmd/dev/img/logo/cloudcmd.png" alt="Cloud Commander"></p>
 
 <h2>Benefits</h2>
 
@@ -58,7 +64,6 @@ we moves to <em>limited mode</em>.</p>
 <h2>Limited-mode features</h2>
 
 <ul>
-<li>only 1 panel available</li>
 <li>no keybinding</li>
 <li>no local caching</li>
 <li>full loading of all web page(with styles, js-scripts, html-page etc).</li>
@@ -68,23 +73,39 @@ we moves to <em>limited mode</em>.</p>
 There is a short list:</p>
 
 <ul>
-<li>Ctrl + r          - reload dir content</li>
-<li>Ctrl + d          - clear local cache (wich contains dir contents)</li>
-<li>Alt  + q          - disable key bindings</li>
-<li>Alt  + s          - get all key bindings back</li>
-<li>up, down, enter   - filesystem navigation</li>
+<li>
+<strong>Ctrl + r</strong>          - reload dir content</li>
+<li>
+<strong>Ctrl + d</strong>          - clear local cache (wich contains dir contents)</li>
+<li>
+<strong>Alt  + q</strong>          - disable key bindings</li>
+<li>
+<strong>Alt  + s</strong>          - get all key bindings back</li>
+<li>
+<strong>up, down, enter</strong>   - filesystem navigation</li>
+<li>
+<strong>Alt + g</strong>           - authorization</li>
 </ul><h2>Viewer's hot keys</h2>
 
 <ul>
-<li>Shift + F3      - open viewer window</li>
-<li>Esc               - close viewer window</li>
+<li>
+<strong>Shift + F3</strong>      - open viewer window</li>
+<li>
+<strong>Esc</strong>               - close viewer window</li>
 </ul><h2>Editor's hot keys</h2>
 
 <ul>
-<li>F3                - open CodeMirror editor in read only mode</li>
-<li>F4                - open CodeMirror editor</li>
-<li>Esc               - close CodeMirror editor</li>
-</ul><h2>Installing</h2>
+<li>
+<strong>F3</strong>                - open CodeMirror editor in read only mode</li>
+<li>
+<strong>F4</strong>                - open CodeMirror editor</li>
+<li>
+<strong>Esc</strong>               - close CodeMirror editor</li>
+</ul><h2>Documentation</h2>
+
+<p>JS Doc documentation could be found in <a href="http://jsdoc.info/coderaiser/cloudcmd/">http://jsdoc.info/coderaiser/cloudcmd/</a></p>
+
+<h2>Installing</h2>
 
 <p><strong>Cloud Commander</strong> installing is very easy. All you need it's just clone
 repository from github. Just 2 commands:</p>
@@ -104,19 +125,37 @@ mv node_modules/cloudcmd ./
 <p>All main configuration could be done thrue config.json.</p>
 
 <div class="highlight"><pre><span class="p">{</span>
-    <span class="s2">"cache"</span> <span class="o">:</span> <span class="p">{</span><span class="s2">"allowed"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">},</span>   <span class="cm">/* cashing of js and css files in memory    */</span>
+    <span class="s2">"api_url"</span>   <span class="o">:</span><span class="s2">"/api/v1"</span><span class="p">,</span>
+    <span class="s2">"appcache"</span>  <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* html5 feature appcache                   */</span>    
+    <span class="s2">"cache"</span> <span class="o">:</span> <span class="p">{</span><span class="s2">"allowed"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">},</span>   <span class="cm">/* cashing of js and css files in memory    */</span>    
     <span class="s2">"minification"</span> <span class="o">:</span> <span class="p">{</span>              <span class="cm">/* minification of js,css,html and img      */</span>
         <span class="s2">"js"</span>    <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* minify module neaded                     */</span>
         <span class="s2">"css"</span>   <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* npm i minify                             */</span>
         <span class="s2">"html"</span>  <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">"img"</span>   <span class="o">:</span> <span class="kc">false</span>
     <span class="p">},</span>
+    <span class="s2">"github_key"</span>            <span class="o">:</span> <span class="s2">"891c251b925e4e967fa9"</span><span class="p">,</span>
+    <span class="s2">"github_secret"</span>         <span class="o">:</span> <span class="s2">"afe9bed1e810c5dc44c4c2a953fc6efb1e5b0545"</span><span class="p">,</span>
+    <span class="s2">"dropbox_key"</span>           <span class="o">:</span> <span class="s2">"0nd3ssnp5fp7tqs"</span><span class="p">,</span>
+    <span class="s2">"dropbox_chooser_key"</span>   <span class="o">:</span> <span class="s2">"o7d6llji052vijk"</span>
+    <span class="s2">"show_keys_panel"</span>       <span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show classic panel with buttons of keys  */</span>
     <span class="s2">"server"</span>    <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* server mode or testing mode              */</span>
     <span class="s2">"logs"</span>      <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* logs or console ouput                    */</span>
-    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">31337</span><span class="p">,</span>            <span class="cm">/* Cloud Commander port                     */</span>
-    <span class="s2">"ip"</span>        <span class="o">:</span> <span class="s2">"127.0.0.1"</span>       <span class="cm">/* Cloud Commander IP                       */</span>
+    <span class="s2">"socket"</span>    <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable web sockets                       */</span>
+    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>               <span class="cm">/* Cloud Commander port                     */</span>
+    <span class="s2">"ip"</span>        <span class="o">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>      <span class="cm">/* Cloud Commander IP                       */</span>
+    <span class="s2">"rest"</span>      <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable rest interface                    */</span>
 <span class="p">}</span>
 </pre></div>
+
+<h2>Authorization</h2>
+
+<p>Thru openID Cloud Commander could authorize clients on GitHub.
+All things that should be done is must be added <strong>id</strong> and <strong>secret</strong> of application
+from github settings page and added to <strong>config.json</strong> (id just) and env varible (secret)
+with names: <em>github_id</em>, <em>github_secret</em>, <em>dropbox_key</em>, <em>dropbox_secret</em> etc.
+For more information see <strong>config.json</strong> and <strong>shell/seret.bat</strong> <em>(on win32)</em>
+or <strong>shell/secret.sh</strong> <em>(on nix)</em>.</p>
 
 <h2>Starting</h2>
 
@@ -131,32 +170,37 @@ mv node_modules/cloudcmd ./
 </code></pre>
 
 <p>After thet Cloud Commander reads config file <strong>config.json</strong> and start server
-on 31337 port, if none of port varibles(*cloud9*, <em>cloudfoundry</em> and <em>nodester</em>)
+on 80 port, if none of port varibles(*cloud9*, <em>cloudfoundry</em> and <em>nodester</em>)
 isn't exist.
 Then type in browser</p>
 
-<pre><code>http://127.0.0.1:31337
+<pre><code>http://127.0.0.1
 </code></pre>
 
 <p>or</p>
 
-<pre><code>http://localhost:31337
+<pre><code>http://localhost
 </code></pre>
 
 <h2>Updating</h2>
 
-<p><strong>Cloud Commander</strong> is very buggy and alfa so it's very often updated. For update
-you can just type in cloudcmd directory:</p>
+<p><strong>Cloud Commander</strong> is very alfa and it's very often updatings.
+Update is doing automagically but it could be done also manualy
+by typing a few commands in cloudcmd directory:</p>
 
 <pre><code>git pull
 </code></pre>
 
-<p>or check new version on npm
-    npm info cloudcmd</p>
+<p>or check new version on npm</p>
 
-<p>and then, if there is new version
-    npm r cloudcmd
-    npm i cloudcmd</p>
+<pre><code>npm info cloudcmd
+</code></pre>
+
+<p>and then, if there is new version</p>
+
+<pre><code>npm r cloudcmd
+npm i cloudcmd
+</code></pre>
 
 <h2>Additional modules</h2>
 
@@ -170,7 +214,7 @@ and <a href="https://github.com/LearnBoost/socket.io" title="Socket.IO">socket.i
 <pre><code>npm i
 </code></pre>
 
-<p><strong>Cloud Commander's Client Side</strong> use module jquery for ajaxing.
+<p><strong>Cloud Commander's Client Side</strong> use module jquery for ajaxing. But only for old browsers.
 We could not use this module, but this way is fast:</p>
 
 <ul>
@@ -187,7 +231,7 @@ it is using now.</p>
 For extend main functionality Cloud Commander use next modules:</p>
 
 <ul>
-<li><a href="http://codemirror.net" title="CodeMirror">CodeMirror</a></li>
+<li><a href="https://github.com/marijnh/CodeMirror" title="CodeMirror">CodeMirror</a></li>
 <li><a href="https://github.com/fancyapps/fancyBox" title="FancyBox">FancyBox</a></li>
 <li><a href="https://github.com/medialize/jQuery-contextMenu" title="jQuery-contextMenu">jQuery-contextMenu</a></li>
 <li><a href="https://github.com/jcubic/jquery.terminal" title="jquery.terminal">jquery.terminal</a></li>
@@ -208,6 +252,10 @@ rm -rf minify
 git clone git://github.com/coderaiser/minify
 git checkout dev
 </code></pre>
+
+<h2>Special Thanks</h2>
+
+<p><a href="http://vk.com/politilena" title="Elena Zalitok">Elena Zalitok</a>  for logo.</p>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
