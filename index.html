@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="google-site-verification" content="lj6-0KNo1SM0HMIHCZ3WHsczW720M3h9y9_ipGVBXcI" />
-    <title>Cloud Commander</title>
+    <title>Cloudcmd by coderaiser</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,7 +16,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">Cloudcmd v 0.1.8</h1>
+        <h1 class="header">Cloudcmd</h1>
         <p class="header">Two-panels node js file manager </p>
 
         <ul>
@@ -39,10 +38,10 @@ DEMO:
 <a href="http://cloudcmd.cloudfoundry.com" title="cloudfoundry">cloudfoundry</a>,
 <a href="http://cloudcmd.aws.af.cm" title="appfog">appfog</a>.</p>
 
-<p>Google PageSpeed Score : <a href="https://developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.cloudfoundry.com_2F&amp;mobile=false" title="score">100</a> (out of 100)
+<p>Google PageSpeed Score : <a href="http://developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.cloudfoundry.com_2F&amp;mobile=false" title="score">100</a> (out of 100)
 (or 96 if js or css minification disabled in config.json).</p>
 
-<p><img src="https://raw.github.com/coderaiser/cloudcmd/dev/img/logo/cloudcmd.png" alt="Cloud Commander"></p>
+<p><img src="img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
 
 <h2>Benefits</h2>
 
@@ -85,12 +84,26 @@ There is a short list:</p>
 <li>
 <strong>up, down, enter</strong>   - filesystem navigation</li>
 <li>
-<strong>Alt + g</strong>           - authorization</li>
+<strong>Tab</strong>               - move thru panels</li>
+<li>
+<strong>Page Up</strong>           - up on one page</li>
+<li>
+<strong>Page Down</strong>         - down on one page</li>
+<li>
+<strong>Home</strong>              - to begin of list</li>
+<li>
+<strong>End</strong>               - to end of list</li>
+<li>
+<strong>Shift + F10</strong>       - show context menu</li>
+<li>
+<strong>F2</strong>                - rename current file</li>
+<li>
+<strong>Alt + g</strong>           - authorization in GitHub</li>
 </ul><h2>Viewer's hot keys</h2>
 
 <ul>
 <li>
-<strong>Shift + F3</strong>      - open viewer window</li>
+<strong>Shift + F3</strong>        - open viewer window</li>
 <li>
 <strong>Esc</strong>               - close viewer window</li>
 </ul><h2>Editor's hot keys</h2>
@@ -101,7 +114,20 @@ There is a short list:</p>
 <li>
 <strong>F4</strong>                - open CodeMirror editor</li>
 <li>
+<strong>Ctrl + s</strong>          - save file</li>
+<li>
 <strong>Esc</strong>               - close CodeMirror editor</li>
+</ul><h2>Menu</h2>
+
+<p>Right mouse click button show context menu with items:</p>
+
+<ul>
+<li>View</li>
+<li>Edit</li>
+<li>Rename</li>
+<li>Delete</li>
+<li>Upload to (Dropbox, Github, GDrive)</li>
+<li>Downloud</li>
 </ul><h2>Documentation</h2>
 
 <p>JS Doc documentation could be found in <a href="http://jsdoc.info/coderaiser/cloudcmd/">http://jsdoc.info/coderaiser/cloudcmd/</a></p>
@@ -127,19 +153,15 @@ mv node_modules/cloudcmd ./
 
 <div class="highlight"><pre><span class="p">{</span>
     <span class="s2">"api_url"</span>   <span class="o">:</span><span class="s2">"/api/v1"</span><span class="p">,</span>
-    <span class="s2">"appcache"</span>  <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* html5 feature appcache                   */</span>    
-    <span class="s2">"cache"</span> <span class="o">:</span> <span class="p">{</span><span class="s2">"allowed"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">},</span>   <span class="cm">/* cashing of js and css files in memory    */</span>    
+    <span class="s2">"appcache"</span>  <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* html5 feature appcache                   */</span>
+    <span class="s2">"cache"</span>     <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* cashing on a client                      */</span>
     <span class="s2">"minification"</span> <span class="o">:</span> <span class="p">{</span>              <span class="cm">/* minification of js,css,html and img      */</span>
         <span class="s2">"js"</span>    <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* minify module neaded                     */</span>
         <span class="s2">"css"</span>   <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* npm i minify                             */</span>
         <span class="s2">"html"</span>  <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">"img"</span>   <span class="o">:</span> <span class="kc">false</span>
     <span class="p">},</span>
-    <span class="s2">"github_key"</span>            <span class="o">:</span> <span class="s2">"891c251b925e4e967fa9"</span><span class="p">,</span>
-    <span class="s2">"github_secret"</span>         <span class="o">:</span> <span class="s2">"afe9bed1e810c5dc44c4c2a953fc6efb1e5b0545"</span><span class="p">,</span>
-    <span class="s2">"dropbox_key"</span>           <span class="o">:</span> <span class="s2">"0nd3ssnp5fp7tqs"</span><span class="p">,</span>
-    <span class="s2">"dropbox_chooser_key"</span>   <span class="o">:</span> <span class="s2">"o7d6llji052vijk"</span>
-    <span class="s2">"show_keys_panel"</span>       <span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show classic panel with buttons of keys  */</span>
+    <span class="s2">"show_keys_panel"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>       <span class="cm">/* show classic panel with buttons of keys  */</span>
     <span class="s2">"server"</span>    <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* server mode or testing mode              */</span>
     <span class="s2">"logs"</span>      <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* logs or console ouput                    */</span>
     <span class="s2">"socket"</span>    <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable web sockets                       */</span>
@@ -232,10 +254,12 @@ it is using now.</p>
 For extend main functionality Cloud Commander use next modules:</p>
 
 <ul>
-<li><a href="https://github.com/marijnh/CodeMirror" title="CodeMirror">CodeMirror</a></li>
-<li><a href="https://github.com/fancyapps/fancyBox" title="FancyBox">FancyBox</a></li>
-<li><a href="https://github.com/medialize/jQuery-contextMenu" title="jQuery-contextMenu">jQuery-contextMenu</a></li>
-<li><a href="https://github.com/jcubic/jquery.terminal" title="jquery.terminal">jquery.terminal</a></li>
+<li><a href="//github.com/marijnh/CodeMirror" title="CodeMirror">CodeMirror</a></li>
+<li><a href="//github.com/fancyapps/fancyBox" title="FancyBox">FancyBox</a></li>
+<li><a href="//github.com/medialize/jQuery-contextMenu" title="jQuery-contextMenu">jQuery-contextMenu</a></li>
+<li><a href="//github.com/jcubic/jquery.terminal" title="jquery.terminal">jquery.terminal</a></li>
+<li><a href="//github.com/michael/github">github</a></li>
+<li><a href="//github.com/dropbox/dropbox-js">dropbox-js</a></li>
 </ul><h2>Contributing</h2>
 
 <p>If you would like to contribute - send pull request to dev branch.
