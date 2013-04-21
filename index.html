@@ -28,15 +28,18 @@
         </ul>
       </header>
       <section>
-        <h1>Cloud Commander <a href="http://travis-ci.org/coderaiser/cloudcmd"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
+        <h1>Cloud Commander v0.2.0 <a href="http://badge.fury.io/js/cloudcmd"><img src="https://badge.fury.io/js/cloudcmd.png" alt="NPM version"></a> <a href="https://gemnasium.com/coderaiser/cloudcmd" title="Dependency Status"><img src="https://gemnasium.com/coderaiser/cloudcmd.png" alt="Dependency Status"></a> <a href="http://travis-ci.org/coderaiser/cloudcmd" title="Build Status"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
 </h1>
+
+<p><a href="https://flattr.com/submit/auto?user_id=coderaiser&amp;url=github.com/coderaiser/cloudcmd&amp;title=cloudcmd&amp;language=&amp;tags=github&amp;category=software"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr"></a></p>
 
 <p><strong>Cloud Commander</strong> - user friendly cloud file manager.
 DEMO:
-<a href="http://cloudcmd.cloudfoundry.com" title="cloudfoundry">cloudfoundry</a>,
-<a href="http://cloudcmd.aws.af.cm" title="appfog">appfog</a>.</p>
+<a href="https://cloudcmd.cloudfoundry.com" title="cloudfoundry">cloudfoundry</a>,
+<a href="https://cloudcmd.aws.af.cm" title="appfog">appfog</a>,
+<a href="https://cloudcmd.jit.su" title="jitsu">jitsu</a>.</p>
 
-<p>Google PageSpeed Score : <a href="http://developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.cloudfoundry.com_2F&amp;mobile=false" title="score">100</a> (out of 100)
+<p>Google PageSpeed Score : <a href="//developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.aws.af.cm_2F&amp;mobile=false" title="score">100</a> (out of 100)
 (or 96 if js or css minification disabled in config.json).</p>
 
 <p><img src="img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
@@ -80,6 +83,8 @@ There is a short list:</p>
 <li>
 <strong>Alt  + s</strong>          - get all key bindings back</li>
 <li>
+<strong>Ctrl + A</strong>          - select all files in a panel</li>
+<li>
 <strong>up, down, enter</strong>   - filesystem navigation</li>
 <li>
 <strong>Tab</strong>               - move thru panels</li>
@@ -92,11 +97,15 @@ There is a short list:</p>
 <li>
 <strong>End</strong>               - to end of list</li>
 <li>
-<strong>Shift + F10</strong>       - show context menu</li>
+<strong>F8, Delete</strong>        - remove current file</li>
+<li>
+<strong>Shift + Delete</strong>    - remove without prompt</li>
+<li>
+<strong>Insert</strong>            - select current file</li>
 <li>
 <strong>F2</strong>                - rename current file</li>
 <li>
-<strong>Alt + g</strong>           - authorization in GitHub</li>
+<strong>Shift + F10</strong>       - show context menu</li>
 </ul><h2>Viewer's hot keys</h2>
 
 <ul>
@@ -125,12 +134,9 @@ There is a short list:</p>
 <li>Rename</li>
 <li>Delete</li>
 <li>Upload to (Dropbox, Github, GDrive)</li>
-<li>Downloud</li>
-</ul><h2>Documentation</h2>
-
-<p>JS Doc documentation could be found in <a href="http://jsdoc.info/coderaiser/cloudcmd/">http://jsdoc.info/coderaiser/cloudcmd/</a></p>
-
-<h2>Installing</h2>
+<li>Download</li>
+<li>New (File, Dir, from cloud)</li>
+</ul><h2>Installing</h2>
 
 <p><strong>Cloud Commander</strong> installing is very easy. All you need it's just clone
 repository from github. Just 2 commands:</p>
@@ -163,11 +169,46 @@ mv node_modules/cloudcmd ./
     <span class="s2">"server"</span>    <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* server mode or testing mode              */</span>
     <span class="s2">"logs"</span>      <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* logs or console ouput                    */</span>
     <span class="s2">"socket"</span>    <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable web sockets                       */</span>
-    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>               <span class="cm">/* Cloud Commander port                     */</span>
+    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>               <span class="cm">/* http port                                */</span>
+    <span class="s2">"sslPort"</span>   <span class="o">:</span> <span class="mi">443</span><span class="p">,</span>              <span class="cm">/* https port                               */</span>
     <span class="s2">"ip"</span>        <span class="o">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>      <span class="cm">/* Cloud Commander IP                       */</span>
+    <span class="s2">"ssl"</span>       <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* should use https?                        */</span>
     <span class="s2">"rest"</span>      <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable rest interface                    */</span>
 <span class="p">}</span>
 </pre></div>
+
+<h2>Server</h2>
+
+<p>Standard practices say no non-root process gets to talk to
+the Internet on a port less than 1024. Anyway I suggest you
+to start Cloud Commander as non-root. How it could be solved?
+There is a couple easy and fast ways. One of them is port forwarding by iptables.</p>
+
+<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -L <span class="c"># look rules before</span>
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 4430
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -L <span class="c"># look reles after</span>
+</pre></div>
+
+<p>You should see somethins like this ( <strong>8000</strong> and <strong>4430</strong> should be in config as <strong>port</strong> and <strong>sslPort</strong> )</p>
+
+<pre><code>target     prot opt source               destination
+REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:http redir ports 8000
+REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:https redir ports 4430
+</code></pre>
+
+<p>If you would want to get things back just clear rules ( <strong>1</strong> and <strong>2</strong> it's rules numbers,
+in your list they could differ).</p>
+
+<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -D PREROUTING 1
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -D PREROUTING 2
+</pre></div>
+
+<p>To run Cloud Commander as daemon in linux you could set <strong>log</strong> to true in config and
+do something like this:</p>
+
+<pre><code>nohup node cloudcmd
+</code></pre>
 
 <h2>Authorization</h2>
 
@@ -276,7 +317,43 @@ git clone git://github.com/coderaiser/minify
 git checkout dev
 </code></pre>
 
-<h2>Special Thanks</h2>
+<h2>Version history</h2>
+
+<ul>
+<li>
+<em>2012.04.22</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.2.0.zip">v0.2.0</a></strong>
+</li>
+<li>
+<em>2012.03.01</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.9.zip">v0.1.9</a></strong>
+</li>
+<li>
+<em>2012.12.12</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.8.zip">v0.1.8</a></strong>
+</li>
+<li>
+<em>2012.10.01</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.7.zip">v0.1.7</a></strong>
+</li>
+<li>
+<em>2012.08.24</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.6.zip">v0.1.6</a></strong>
+</li>
+<li>
+<em>2012.08.06</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.5.zip">v0.1.5</a></strong>
+</li>
+<li>
+<em>2012.07.27</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.4.zip">v0.1.4</a></strong>
+</li>
+<li>
+<em>2012.07.19</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.3.zip">v0.1.3</a></strong>
+</li>
+<li>
+<em>2012.07.14</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.2.zip">v0.1.2</a></strong>
+</li>
+<li>
+<em>2012.07.11</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.1.zip">v0.1.1</a></strong>
+</li>
+<li>
+<em>2012.00.00</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.0.zip">v0.1.0</a></strong>
+</li>
+</ul><h2>Special Thanks</h2>
 
 <p><a href="http://vk.com/politilena" title="Elena Zalitok">Elena Zalitok</a>  for logo.</p>
       </section>
