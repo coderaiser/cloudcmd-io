@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link href="images/favicon.png" rel="icon" type="image/png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -29,7 +28,8 @@
         </ul>
       </header>
       <section>
-        <h1>Cloud Commander v0.2.0 <a href="http://badge.fury.io/js/cloudcmd"><img src="https://badge.fury.io/js/cloudcmd.png" alt="NPM version"></a> <a href="https://gemnasium.com/coderaiser/cloudcmd" title="Dependency Status"><img src="https://gemnasium.com/coderaiser/cloudcmd.png" alt="Dependency Status"></a> <a href="http://travis-ci.org/coderaiser/cloudcmd" title="Build Status"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
+        <h1>
+<a name="cloud-commander-v030---" class="anchor" href="#cloud-commander-v030---"><span class="octicon octicon-link"></span></a>Cloud Commander v0.3.0 <a href="http://badge.fury.io/js/cloudcmd"><img src="https://badge.fury.io/js/cloudcmd.png" alt="NPM version"></a> <a href="https://gemnasium.com/coderaiser/cloudcmd" title="Dependency Status"><img src="https://gemnasium.com/coderaiser/cloudcmd.png" alt="Dependency Status"></a> <a href="http://travis-ci.org/coderaiser/cloudcmd" title="Build Status"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
 </h1>
 
 <p><a href="https://flattr.com/submit/auto?user_id=coderaiser&amp;url=github.com/coderaiser/cloudcmd&amp;title=cloudcmd&amp;language=&amp;tags=github&amp;category=software"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr"></a></p>
@@ -43,9 +43,10 @@ DEMO:
 <p>Google PageSpeed Score : <a href="//developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.aws.af.cm_2F&amp;mobile=false" title="score">100</a> (out of 100)
 (or 96 if js or css minification disabled in config.json).</p>
 
-<p><img src="https://github.com/coderaiser/cloudcmd/raw/master/img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
+<p><img src="/img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
 
-<h2>Benefits</h2>
+<h2>
+<a name="benefits" class="anchor" href="#benefits"><span class="octicon octicon-link"></span></a>Benefits</h2>
 
 <ul>
 <li>full browser compatibility <em>(ie6+,chrome,safari,opera,firefox)</em>;</li>
@@ -63,18 +64,38 @@ definitely will can work with cached copy of directory listings)</em>;</li>
 </ul><p><strong>Cloud Commander</strong> uses all benefits of js, so if js is disabled,
 we moves to <em>limited mode</em>.</p>
 
-<h2>Limited-mode features</h2>
+<h2>
+<a name="limited-mode-features" class="anchor" href="#limited-mode-features"><span class="octicon octicon-link"></span></a>Limited-mode features</h2>
 
 <ul>
 <li>no keybinding</li>
 <li>no local caching</li>
 <li>full loading of all web page(with styles, js-scripts, html-page etc).</li>
-</ul><h2>Hot keys</h2>
+</ul><h2>
+<a name="hot-keys" class="anchor" href="#hot-keys"><span class="octicon octicon-link"></span></a>Hot keys</h2>
 
 <p>In all modern web browsers (but not in IE, becouse he special) hot keys works.
 There is a short list:</p>
 
 <ul>
+<li>
+<strong>F1</strong>                - help</li>
+<li>
+<strong>F2</strong>                - rename current file</li>
+<li>
+<strong>F3</strong>                - view</li>
+<li>
+<strong>F4</strong>                - edit</li>
+<li>
+<strong>F5</strong>                - copy</li>
+<li>
+<strong>F6</strong>                - rename/move</li>
+<li>
+<strong>F7</strong>                - new dir</li>
+<li>
+<strong>F8, Delete</strong>        - remove current file</li>
+<li>
+<strong>F9</strong>                = menu</li>
 <li>
 <strong>Ctrl + r</strong>          - reload dir content</li>
 <li>
@@ -98,34 +119,33 @@ There is a short list:</p>
 <li>
 <strong>End</strong>               - to end of list</li>
 <li>
-<strong>F8, Delete</strong>        - remove current file</li>
-<li>
 <strong>Shift + Delete</strong>    - remove without prompt</li>
 <li>
 <strong>Insert</strong>            - select current file</li>
 <li>
-<strong>F2</strong>                - rename current file</li>
+<strong>Shift + F10</strong>       - context menu</li>
 <li>
-<strong>Shift + F10</strong>       - show context menu</li>
-</ul><h2>Viewer's hot keys</h2>
+<strong>~</strong>                 - console</li>
+</ul><h2>
+<a name="viewers-hot-keys" class="anchor" href="#viewers-hot-keys"><span class="octicon octicon-link"></span></a>Viewer's hot keys</h2>
 
 <ul>
 <li>
-<strong>Shift + F3</strong>        - open viewer window</li>
+<strong>F3</strong>                - open</li>
 <li>
-<strong>Esc</strong>               - close viewer window</li>
-</ul><h2>Editor's hot keys</h2>
+<strong>Esc</strong>               - close</li>
+</ul><h2>
+<a name="editors-hot-keys" class="anchor" href="#editors-hot-keys"><span class="octicon octicon-link"></span></a>Editor's hot keys</h2>
 
 <ul>
 <li>
-<strong>F3</strong>                - open CodeMirror editor in read only mode</li>
+<strong>F4</strong>                - open</li>
 <li>
-<strong>F4</strong>                - open CodeMirror editor</li>
+<strong>Ctrl + s</strong>          - save</li>
 <li>
-<strong>Ctrl + s</strong>          - save file</li>
-<li>
-<strong>Esc</strong>               - close CodeMirror editor</li>
-</ul><h2>Menu</h2>
+<strong>Esc</strong>               - close</li>
+</ul><h2>
+<a name="menu" class="anchor" href="#menu"><span class="octicon octicon-link"></span></a>Menu</h2>
 
 <p>Right mouse click button show context menu with items:</p>
 
@@ -137,22 +157,31 @@ There is a short list:</p>
 <li>Upload to (Dropbox, Github, GDrive)</li>
 <li>Download</li>
 <li>New (File, Dir, from cloud)</li>
-</ul><h2>Installing</h2>
+</ul><h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
 
-<p><strong>Cloud Commander</strong> installing is very easy. All you need it's just clone
-repository from github. Just 2 commands:</p>
+<p><strong>Cloud Commander</strong> install is very easy.
+All you need is </p>
 
-<pre><code>git clone git://github.com/coderaiser/cloudcmd.git
-cd cloudcmd
+<ul>
+<li>install <a href="//nodejs.org/" title="node.js">node.js</a>
+</li>
+<li>
+<a href="https://github.com/coderaiser/cloudcmd/archive/master.zip">download</a>
+and unpack or just clone repository from github:</li>
+</ul><pre><code>    git clone git://github.com/coderaiser/cloudcmd.git
+    cd cloudcmd
+    node cloudcmd
 </code></pre>
 
-<p>or</p>
+<p>or install in npm:</p>
 
-<pre><code>npm i cloudcmd
-mv node_modules/cloudcmd ./
+<pre><code>    npm i cloudcmd -g
+    cloudcmd
 </code></pre>
 
-<h2>Configuration</h2>
+<h2>
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
 
 <p>All main configuration could be done thrue config.json.</p>
 
@@ -170,25 +199,27 @@ mv node_modules/cloudcmd ./
     <span class="s2">"server"</span>    <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* server mode or testing mode              */</span>
     <span class="s2">"logs"</span>      <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* logs or console ouput                    */</span>
     <span class="s2">"socket"</span>    <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable web sockets                       */</span>
-    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>               <span class="cm">/* http port                                */</span>
-    <span class="s2">"sslPort"</span>   <span class="o">:</span> <span class="mi">443</span><span class="p">,</span>              <span class="cm">/* https port                               */</span>
-    <span class="s2">"ip"</span>        <span class="o">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>      <span class="cm">/* Cloud Commander IP                       */</span>
+    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>               <span class="cm">/* http port or null(default)               */</span>
+    <span class="s2">"sslPort"</span>   <span class="o">:</span> <span class="mi">443</span><span class="p">,</span>              <span class="cm">/* https port or null(default)              */</span>
+    <span class="s2">"ip"</span>        <span class="o">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>      <span class="cm">/* ip or null(default)                      */</span>
     <span class="s2">"ssl"</span>       <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* should use https?                        */</span>
     <span class="s2">"rest"</span>      <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable rest interface                    */</span>
 <span class="p">}</span>
 </pre></div>
 
-<h2>Server</h2>
+<h2>
+<a name="server" class="anchor" href="#server"><span class="octicon octicon-link"></span></a>Server</h2>
 
 <p>Standard practices say no non-root process gets to talk to
 the Internet on a port less than 1024. Anyway I suggest you
 to start Cloud Commander as non-root. How it could be solved?
-There is a couple easy and fast ways. One of them is port forwarding by iptables.</p>
+There is a couple easy and fast ways. One of them is port forwarding by iptables.
+Just run <a href="shell/addtables.sh">shell/addtables.sh</a> for default options.</p>
 
-<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -L <span class="c"># look rules before</span>
-@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
-@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 4430
-@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -L <span class="c"># look reles after</span>
+<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look rules before</span>
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 4430
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look reles after</span>
 </pre></div>
 
 <p>You should see somethins like this ( <strong>8000</strong> and <strong>4430</strong> should be in config as <strong>port</strong> and <strong>sslPort</strong> )</p>
@@ -201,8 +232,8 @@ REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:https redi
 <p>If you would want to get things back just clear rules ( <strong>1</strong> and <strong>2</strong> it's rules numbers,
 in your list they could differ).</p>
 
-<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -D PREROUTING 1
-@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>su iptables -t nat -D PREROUTING 2
+<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 1
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 2
 </pre></div>
 
 <p>To run Cloud Commander as daemon in linux you could set <strong>log</strong> to true in config and
@@ -211,7 +242,8 @@ do something like this:</p>
 <pre><code>nohup node cloudcmd
 </code></pre>
 
-<h2>Authorization</h2>
+<h2>
+<a name="authorization" class="anchor" href="#authorization"><span class="octicon octicon-link"></span></a>Authorization</h2>
 
 <p>Thru openID Cloud Commander could authorize clients on GitHub.
 All things that should be done is must be added <strong>id</strong> and <strong>secret</strong> of application
@@ -220,7 +252,8 @@ with names: <em>github_id</em>, <em>github_secret</em>, <em>dropbox_key</em>, <e
 For more information see <strong>config.json</strong> and <strong>shell/seret.bat</strong> <em>(on win32)</em>
 or <strong>shell/secret.sh</strong> <em>(on nix)</em>.</p>
 
-<h2>Starting</h2>
+<h2>
+<a name="start" class="anchor" href="#start"><span class="octicon octicon-link"></span></a>Start</h2>
 
 <p>To start <strong>Cloud Commander</strong> only one command neaded:</p>
 
@@ -245,9 +278,10 @@ Then type in browser</p>
 <pre><code>http://localhost
 </code></pre>
 
-<h2>Updating</h2>
+<h2>
+<a name="update" class="anchor" href="#update"><span class="octicon octicon-link"></span></a>Update</h2>
 
-<p><strong>Cloud Commander</strong> is very alfa and it's very often updatings.
+<p><strong>Cloud Commander</strong> is very often updates.
 Update is doing automagically but it could be done also manualy
 by typing a few commands in cloudcmd directory:</p>
 
@@ -265,42 +299,35 @@ by typing a few commands in cloudcmd directory:</p>
 npm i cloudcmd
 </code></pre>
 
-<h2>Additional modules</h2>
+<h2>
+<a name="additional-modules" class="anchor" href="#additional-modules"><span class="octicon octicon-link"></span></a>Additional modules</h2>
 
 <p><strong>Cloud Commander's Server Side</strong> not using additional modules for main functionality.
 But for minification and optimization tricks optional can be
 assingned (and installed) modules: <a href="https://github.com/coderaiser/minify" title="Minify">Minify</a>
 and <a href="https://github.com/LearnBoost/socket.io" title="Socket.IO">socket.io</a>.</p>
 
-<p>Install addtitional modules:</p>
+<p>Install addtitional modules (type in <strong>Cloud Commander</strong> directory):</p>
 
 <pre><code>npm i
 </code></pre>
 
-<p><strong>Cloud Commander's Client Side</strong> use module jquery for ajaxing. But only for old browsers.
-We could not use this module, but this way is fast:</p>
-
-<ul>
-<li>google cdn</li>
-<li>gzip</li>
-<li>cache</li>
-</ul><p>Perhaps in the future, it will not be used, but so far it has no effect on
-start loading of Cloud Commander Client Side and do things fast and stable
-it is using now.</p>
-
-<h2>Extensions</h2>
+<h2>
+<a name="extensions" class="anchor" href="#extensions"><span class="octicon octicon-link"></span></a>Extensions</h2>
 
 <p><strong>Cloud Commander</strong> desinged to easily porting extensions.
 For extend main functionality Cloud Commander use next modules:</p>
 
 <ul>
-<li><a href="//github.com/marijnh/CodeMirror" title="CodeMirror">CodeMirror</a></li>
+<li><a href="//ace.ajax.org/" title="Ace">Ace</a></li>
 <li><a href="//github.com/fancyapps/fancyBox" title="FancyBox">FancyBox</a></li>
 <li><a href="//github.com/medialize/jQuery-contextMenu" title="jQuery-contextMenu">jQuery-contextMenu</a></li>
-<li><a href="//github.com/jcubic/jquery.terminal" title="jquery.terminal">jquery.terminal</a></li>
-<li><a href="//github.com/michael/github">github</a></li>
-<li><a href="//github.com/dropbox/dropbox-js">dropbox-js</a></li>
-</ul><h2>Contributing</h2>
+<li><a href="//github.com/replit/jq-console%E2%80%8E" title="jq-console">jq-console</a></li>
+<li><a href="//github.com/michael/github" title="github">github</a></li>
+<li><a href="//github.com/dropbox/dropbox-js" title="dropbox-js">dropbox-js</a></li>
+<li><a href="//jquery.com">jquery</a></li>
+</ul><h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
 <p>If you would like to contribute - send pull request to dev branch.
 Getting dev version of <strong>Cloud Commander</strong>:</p>
@@ -318,9 +345,13 @@ git clone git://github.com/coderaiser/minify
 git checkout dev
 </code></pre>
 
-<h2>Version history</h2>
+<h2>
+<a name="version-history" class="anchor" href="#version-history"><span class="octicon octicon-link"></span></a>Version history</h2>
 
 <ul>
+<li>
+<em>2012.07.01</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.3.0.zip">v0.3.0</a></strong>
+</li>
 <li>
 <em>2012.04.22</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.2.0.zip">v0.2.0</a></strong>
 </li>
@@ -354,9 +385,16 @@ git checkout dev
 <li>
 <em>2012.00.00</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.0.zip">v0.1.0</a></strong>
 </li>
-</ul><h2>Special Thanks</h2>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p><a href="http://vk.com/politilena" title="Elena Zalitok">Elena Zalitok</a>  for logo.</p>
+<p>MIT <a href="LICENSE" title="license">license</a>.</p>
+
+<h2>
+<a name="special-thanks" class="anchor" href="#special-thanks"><span class="octicon octicon-link"></span></a>Special Thanks</h2>
+
+<p><a href="http://vk.com/politilena" title="Elena Zalitok">Elena Zalitok</a> for
+<a href="img/logo/cloudcmd.png" title="logo">logo</a> and <a href="img/favicon/favicon.png" title="favicon">favicon</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/coderaiser">coderaiser</a></p>
