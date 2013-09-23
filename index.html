@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link href="//github.com/coderaiser/cloudcmd/blob/master/img/favicon/favicon.png?raw=true" rel="icon" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +26,6 @@
           <li><a href="https://github.com/coderaiser/cloudcmd/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/coderaiser/cloudcmd">View On <strong>GitHub</strong></a></li>
         </ul>
-        <div id="carbonads-container" style="margin-bottom:10px"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/51147/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
       </header>
       <section>
         <h1>
@@ -45,7 +43,7 @@ DEMO:
 <p>Google PageSpeed Score : <a href="//developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.aws.af.cm_2F&amp;mobile=false" title="score">100</a> (out of 100)
 (or 96 if js or css minification disabled in config.json).</p>
 
-<p><img src="https://raw.github.com/coderaiser/cloudcmd/dev/img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
+<p><img src="/img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
 
 <h2>
 <a name="benefits" class="anchor" href="#benefits"><span class="octicon octicon-link"></span></a>Benefits</h2>
@@ -187,7 +185,7 @@ and unpack or just clone repository from github:</li>
 
 <p>All main configuration could be done thrue config.json.</p>
 
-<div class="highlight"><pre><span class="p">{</span>
+<div class="highlight highlight-js"><pre><span class="p">{</span>
     <span class="s2">"api_url"</span>   <span class="o">:</span><span class="s2">"/api/v1"</span><span class="p">,</span>
     <span class="s2">"appcache"</span>  <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* html5 feature appcache                   */</span>
     <span class="s2">"cache"</span>     <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* cashing on a client                      */</span>
@@ -218,7 +216,7 @@ to start Cloud Commander as non-root. How it could be solved?
 There is a couple easy and fast ways. One of them is port forwarding by iptables.
 Just run <a href="shell/addtables.sh">shell/addtables.sh</a> for default options.</p>
 
-<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look rules before</span>
+<div class="highlight highlight-sh"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look rules before</span>
 @:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
 @:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 4430
 @:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look reles after</span>
@@ -234,7 +232,7 @@ REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:https redi
 <p>If you would want to get things back just clear rules ( <strong>1</strong> and <strong>2</strong> it's rules numbers,
 in your list they could differ).</p>
 
-<div class="highlight"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 1
+<div class="highlight highlight-sh"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 1
 @:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 2
 </pre></div>
 
