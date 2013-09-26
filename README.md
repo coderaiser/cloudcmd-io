@@ -1,4 +1,4 @@
 cloudcmd
 ========
 
-User friendly cloud file manager
+cloud file manager with console and editor
