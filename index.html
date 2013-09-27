@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Cloud Commander</title>
+    <title>Cloud Commander by coderaiser</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link href="//github.com/coderaiser/cloudcmd/blob/master/img/favicon/favicon.png?raw=true" rel="icon" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="google-site-verification" content="lj6-0KNo1SM0HMIHCZ3WHsczW720M3h9y9_ipGVBXcI" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -17,8 +15,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Cloudcmd</h1>
-        <p>Two-panels node js file manager </p>
+        <h1>Cloud Commander</h1>
+        <p>cloud file manager with console and editor</p>
 
         <p class="view"><a href="https://github.com/coderaiser/cloudcmd">View the Project on GitHub <small>coderaiser/cloudcmd</small></a></p>
 
@@ -28,25 +26,21 @@
           <li><a href="https://github.com/coderaiser/cloudcmd/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/coderaiser/cloudcmd">View On <strong>GitHub</strong></a></li>
         </ul>
-        <div id="carbonads-container" style="margin-bottom:10px"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/51147/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
       </header>
       <section>
         <h1>
-<a name="cloud-commander-v030---" class="anchor" href="#cloud-commander-v030---"><span class="octicon octicon-link"></span></a>Cloud Commander v0.3.0 <a href="http://badge.fury.io/js/cloudcmd"><img src="https://badge.fury.io/js/cloudcmd.png" alt="NPM version"></a> <a href="https://gemnasium.com/coderaiser/cloudcmd" title="Dependency Status"><img src="https://gemnasium.com/coderaiser/cloudcmd.png" alt="Dependency Status"></a> <a href="http://travis-ci.org/coderaiser/cloudcmd" title="Build Status"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
+<a name="cloud-commander-v040---" class="anchor" href="#cloud-commander-v040---"><span class="octicon octicon-link"></span></a>Cloud Commander v0.4.0 <a href="http://badge.fury.io/js/cloudcmd"><img src="https://badge.fury.io/js/cloudcmd.png" alt="NPM version"></a> <a href="https://gemnasium.com/coderaiser/cloudcmd" title="Dependency Status"><img src="https://gemnasium.com/coderaiser/cloudcmd.png" alt="Dependency Status"></a> <a href="http://travis-ci.org/coderaiser/cloudcmd" title="Build Status"><img src="https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master" alt="Build Status"></a>
 </h1>
 
-<p><a href="https://flattr.com/submit/auto?user_id=coderaiser&amp;url=github.com/coderaiser/cloudcmd&amp;title=cloudcmd&amp;language=&amp;tags=github&amp;category=software"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr"></a></p>
+<h3>
+<a name="main-blog-demo" class="anchor" href="#main-blog-demo"><span class="octicon octicon-link"></span></a><a href="http://cloudcmd.io" title="Main">Main</a> <a href="http://blog.cloudcmd.io" title="Blog">Blog</a> <a href="http://io.cloudcmd.io" title="Demo">Demo</a>
+</h3>
 
-<p><strong>Cloud Commander</strong> - user friendly cloud file manager.
-DEMO:
-<a href="https://cloudcmd.cloudfoundry.com" title="cloudfoundry">cloudfoundry</a>,
-<a href="https://cloudcmd.aws.af.cm" title="appfog">appfog</a>,
-<a href="https://cloudcmd.jit.su" title="jitsu">jitsu</a>.</p>
+<p><a href="https://flattr.com/submit/auto?user_id=coderaiser&amp;url=github.com/coderaiser/cloudcmd&amp;title=cloudcmd&amp;language=&amp;tags=github&amp;category=software" title="flattr"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr"></a></p>
 
-<p>Google PageSpeed Score : <a href="//developers.google.com/speed/pagespeed/insights#url=http_3A_2F_2Fcloudcmd.aws.af.cm_2F&amp;mobile=false" title="score">100</a> (out of 100)
-(or 96 if js or css minification disabled in config.json).</p>
+<p><strong>Cloud Commander</strong> - cloud file manager with console and editor.</p>
 
-<p><img src="https://raw.github.com/coderaiser/cloudcmd/dev/img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
+<p><img src="/img/logo/cloudcmd.png" alt="Cloud Commander" title="Cloud Commander"></p>
 
 <h2>
 <a name="benefits" class="anchor" href="#benefits"><span class="octicon octicon-link"></span></a>Benefits</h2>
@@ -57,15 +51,15 @@ DEMO:
 <li>one full page loading, <em>and then just one-time json-dir-listings loading
 (with refresh opportunity).</em>
 </li>
-<li>caching readed directories <em>to localStorage (for now)
-(so if network will disconnected or something heppen with a signal, we
+<li>caching read directories <em>to localStorage (for now)
+(so if network will disconnected or something happens with a signal, we
 definitely will can work with cached copy of directory listings)</em>;</li>
 <li>key binding</li>
 <li>disabled js support <em>(working in limited mode)</em>.</li>
 <li>automated minification <em>client js-files and onstart-reading Cloud manager files on server starting.</em>
 </li>
 </ul><p><strong>Cloud Commander</strong> uses all benefits of js, so if js is disabled,
-we moves to <em>limited mode</em>.</p>
+we go to <em>limited mode</em>.</p>
 
 <h2>
 <a name="limited-mode-features" class="anchor" href="#limited-mode-features"><span class="octicon octicon-link"></span></a>Limited-mode features</h2>
@@ -98,7 +92,7 @@ There is a short list:</p>
 <li>
 <strong>F8, Delete</strong>        - remove current file</li>
 <li>
-<strong>F9</strong>                = menu</li>
+<strong>F9</strong>                - menu</li>
 <li>
 <strong>Ctrl + r</strong>          - reload dir content</li>
 <li>
@@ -108,11 +102,11 @@ There is a short list:</p>
 <li>
 <strong>Alt  + s</strong>          - get all key bindings back</li>
 <li>
-<strong>Ctrl + A</strong>          - select all files in a panel</li>
+<strong>Ctrl + a</strong>          - select all files in a panel</li>
 <li>
 <strong>up, down, enter</strong>   - filesystem navigation</li>
 <li>
-<strong>Tab</strong>               - move thru panels</li>
+<strong>Tab</strong>               - move via panels</li>
 <li>
 <strong>Page Up</strong>           - up on one page</li>
 <li>
@@ -130,15 +124,13 @@ There is a short list:</p>
 <li>
 <strong>~</strong>                 - console</li>
 </ul><h2>
-<a name="viewers-hot-keys" class="anchor" href="#viewers-hot-keys"><span class="octicon octicon-link"></span></a>Viewer's hot keys</h2>
+<a name="edit" class="anchor" href="#edit"><span class="octicon octicon-link"></span></a>Edit</h2>
 
-<ul>
-<li>
-<strong>F3</strong>                - open</li>
-<li>
-<strong>Esc</strong>               - close</li>
-</ul><h2>
-<a name="editors-hot-keys" class="anchor" href="#editors-hot-keys"><span class="octicon octicon-link"></span></a>Editor's hot keys</h2>
+<p><a href="http://io.cloudcmd.io/fs/etc#/edit/passwd" title="Edit">Demo</a>
+<img src="/img/screenshot/edit.png" alt="Edit" title="Edit"></p>
+
+<h3>
+<a name="hot-keys-1" class="anchor" href="#hot-keys-1"><span class="octicon octicon-link"></span></a>Hot keys</h3>
 
 <ul>
 <li>
@@ -148,9 +140,47 @@ There is a short list:</p>
 <li>
 <strong>Esc</strong>               - close</li>
 </ul><h2>
+<a name="console" class="anchor" href="#console"><span class="octicon octicon-link"></span></a>Console</h2>
+
+<p><a href="http://io.cloudcmd.io#/console" title="Console">Demo</a>
+<img src="/img/screenshot/console.png" alt="Console" title="Console"></p>
+
+<h3>
+<a name="hot-keys-2" class="anchor" href="#hot-keys-2"><span class="octicon octicon-link"></span></a>Hot keys</h3>
+
+<ul>
+<li>
+<strong>~</strong>                 - open</li>
+<li>
+<strong>Esc</strong>               - close</li>
+</ul><h2>
 <a name="menu" class="anchor" href="#menu"><span class="octicon octicon-link"></span></a>Menu</h2>
 
-<p>Right mouse click button show context menu with items:</p>
+<p><a href="http://io.cloudcmd.io#/menu" title="Menu">Demo</a>
+<img src="/img/screenshot/menu.png" alt="Menu" title="Menu">
+Right mouse click button shows context menu with items:</p>
+
+<ul>
+<li>View</li>
+<li>Edit</li>
+<li>Rename</li>
+<li>Delete</li>
+<li>Zip file</li>
+<li>Upload to (Dropbox, Github, GDrive)</li>
+<li>Download</li>
+<li>New (File, Dir, from cloud)</li>
+</ul><h3>
+<a name="hot-keys-3" class="anchor" href="#hot-keys-3"><span class="octicon octicon-link"></span></a>Hot keys</h3>
+
+<ul>
+<li>
+<strong>F9</strong>                - open</li>
+<li>
+<strong>Esc</strong>               - close</li>
+</ul><h2>
+<a name="menu-1" class="anchor" href="#menu-1"><span class="octicon octicon-link"></span></a>Menu</h2>
+
+<p>Right mouse click button shows context menu with items:</p>
 
 <ul>
 <li>View</li>
@@ -163,11 +193,13 @@ There is a short list:</p>
 </ul><h2>
 <a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
 
-<p><strong>Cloud Commander</strong> install is very easy.
+<p><a href="https://npmjs.org/package/cloudcmd" title="npm"><img src="https://nodei.co/npm/cloudcmd.png?downloads=true&amp;&amp;stars" alt="NPM_INFO"></a></p>
+
+<p>Installing <strong>Cloud Commander</strong> is very simple.
 All you need is </p>
 
 <ul>
-<li>install <a href="//nodejs.org/" title="node.js">node.js</a>
+<li>install <a href="http://nodejs.org/" title="node.js">node.js</a>
 </li>
 <li>
 <a href="https://github.com/coderaiser/cloudcmd/archive/master.zip">download</a>
@@ -186,27 +218,29 @@ and unpack or just clone repository from github:</li>
 <h2>
 <a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
 
-<p>All main configuration could be done thrue config.json.</p>
+<p>All main configuration could be done via config.json.</p>
 
 <div class="highlight highlight-js"><pre><span class="p">{</span>
-    <span class="s2">"api_url"</span>   <span class="o">:</span><span class="s2">"/api/v1"</span><span class="p">,</span>
-    <span class="s2">"appcache"</span>  <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* html5 feature appcache                   */</span>
-    <span class="s2">"cache"</span>     <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* cashing on a client                      */</span>
+    <span class="s2">"api_url"</span>           <span class="o">:</span><span class="s2">"/api/v1"</span><span class="p">,</span>
+    <span class="s2">"appcache"</span>          <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>    <span class="cm">/* cache files for offline use              */</span>
+    <span class="s2">"analytics"</span>         <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="cm">/* google analytics suport                  */</span>
+    <span class="s2">"localStorage"</span>      <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>     <span class="cm">/* cache directory data                     */</span>
     <span class="s2">"minification"</span> <span class="o">:</span> <span class="p">{</span>              <span class="cm">/* minification of js,css,html and img      */</span>
-        <span class="s2">"js"</span>    <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* minify module neaded                     */</span>
+        <span class="s2">"js"</span>    <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* minify module needed                     */</span>
         <span class="s2">"css"</span>   <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* npm i minify                             */</span>
         <span class="s2">"html"</span>  <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">"img"</span>   <span class="o">:</span> <span class="kc">false</span>
     <span class="p">},</span>
-    <span class="s2">"show_keys_panel"</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>       <span class="cm">/* show classic panel with buttons of keys  */</span>
-    <span class="s2">"server"</span>    <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>             <span class="cm">/* server mode or testing mode              */</span>
-    <span class="s2">"logs"</span>      <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>            <span class="cm">/* logs or console ouput                    */</span>
-    <span class="s2">"socket"</span>    <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable web sockets                       */</span>
-    <span class="s2">"port"</span>      <span class="o">:</span> <span class="mi">80</span><span class="p">,</span>               <span class="cm">/* http port or null(default)               */</span>
-    <span class="s2">"sslPort"</span>   <span class="o">:</span> <span class="mi">443</span><span class="p">,</span>              <span class="cm">/* https port or null(default)              */</span>
-    <span class="s2">"ip"</span>        <span class="o">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>      <span class="cm">/* ip or null(default)                      */</span>
-    <span class="s2">"ssl"</span>       <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* should use https?                        */</span>
-    <span class="s2">"rest"</span>      <span class="o">:</span> <span class="kc">true</span>              <span class="cm">/* enable rest interface                    */</span>
+    <span class="s2">"cache"</span>             <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">"logs"</span>              <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>     <span class="cm">/* logs or console ouput                    */</span>
+    <span class="s2">"show_keys_panel"</span>   <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>      <span class="cm">/* show classic panel with buttons of keys  */</span>
+    <span class="s2">"server"</span>            <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>      <span class="cm">/* server mode or testing mode              */</span>
+    <span class="s2">"socket"</span>            <span class="o">:</span> <span class="kc">true</span>       <span class="cm">/* enable web sockets                       */</span>
+    <span class="s2">"port"</span>              <span class="o">:</span> <span class="mi">8000</span><span class="p">,</span>      <span class="cm">/* http port or null(default)               */</span>
+    <span class="s2">"sslPort"</span>           <span class="o">:</span> <span class="mi">443</span><span class="p">,</span>       <span class="cm">/* https port or null(default)              */</span>
+    <span class="s2">"ip"</span>                <span class="o">:</span> <span class="kc">null</span><span class="p">,</span>      <span class="cm">/* ip or null(default)                      */</span>
+    <span class="s2">"ssl"</span>               <span class="o">:</span> <span class="kc">false</span>      <span class="cm">/* should use https?                        */</span>
+    <span class="s2">"rest"</span>              <span class="o">:</span> <span class="kc">true</span>       <span class="cm">/* enable rest interface                    */</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -216,27 +250,58 @@ and unpack or just clone repository from github:</li>
 <p>Standard practices say no non-root process gets to talk to
 the Internet on a port less than 1024. Anyway I suggest you
 to start Cloud Commander as non-root. How it could be solved?
-There is a couple easy and fast ways. One of them is port forwarding by iptables.
-Just run <a href="shell/addtables.sh">shell/addtables.sh</a> for default options.</p>
+There is a couple easy and fast ways. One of them is port forwarding.</p>
+
+<h3>
+<a name="iptables" class="anchor" href="#iptables"><span class="octicon octicon-link"></span></a>Iptables</h3>
+
+<p>Just run <a href="shell/addtables.sh">shell/addtables.sh</a> for default options.</p>
 
 <div class="highlight highlight-sh"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look rules before</span>
 @:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
 @:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 4430
-@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look reles after</span>
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -L <span class="c"># look rules after</span>
 </pre></div>
 
-<p>You should see somethins like this ( <strong>8000</strong> and <strong>4430</strong> should be in config as <strong>port</strong> and <strong>sslPort</strong> )</p>
+<p>You should see something like this ( <strong>8000</strong> and <strong>4430</strong> should be in config as <strong>port</strong> and <strong>sslPort</strong> )</p>
 
 <pre><code>target     prot opt source               destination
 REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:http redir ports 8000
 REDIRECT   tcp  --  anywhere             anywhere             tcp dpt:https redir ports 4430
 </code></pre>
 
-<p>If you would want to get things back just clear rules ( <strong>1</strong> and <strong>2</strong> it's rules numbers,
+<p>If you would want to get things back just clear rules ( <strong>1</strong> and <strong>2</strong> it's rule numbers,
 in your list they could differ).</p>
 
-<div class="highlight highlight-sh"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 1
-@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 2
+<div class="highlight highlight-sh"><pre>@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 2
+@:/tmp/cloudcmd <span class="o">(</span>dev<span class="o">)</span> <span class="nv">$ </span>sudo iptables -t nat -D PREROUTING 1
+</pre></div>
+
+<h3>
+<a name="nginx" class="anchor" href="#nginx"><span class="octicon octicon-link"></span></a>nginx</h3>
+
+<p>Get <a href="http://nginx.org/" title="nginx">nginx</a>. On linux it could be done like that</p>
+
+<div class="highlight highlight-sh"><pre>sudo apt-get install nginx <span class="c">#for ubuntu and debian</span>
+</pre></div>
+
+<p>Than make host file <strong>/etc/nginx/sites-enabled/io.cloudcmd.io</strong>
+( <em>io.cloudcmd.io</em> is your domain name) with content:</p>
+
+<div class="highlight highlight-sh"><pre>server <span class="o">{</span>
+    listen 80;
+    server_name io.cloudcmd.io;
+    access_log /var/log/nginx/io.cloudcmd.io.access.log;
+    location / <span class="o">{</span>
+        proxy_pass    http://127.0.0.1:8000/;
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<div class="highlight highlight-sh"><pre><span class="c"># create symlink of this file</span>
+ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
+<span class="c"># restart nginx</span>
+/etc/init.d/nginx restart
 </pre></div>
 
 <p>To run Cloud Commander as daemon in linux you could set <strong>log</strong> to true in config and
@@ -248,17 +313,16 @@ do something like this:</p>
 <h2>
 <a name="authorization" class="anchor" href="#authorization"><span class="octicon octicon-link"></span></a>Authorization</h2>
 
-<p>Thru openID Cloud Commander could authorize clients on GitHub.
+<p>Cloud Commander could authorize clients on GitHub via openID.
 All things that should be done is must be added <strong>id</strong> and <strong>secret</strong> of application
-from github settings page and added to <strong>config.json</strong> (id just) and env varible (secret)
-with names: <em>github_id</em>, <em>github_secret</em>, <em>dropbox_key</em>, <em>dropbox_secret</em> etc.
-For more information see <strong>config.json</strong> and <strong>shell/seret.bat</strong> <em>(on win32)</em>
-or <strong>shell/secret.sh</strong> <em>(on nix)</em>.</p>
+from github settings page and added to <a href="json/modules.json">modules.json</a> (id just) and env variable (secret)
+with names: <em>github_id</em>, <em>github_secret</em>, <em>dropbox_key</em>, <em>dropbox_secret</em> etc in
+<a href="shell/secret.bat">secret.bat</a> <em>(on win32)</em> or <a href="shell/secret.sh">secret.sh</a> <em>(on nix)</em>.</p>
 
 <h2>
 <a name="start" class="anchor" href="#start"><span class="octicon octicon-link"></span></a>Start</h2>
 
-<p>To start <strong>Cloud Commander</strong> only one command neaded:</p>
+<p>To start <strong>Cloud Commander</strong> only one command needed:</p>
 
 <pre><code>node cloudcmd
 </code></pre>
@@ -268,17 +332,16 @@ or <strong>shell/secret.sh</strong> <em>(on nix)</em>.</p>
 <pre><code>cloudcmd
 </code></pre>
 
-<p>After thet Cloud Commander reads config file <strong>config.json</strong> and start server
-on 80 port, if none of port varibles(*cloud9*, <em>cloudfoundry</em> and <em>nodester</em>)
-isn't exist.
+<p>After that Cloud Commander reads port information from config file <a href="json/config.json#L17">config.json</a> and start server
+on this port ( <strong>8000</strong> by default ), if none of port varibles ( <em>cloud9</em>, <em>cloudfoundry</em> and <em>nodester</em> ) isn't exist.
 Then type in browser</p>
 
-<pre><code>http://127.0.0.1
+<pre><code>http://127.0.0.1:8000
 </code></pre>
 
 <p>or</p>
 
-<pre><code>http://localhost
+<pre><code>http://localhost:8000
 </code></pre>
 
 <h2>
@@ -339,7 +402,7 @@ Getting dev version of <strong>Cloud Commander</strong>:</p>
 git checkout dev
 </code></pre>
 
-<p>It is possible thet dev version Cloud Commander will needed dev version of Minify,
+<p>It is possible that dev version of Cloud Commander will needed dev version of Minify,
 so to get it you should type a couple more commands:</p>
 
 <pre><code>cd node_modules
@@ -353,13 +416,16 @@ git checkout dev
 
 <ul>
 <li>
-<em>2012.07.01</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.3.0.zip">v0.3.0</a></strong>
+<em>2013.09.27</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.4.0.zip">v0.4.0</a></strong>
 </li>
 <li>
-<em>2012.04.22</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.2.0.zip">v0.2.0</a></strong>
+<em>2013.07.01</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.3.0.zip">v0.3.0</a></strong>
 </li>
 <li>
-<em>2012.03.01</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.9.zip">v0.1.9</a></strong>
+<em>2013.04.22</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.2.0.zip">v0.2.0</a></strong>
+</li>
+<li>
+<em>2013.03.01</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.9.zip">v0.1.9</a></strong>
 </li>
 <li>
 <em>2012.12.12</em>, <strong><a href="//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.8.zip">v0.1.8</a></strong>
@@ -396,8 +462,12 @@ git checkout dev
 <h2>
 <a name="special-thanks" class="anchor" href="#special-thanks"><span class="octicon octicon-link"></span></a>Special Thanks</h2>
 
-<p><a href="http://vk.com/politilena" title="Elena Zalitok">Elena Zalitok</a> for
-<a href="img/logo/cloudcmd.png" title="logo">logo</a> and <a href="img/favicon/favicon.png" title="favicon">favicon</a>.</p>
+<ul>
+<li>
+<a href="http://polietilena.github.io/" title="Polietilena">Polietilena</a> for <a href="img/logo/cloudcmd.png" title="logo">logo</a> and <a href="img/favicon/favicon.png" title="favicon">favicon</a>.</li>
+<li>
+<a href="https://github.com/elec-ua">Elec-ua</a> for <a href="http://ru.cloudcmd.io" title="Cloud Commander in Russian">ru</a> and <a href="http://ua.cloudcmd.io" title="Cloud Commander in Ukrainian">ua</a> translations.</li>
+</ul>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/coderaiser">coderaiser</a></p>
