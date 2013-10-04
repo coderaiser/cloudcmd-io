@@ -1,4 +1,4 @@
-cloudcmd
+Cloud Commander
 ========
 
-cloud file manager with console and editor
+Cloud [file manager](http://cloudcmd.io "File Manager") with console and editor.
