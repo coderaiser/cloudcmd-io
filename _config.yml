@@ -1,1 +1,5 @@
-markdown: redcarpet
+markdown      : redcarpet
+tagLine       : Cloud file manager with console and editor
+viewOn        : View the Project on
+download      : Download
+maintainedBy  : This project is maintained by
