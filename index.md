@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Cloud Commander v0.4.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
+Cloud Commander v0.5.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
 ===============
 ###[Main][MainURL] [Blog][BlogURL] [Demo][DemoURL]
 [NPMIMGURL]:                https://badge.fury.io/js/cloudcmd.png
@@ -27,29 +27,36 @@ Cloud Commander v0.4.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status]
 
 Benefits
 ---------------
-- full browser compatibility *(ie6+,chrome,safari,opera,firefox)*;
-- responsible design
-- one full page loading, *and then just one-time json-dir-listings loading
-(with refresh opportunity).*
-- caching read directories *to localStorage (for now)
-(so if network will disconnected or something happens with a signal, we
-definitely will can work with cached copy of directory listings)*;
-- key binding
-- disabled js support *(working in limited mode)*.
+- Open Source.
+- Has 2 classic ortodox panels.
+- Works on Windows, Linux and Mac OS.
+- Could be used local or remotly.
+- Has nice console and editor.
+- Writed on JavaScript/Node.js.
 
-**Cloud Commander** uses all benefits of js, so if js is disabled,
-we go to *limited mode*.
-
-Limited-mode features
+Install
 ---------------
-- no keybinding
-- no local caching
-- full loading of all web page(with styles, js-scripts, html-page etc).
+[![NPM_INFO][NPM_INFO_IMG]][NPM_INFO_URL]
+
+Installing **Cloud Commander** is very simple.
+All you need is 
+- install [node.js](http://nodejs.org/ "node.js")
+- [download](https://github.com/coderaiser/cloudcmd/archive/master.zip)
+and unpack or just clone repository from github:
+
+```
+    git clone git://github.com/coderaiser/cloudcmd.git
+    cd cloudcmd
+    node cloudcmd
+```
+or install in npm:
+```
+    npm i cloudcmd -g
+    cloudcmd
+```
 
 Hot keys
 ---------------
-In all modern web browsers (but not in IE, becouse he special) hot keys works.
-There is a short list:
 
 - **F1**                - help
 - **F2**                - rename current file
@@ -119,6 +126,7 @@ Right mouse click button shows context menu with items:
 Menu
 ---------------
 Right mouse click button shows context menu with items:
+
 - View
 - Edit
 - Rename
@@ -126,27 +134,6 @@ Right mouse click button shows context menu with items:
 - Upload to (Dropbox, Github, GDrive)
 - Download
 - New (File, Dir, from cloud)
-
-Install
----------------
-[![NPM_INFO][NPM_INFO_IMG]][NPM_INFO_URL]
-
-Installing **Cloud Commander** is very simple.
-All you need is 
-- install [node.js](http://nodejs.org/ "node.js")
-- [download](https://github.com/coderaiser/cloudcmd/archive/master.zip)
-and unpack or just clone repository from github:
-
-```
-    git clone git://github.com/coderaiser/cloudcmd.git
-    cd cloudcmd
-    node cloudcmd
-```
-or install in npm:
-```
-    npm i cloudcmd -g
-    cloudcmd
-```
 
 Configuration
 ---------------
@@ -158,23 +145,18 @@ All main configuration could be done via [config.json](json/config.json "Config"
     "appcache"          : false,    /* cache files for offline use              */
     "analytics"         : true,     /* google analytics suport                  */
     "localStorage"      : true,     /* cache directory data                     */
-    "minification" : {              /* minification of js,css,html and img      */
-        "js"    : false,            /* minify module needed                     */
-        "css"   : false,            /* npm i minify                             */
-        "html"  : true,
-        "img"   : false
-    },
-    "online"            : true,      /* load js files from cdn or local path     */
-    "cache"             : true,
-    "logs"              : false,     /* logs or console ouput                    */
-    "show_keys_panel"   : true,      /* show classic panel with buttons of keys  */
-    "server"            : true,      /* server mode or testing mode              */
-    "socket"            : true       /* enable web sockets                       */
-    "port"              : 8000,      /* http port or null(default)               */
-    "sslPort"           : 443,       /* https port or null(default)              */
-    "ip"                : null,      /* ip or null(default)                      */
-    "ssl"               : false      /* should use https?                        */
-    "rest"              : true       /* enable rest interface                    */
+    "minify" : true                 /* minification of js,css,html and img      */
+    "online"            : true,     /* load js files from cdn or local path     */
+    "cache"             : true,     /* add cache-control                        */
+    "logs"              : false,    /* logs or console ouput                    */
+    "show_keys_panel"   : true,     /* show classic panel with buttons of keys  */
+    "server"            : true,     /* server mode or testing mode              */
+    "socket"            : true      /* enable web sockets                       */
+    "port"              : 8000,     /* http port or null(default)               */
+    "sslPort"           : 443,      /* https port or null(default)              */
+    "ip"                : null,     /* ip or null(default)                      */
+    "ssl"               : false     /* should use https?                        */
+    "rest"              : true      /* enable rest interface                    */
 }
 ```
 
@@ -234,6 +216,7 @@ Than make host file **/etc/nginx/sites-enabled/io.cloudcmd.io**
 ```sh
 server {
     listen 80;
+    client_max_body_size 100m;
     server_name io.cloudcmd.io;
     access_log /var/log/nginx/io.cloudcmd.io.access.log;
     location / {
@@ -247,13 +230,6 @@ server {
 ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 # restart nginx
 /etc/init.d/nginx restart
-```
-
-If you will want to upload files, you should add next line in **http** section of **/etc/nginx/nginx.conf**:
-
-```
-#limit of uploading data
-client_max_body_size 100m;
 ```
 
 To run Cloud Commander as daemon in linux you could set **log** to true in config and
@@ -317,6 +293,7 @@ Extensions
 ---------------
 **Cloud Commander** desinged to easily porting extensions.
 For extend main functionality Cloud Commander use next modules:
+
 - [Ace]                     [AceURL]
 - [FancyBox]                [FancyBoxURL]
 - [jQuery-contextMenu]      [jQuery-contextMenuURL]
@@ -351,6 +328,7 @@ so to get it you should type a couple more commands:
 
 Version history
 ---------------
+- *2013.10.17*, **[v0.5.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.5.0.zip)**
 - *2013.09.27*, **[v0.4.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.4.0.zip)**
 - *2013.08.01*, **[v0.3.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.3.0.zip)**
 - *2013.04.22*, **[v0.2.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.2.0.zip)**
