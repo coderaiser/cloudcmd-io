@@ -58,7 +58,6 @@ or install in npm:
 
 Hot keys
 ---------------
-
 - **F1**                - help
 - **F2**                - rename current file
 - **F3**                - view
