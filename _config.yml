@@ -9,3 +9,4 @@ ga              : UA-45093573-2
 canonical       : cloudcmd.io
 repoName        : coderaiser/cloudcmd-io/edit/gh-pages/index.md
 improveText     : "Find typo? Help fix it."
+repoSource      : coderaiser/cloudcmd
