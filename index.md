@@ -38,7 +38,7 @@ Benefits
 - Works on Windows, Linux and Mac OS.
 - Could be used local or remotly.
 - Has nice console and editor.
-- Writed on JavaScript/Node.js.
+- Wrote on JavaScript/Node.js.
 
 Install
 ---------------
