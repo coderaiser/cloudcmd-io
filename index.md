@@ -127,6 +127,7 @@ Menu
 [Demo](http://io.cloudcmd.io#/menu "Menu")
 ![Menu](/img/screen/menu.png "Menu")
 Right mouse click button shows context menu with items:
+
 - View
 - Edit
 - Rename
@@ -140,18 +141,6 @@ Right mouse click button shows context menu with items:
 ###Hot keys
 - **F9**                - open
 - **Esc**               - close
-
-Menu
----------------
-Right mouse click button shows context menu with items:
-
-- View
-- Edit
-- Rename
-- Delete
-- Upload to (Dropbox, Github, GDrive)
-- Download
-- New (File, Dir, from cloud)
 
 Configuration
 ---------------
