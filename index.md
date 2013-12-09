@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Cloud Commander v0.6.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
+Cloud Commander v0.7.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![IO][IO_LIVE_IMG] [IO][IOURL], ![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL] ![RunKite][RunKite_LIVE_IMG] [RunKite][RunKiteURL])
 [NPMIMGURL]:                https://badge.fury.io/js/cloudcmd.png
@@ -20,10 +20,10 @@ Cloud Commander v0.6.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status]
 [JitSuURL]:                 http://cloudcmd.jit.su "JitSu"
 [HerokuURL]:                http://cloudcmd.herokuapp.com/ "Heroku"
 [RunKiteURL]:               http://cloudcmd.apps.runkite.com/ "RunKite"
-[IO_LIVE_IMG]:              https://status-ok.cloudcmd.io/host/io.cloudcmd.io "IO"
-[JitSu_LIVE_IMG]:           https://status-ok.cloudcmd.io/host/cloudcmd.jit.su "JitSu"
-[HEROKU_LIVE_IMG]:          https://status-ok.cloudcmd.io/host/cloudcmd.herokuapp.com "Heroku"
-[RunKite_LIVE_IMG]:         https://status-ok.cloudcmd.io/host/cloudcmd.apps.runkite.com/ "RunKite"
+[IO_LIVE_IMG]:              https://status-ok.cloudcmd.io/host/io.cloudcmd.io/fs?json "IO"
+[JitSu_LIVE_IMG]:           https://status-ok.cloudcmd.io/host/cloudcmd.jit.su/fs?json "JitSu"
+[HEROKU_LIVE_IMG]:          https://status-ok.cloudcmd.io/host/cloudcmd.herokuapp.com/fs?json "Heroku"
+[RunKite_LIVE_IMG]:         https://status-ok.cloudcmd.io/host/cloudcmd.apps.runkite.com/fs?json "RunKite"
 
 **Cloud Commander** - cloud file manager with console and editor.
 
@@ -33,6 +33,7 @@ Cloud Commander v0.6.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status]
 
 Benefits
 ---------------
+
 - Open Source.
 - Has 2 classic ortodox panels.
 - Works on Windows, Linux and Mac OS.
@@ -62,6 +63,18 @@ or install in npm:
     npm i cloudcmd -g
     cloudcmd
 ```
+
+Additional modules
+---------------
+**Cloud Commander's Server Side** not using additional modules for main functionality.
+But for console and minification and optimization tricks optional can be
+assingned (and installed) modules: [Minify] (https://github.com/coderaiser/minify "Minify")
+and [socket.io] (https://github.com/LearnBoost/socket.io "Socket.IO").
+
+Install addtitional modules (type in **Cloud Commander** directory):
+
+    npm i
+
 
 Hot keys
 ---------------
@@ -100,6 +113,9 @@ Edit
 ###Hot keys
 - **F4**                - open
 - **Ctrl + s**          - save
+- **Ctrl + f**          - find
+- **Ctrl + f + f**      - replace
+- **Ctrl + g**          - go to line
 - **Esc**               - close
 
 For more details see [Ace keyboard shortcuts](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts "Ace keyboard shortcuts").
@@ -148,19 +164,21 @@ All main configuration could be done via [config.json](json/config.json "Config"
 
 ```js
 {
-    "api_url"           :"/api/v1",
-    "appcache"          : false,    /* cache files for offline use              */
+    "apiURL"            :"/api/v1",
+    "appCache"          : false,    /* cache files for offline use              */
     "analytics"         : true,     /* google analytics suport                  */
+    "diff"              : false,    /* when save - send patch, not whole file   */
+    "notifications"     : false,    /* show notifications when tab is not active*/
     "localStorage"      : true,     /* cache directory data                     */
     "minify"            : true      /* minification of js,css,html and img      */
     "online"            : true,     /* load js files from cdn or local path     */
     "cache"             : true,     /* add cache-control                        */
     "logs"              : false,    /* logs or console ouput                    */
-    "show_keys_panel"   : true,     /* show classic panel with buttons of keys  */
+    "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
     "server"            : true,     /* server mode or testing mode              */
     "socket"            : true      /* enable web sockets                       */
-    "port"              : 8000,     /* http port or null(default)               */
-    "sslPort"           : 443,      /* https port or null(default)              */
+    "port"              : 8000,     /* http port                                */
+    "sslPort"           : 443,      /* https port                               */
     "ip"                : null,     /* ip or null(default)                      */
     "ssl"               : false     /* should use https?                        */
     "rest"              : true      /* enable rest interface                    */
@@ -232,6 +250,34 @@ server {
 }
 ```
 
+If you want add **ssl**, add a couple lines to server block:
+
+```sh
+server {
+    listen 443;
+    client_max_body_size 100m;
+    ssl                  on;
+    ssl_certificate      /home/coderaiser/cloudcmd/ssl/ssl.crt;
+    ssl_certificate_key  /home/coderaiser/cloudcmd/ssl/ssl.key;
+    server_name io.cloudcmd.io;
+    access_log /var/log/nginx/io.cloudcmd.io.access.log;
+    location / {
+        proxy_pass    http://127.0.0.1:8000/;
+    }
+}
+```
+
+If you need redirection from **http** to **https**, it's simple:
+
+```sh
+server {
+    listen 80;
+    server_name admin.cloudcmd.io;
+    rewrite ^ https://io.cloudcmd.io$request_uri? permanent; #301 redirect
+    access_log /var/log/nginx/io.cloudcmd.io.access.log;
+}
+```
+
 ```sh
 # create symlink of this file
 ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
@@ -285,17 +331,6 @@ and then, if there is new version
     npm r cloudcmd
     npm i cloudcmd
 
-Additional modules
----------------
-**Cloud Commander's Server Side** not using additional modules for main functionality.
-But for minification and optimization tricks optional can be
-assingned (and installed) modules: [Minify] (https://github.com/coderaiser/minify "Minify")
-and [socket.io] (https://github.com/LearnBoost/socket.io "Socket.IO").
-
-Install addtitional modules (type in **Cloud Commander** directory):
-
-    npm i
-
 Extensions
 ---------------
 **Cloud Commander** desinged to easily porting extensions.
@@ -336,21 +371,22 @@ so to get it you should type a couple more commands:
 Version history
 ---------------
 
-- *2013.11.08*, **[v0.6.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.6.0.zip)**
-- *2013.10.17*, **[v0.5.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.5.0.zip)**
-- *2013.09.27*, **[v0.4.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.4.0.zip)**
-- *2013.08.01*, **[v0.3.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.3.0.zip)**
-- *2013.04.22*, **[v0.2.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.2.0.zip)**
-- *2013.03.01*, **[v0.1.9](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.9.zip)**
-- *2012.12.12*, **[v0.1.8](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.8.zip)**
-- *2012.10.01*, **[v0.1.7](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.7.zip)**
-- *2012.08.24*, **[v0.1.6](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.6.zip)**
-- *2012.08.06*, **[v0.1.5](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.5.zip)**
-- *2012.07.27*, **[v0.1.4](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.4.zip)**
-- *2012.07.19*, **[v0.1.3](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.3.zip)**
-- *2012.07.14*, **[v0.1.2](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.2.zip)**
-- *2012.07.11*, **[v0.1.1](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.1.zip)**
-- *2012.07.09*, **[v0.1.0](//github.com/coderaiser/cloudcmd-archive/raw/master/cloudcmd-v0.1.0.zip)**
+- *2013.12.09*, **[v0.7.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.7.0.zip)**
+- *2013.11.08*, **[v0.6.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.6.0.zip)**
+- *2013.10.17*, **[v0.5.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.5.0.zip)**
+- *2013.09.27*, **[v0.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.4.0.zip)**
+- *2013.08.01*, **[v0.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.3.0.zip)**
+- *2013.04.22*, **[v0.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.2.0.zip)**
+- *2013.03.01*, **[v0.1.9](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.9.zip)**
+- *2012.12.12*, **[v0.1.8](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.8.zip)**
+- *2012.10.01*, **[v0.1.7](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.7.zip)**
+- *2012.08.24*, **[v0.1.6](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.6.zip)**
+- *2012.08.06*, **[v0.1.5](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.5.zip)**
+- *2012.07.27*, **[v0.1.4](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.4.zip)**
+- *2012.07.19*, **[v0.1.3](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.3.zip)**
+- *2012.07.14*, **[v0.1.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.2.zip)**
+- *2012.07.11*, **[v0.1.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.1.zip)**
+- *2012.00.00*, **[v0.1.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.1.0.zip)**
 
 License
 ---------------
@@ -360,6 +396,8 @@ Special Thanks
 ---------------
 
 - [Polietilena](http://polietilena.github.io/ "Polietilena") for [logo](img/logo/cloudcmd.png "logo") and [favicon](img/favicon/favicon.png "favicon");
-- [Elec-ua](https://github.com/elec-ua)
+- [TarZak](https://github.com/tarzak)
     - [ru](http://ru.cloudcmd.io "Cloud Commander in Russian") and [ua](http://ua.cloudcmd.io "Cloud Commander in Ukrainian") translations;
-    - config [template](html/config.html) and [style](css/config.css);
+    - config template and style;
+    - change order of directories and files;
+    - add ability do not hide path and header when files are scrolling;
