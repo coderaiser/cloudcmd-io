@@ -2,14 +2,14 @@
 layout: default
 ---
 
-Cloud Commander v0.7.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
+Cloud Commander v0.8.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL]
 ===============
-###[Main][MainURL] [Blog][BlogURL] Live(![IO][IO_LIVE_IMG] [IO][IOURL], ![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL] ![RunKite][RunKite_LIVE_IMG] [RunKite][RunKiteURL])
+###[Main][MainURL] [Blog][BlogURL] Live(![IO][IO_LIVE_IMG] [IO][IOURL], ![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPMIMGURL]:                https://badge.fury.io/js/cloudcmd.png
 [BuildStatusIMGURL]:        https://secure.travis-ci.org/coderaiser/cloudcmd.png?branch=master
 [DependencyStatusIMGURL]:   https://gemnasium.com/coderaiser/cloudcmd.png
 [FlattrIMGURL]:             https://api.flattr.com/button/flattr-badge-large.png
-[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars
+[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png
 [NPMURL]:                   https://npmjs.org/package/cloudcmd "npm"
 [BuildStatusURL]:           http://travis-ci.org/coderaiser/cloudcmd  "Build Status"
 [DependencyStatusURL]:      https://gemnasium.com/coderaiser/cloudcmd "Dependency Status"
@@ -19,11 +19,9 @@ Cloud Commander v0.7.0 [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status]
 [IOURL]:                    http://io.cloudcmd.io "IO"
 [JitSuURL]:                 http://cloudcmd.jit.su "JitSu"
 [HerokuURL]:                http://cloudcmd.herokuapp.com/ "Heroku"
-[RunKiteURL]:               http://cloudcmd.apps.runkite.com/ "RunKite"
-[IO_LIVE_IMG]:              https://status-ok.cloudcmd.io/host/io.cloudcmd.io/fs?json "IO"
-[JitSu_LIVE_IMG]:           https://status-ok.cloudcmd.io/host/cloudcmd.jit.su/fs?json "JitSu"
-[HEROKU_LIVE_IMG]:          https://status-ok.cloudcmd.io/host/cloudcmd.herokuapp.com/fs?json "Heroku"
-[RunKite_LIVE_IMG]:         https://status-ok.cloudcmd.io/host/cloudcmd.apps.runkite.com/fs?json "RunKite"
+[IO_LIVE_IMG]:              http://status-ok.cloudcmd.io/host/io.cloudcmd.io/fs?json "IO"
+[JitSu_LIVE_IMG]:           http://status-ok.cloudcmd.io/host/cloudcmd.jit.su/fs?json "JitSu"
+[HEROKU_LIVE_IMG]:          http://status-ok.cloudcmd.io/host/cloudcmd.herokuapp.com/fs?json "Heroku"
 
 **Cloud Commander** - cloud file manager with console and editor.
 
@@ -53,28 +51,25 @@ All you need is
 and unpack or just clone repository from github:
 
 ```
-    git clone git://github.com/coderaiser/cloudcmd.git
-    cd cloudcmd
-    node cloudcmd
+git clone git://github.com/coderaiser/cloudcmd.git
+cd cloudcmd
+npm install
+node cloudcmd
 ```
 or install in npm:
 
 ```
-    npm i cloudcmd -g
-    cloudcmd
+npm install cloudcmd -g
+cloudcmd
 ```
 
 Additional modules
 ---------------
-**Cloud Commander's Server Side** not using additional modules for main functionality.
-But for console and minification and optimization tricks optional can be
-assingned (and installed) modules: [Minify] (https://github.com/coderaiser/minify "Minify")
-and [socket.io] (https://github.com/LearnBoost/socket.io "Socket.IO").
+**Cloud Commander** could work without any modules installed.
+But for console, minification, file system operations etc, recommended
+install additional modules with next commnad (type in **Cloud Commander**'s directory):
 
-Install addtitional modules (type in **Cloud Commander** directory):
-
-    npm i
-
+    npm install
 
 Hot keys
 ---------------
@@ -86,15 +81,20 @@ Hot keys
 - **F5**                - copy
 - **F6**                - rename/move
 - **F7**                - new dir
+- **F7** + **shift**    = new file
 - **F8, Delete**        - remove current file
 - **F9**                - menu
 - **F10**               - config
+- **(*)**               - select/unselect all
+- **(+)**               - expand selection
+- **(-)**               - shrink selection
 - **Ctrl + r**          - reload dir content
 - **Ctrl + d**          - clear local cache (wich contains dir contents)
 - **Alt  + q**          - disable key bindings
 - **Alt  + s**          - get all key bindings back
 - **Ctrl + a**          - select all files in a panel
 - **up, down, enter**   - filesystem navigation
+- **Ctrl + \**          - go to the root directory
 - **Tab**               - move via panels
 - **Page Up**           - up on one page
 - **Page Down**         - down on one page
@@ -104,6 +104,7 @@ Hot keys
 - **Insert**            - select current file
 - **Shift + F10**       - context menu
 - **~**                 - console
+- **Ctrl + Click**      - open file on new tab
 
 Edit
 ---------------
@@ -164,6 +165,9 @@ All main configuration could be done via [config.json](json/config.json "Config"
 
 ```js
 {
+    "auth"              : false,    /* enable http authentication               */
+    "username"          : "root",   /* username for authentication              */
+    "password"          : "toor",   /* password hash in sha-1 for authentication*/
     "apiURL"            :"/api/v1",
     "appCache"          : false,    /* cache files for offline use              */
     "analytics"         : true,     /* google analytics suport                  */
@@ -245,7 +249,7 @@ server {
     server_name io.cloudcmd.io;
     access_log /var/log/nginx/io.cloudcmd.io.access.log;
     location / {
-        proxy_pass    http://127.0.0.1:8000/;
+        proxy_pass          http://127.0.0.1:8000/;
     }
 }
 ```
@@ -266,6 +270,19 @@ server {
     }
 }
 ```
+
+For websocket suport (nginx >= v1.3.13) modify server block:
+
+```sh
+    location / {
+        proxy_http_version  1.1;
+        proxy_set_header    Upgrade $http_upgrade;
+        proxy_set_header    Connection "upgrade";
+
+        proxy_pass          http://127.0.0.1:8000/;
+    }
+```
+
 
 If you need redirection from **http** to **https**, it's simple:
 
@@ -289,15 +306,6 @@ To run Cloud Commander as daemon in linux you could set **log** to true in confi
 do something like this:
     
     nohup node cloudcmd
-
-Authorization
----------------
-Cloud Commander could authorize clients on GitHub via openID.
-All things that should be done is must be added **id** and **secret** of application
-from github settings page and added to [modules.json](json/modules.json) (id just) and env variable (secret)
-with names: *github_id*, *github_secret*, *dropbox_key*, *dropbox_secret* etc in
-[secret.bat](shell/secret.bat) *(on win32)* or [secret.sh](shell/secret.sh) *(on nix)*.
-
 
 Start
 ---------------
@@ -331,10 +339,9 @@ and then, if there is new version
     npm r cloudcmd
     npm i cloudcmd
 
-Extensions
+Additional modules list
 ---------------
-**Cloud Commander** desinged to easily porting extensions.
-For extend main functionality Cloud Commander use next modules:
+To extend capabilities of file manager next modules used:
 
 - [Ace]                     [AceURL]
 - [FancyBox]                [FancyBoxURL]
@@ -343,14 +350,20 @@ For extend main functionality Cloud Commander use next modules:
 - [github]                  [githubURL]
 - [dropbox-js]              [dropbox-jsURL]
 - [jquery]                  [jqueryURL]
+- [socket.io]               [socketIOURL]
+- [http-auth]               [httpAuthURL]
+- [fs-extra]                [fs-extraURL]
 
-[AceURL]:                   //ace.ajax.org/ "Ace"
+[AceURL]:                   http://ace.ajax.org/ "Ace"
 [FancyBoxURL]:              //github.com/fancyapps/fancyBox "FancyBox"
 [jQuery-contextMenuURL]:    //github.com/medialize/jQuery-contextMenu "jQuery-contextMenu"
-[jq-consoleURL]:            //github.com/replit/jq-console‎ "jq-console"
+[jq-consoleURL]:            //github.com/replit/jq-console "jq-console"
 [githubURL]:                //github.com/michael/github "github"
 [dropbox-jsURL]:            //github.com/dropbox/dropbox-js "dropbox-js"
 [jqueryURL]:                //jquery.com
+[socketIOURL]:              http://socket.io
+[httpAuthURL]:              //github.com/gevorg/http-auth
+[fs-extraURL]:              //github.com/jprichardson/node-fs-extra "fs-extra"
 
 Contributing
 ---------------
@@ -370,6 +383,7 @@ so to get it you should type a couple more commands:
 
 Version history
 ---------------
+- *2014.02.13*, **[v0.8.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.8.0.zip)**
 - *2013.12.09*, **[v0.7.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.7.0.zip)**
 - *2013.11.08*, **[v0.6.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.6.0.zip)**
 - *2013.10.17*, **[v0.5.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.5.0.zip)**
