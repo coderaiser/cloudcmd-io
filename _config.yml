@@ -13,4 +13,4 @@ repoName        : coderaiser/cloudcmd/edit/dev/HELP.md
 improveText     : "Find typo? Help fix it."
 repoSource      : coderaiser/cloudcmd
 image           : //cloudcmd.io/img/logo/cloudcmd.png
-favicon         : //cloudcmd.io/img/favicon/favicon.png
+favicon         : //cloudcmd.io/favicon.ico
