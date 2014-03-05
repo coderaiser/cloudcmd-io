@@ -65,7 +65,7 @@ Hot keys
 | `F5`              | copy
 | `F6`              | rename/move
 | `F7`              | new dir
-| `F7` + `shift`    | new file
+| `Shift + F7`      | new file
 | `F8, Delete`      | remove current file
 | `F9`              | menu
 | `F10`             | config
