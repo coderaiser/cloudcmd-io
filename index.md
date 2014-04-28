@@ -11,7 +11,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v0.8.3
+Cloud Commander v0.8.4
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![IO][IO_LIVE_IMG] [IO][IOURL], ![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
@@ -35,11 +35,11 @@ Benefits
 - Has 2 classic panels.
 - Optional **authorization**.
 - Client works in web browser.
-- Server works on **Windows, Linux and Mac OS**.
-- Could be used local or remotly.
+- Server works on **Windows**, **Linux** and **Mac OS**.
+- Could be used local or remotely.
 - Adapting to screen size.
-- **Editor** with suport of **syntax highlighting** for over 110 languages.
-- **Console** with suport of default OS command line.
+- **Editor** with support of **syntax highlighting** for over 110 languages.
+- **Console** with support of default OS command line.
 - Written in **JavaScript/Node.js**.
 
 Install
@@ -61,9 +61,9 @@ or if you install with `-g` flag just type:
 
     cloudcmd
 
-After that Cloud Commander reads port information from config file `config.json` and start server
-on this port ( **8000** by default ), if none of port variables ( *cloud9*, *cloudfoundry* and *nodester* ) isn't exist.
-Then type in browser
+Cloud Commander reads port information from config file `json/config.json` and start server
+on default port (`8000`), if none of port variables (`cloud9`, `cloudfoundry` and `nodester`) isn't exist.
+To start work type in address bar of your browser:
 
     http://127.0.0.1:8000
 
@@ -75,6 +75,7 @@ Hot keys
 | `F1`                  | help
 | `F2`                  | rename
 | `F3`                  | view
+| `Shift` + `F3`        | view as `markdown`
 | `F4`                  | edit
 | `F5`                  | copy
 | `F6`                  | rename/move
@@ -110,13 +111,21 @@ Edit
 [Demo](http://io.cloudcmd.io/fs/etc#/edit/passwd "Edit")
 ![Edit](/img/screen/edit.png "Edit")
 
+### Features
+- Syntax highlighting based on extension of file for over 110 languages.
+- Build in `emmet` (for html files)
+- Drag n drop (drag file from desktop to editor).
+- Build in `jshint` (with options in `.jshintrc` file)
+
 ###Hot keys
-- **F4**                - open
-- **Ctrl + s**          - save
-- **Ctrl + f**          - find
-- **Ctrl + f + f**      - replace
-- **Ctrl + g**          - go to line
-- **Esc**               - close
+|Key                    |Operation
+|:----------------------|:--------------------------------------------
+|`F4`                   | open
+| `Ctrl + s`            | save
+| `Ctrl + f`            | find
+| `Ctrl + f + f`        | replace
+| `Ctrl + g`            | go to line
+| `Esc`                 | close
 
 For more details see [Ace keyboard shortcuts](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts "Ace keyboard shortcuts").
 
@@ -126,8 +135,10 @@ Console
 ![Console](/img/screen/console.png "Console")
 
 ###Hot keys
-- **~**                 - open
-- **Esc**               - close
+|Key                    |Operation
+|:----------------------|:--------------------------------------------
+| `~`                   | open
+| `Esc`                 | close
 
 Config
 ---------------
@@ -135,8 +146,10 @@ Config
 ![Console](/img/screen/config.png "Config")
 
 ###Hot keys
-- **F10**               - open
-- **Esc**               - close
+|Key                    |Operation
+|:----------------------|:--------------------------------------------
+| `F10`                 | open
+| `Esc`                 | close
 
 Menu
 ---------------
@@ -149,18 +162,21 @@ Right mouse click button shows context menu with items:
 - Rename
 - Delete
 - Zip file
+- Unzip file
 - (Un)Select All
 - Upload to (Dropbox, Github, GDrive, FilePicker)
 - Download
 - New (File, Dir, from FilePicker)
 
 ###Hot keys
-- **F9**                - open
-- **Esc**               - close
+|Key                    |Operation
+|:----------------------|:--------------------------------------------
+| `F9`                  | open
+| `Esc`                 | close
 
 Configuration
 ---------------
-All main configuration could be done via `config.json`.
+All main configuration could be done via `json/config.json`.
 
 ```js
 {
@@ -169,8 +185,9 @@ All main configuration could be done via `config.json`.
     "password"          : "toor",   /* password hash in sha-1 for authentication*/
     "apiURL"            :"/api/v1",
     "appCache"          : false,    /* cache files for offline use              */
-    "analytics"         : true,     /* google analytics suport                  */
-    "diff"              : false,    /* when save - send patch, not whole file   */
+    "analytics"         : true,     /* google analytics support                  */
+    "diff"              : true,     /* when save - send patch, not whole file   */
+    "zip"               : true,     /* zip text before send / unzip before save */
     "notifications"     : false,    /* show notifications when tab is not active*/
     "localStorage"      : true,     /* cache directory data                     */
     "minify"            : true      /* minification of js,css,html and img      */
@@ -211,10 +228,10 @@ There is a couple easy and fast ways. One of them is port forwarding.
 Just run `shell/addtables.sh` for default options.
 
 ```sh
-# iptables -t nat -L # look rules before
-# iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
-# iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 4430
-# iptables -t nat -L # look rules after
+iptables -t nat -L # look rules before
+iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
+iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 4430
+iptables -t nat -L # look rules after
 ```
 
 You should see something like this ( **8000** and **4430** should be in config as **port** and **sslPort** )
@@ -228,8 +245,8 @@ If you would want to get things back just clear rules ( **1** and **2** it's rul
 in your list they could differ).
 
 ```sh
-# iptables -t nat -D PREROUTING 2
-# iptables -t nat -D PREROUTING 1
+iptables -t nat -D PREROUTING 2
+iptables -t nat -D PREROUTING 1
 ```
 
 ###nginx
@@ -271,7 +288,7 @@ server {
 }
 ```
 
-For websocket suport (nginx >= v1.3.13) modify server block:
+For websocket support (nginx >= v1.3.13) modify server block:
 
 ```sh
     location / {
@@ -337,7 +354,8 @@ To extend capabilities of file manager next modules used:
 - [jquery]                  [jqueryURL]
 - [socket.io]               [socketIOURL]
 - [http-auth]               [httpAuthURL]
-- [fs-extra]                [fs-extraURL]
+- [rimraf]                  [rimrafURL]
+- [mkdirp]                  [mkdirpURL]
 
 [AceURL]:                   http://ace.ajax.org/ "Ace"
 [MinifyURL]:                http://coderaiser.github.io/minify "Minify"
@@ -349,7 +367,8 @@ To extend capabilities of file manager next modules used:
 [jqueryURL]:                //jquery.com
 [socketIOURL]:              http://socket.io
 [httpAuthURL]:              //github.com/gevorg/http-auth
-[fs-extraURL]:              //github.com/jprichardson/node-fs-extra "fs-extra"
+[rimrafURL]:                //github.com/isaacs/rimraf "rimraf"
+[mkdirpURL]:                //github.com/substack/node-mkdirp
 
 Contributing
 ---------------
