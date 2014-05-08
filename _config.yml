@@ -18,3 +18,5 @@ improveText     : "Find typo? Help fix it."
 repoSource      : coderaiser/cloudcmd
 image           : http://cloudcmd.io/img/logo/cloudcmd.png
 favicon         : http://cloudcmd.io/favicon.ico
+gems:
+  - jekyll-sitemap
