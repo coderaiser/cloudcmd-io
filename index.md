@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 lang:
  - name: English
    link: http://cloudcmd.io
