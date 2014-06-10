@@ -125,7 +125,6 @@ View
 
 Edit
 ---------------
-[Demo](http://io.cloudcmd.io/fs/etc#/edit/passwd "Edit")
 ![Edit](/img/screen/edit.png "Edit")
 
 ### Features
@@ -149,7 +148,6 @@ For more details see [Ace keyboard shortcuts](https://github.com/ajaxorg/ace/wik
 
 Console
 ---------------
-[Demo](http://io.cloudcmd.io#/console "Console")
 ![Console](/img/screen/console.png "Console")
 
 ###Hot keys
@@ -160,7 +158,6 @@ Console
 
 Config
 ---------------
-[Demo](http://io.cloudcmd.io#/config "Config")
 ![Console](/img/screen/config.png "Config")
 
 ###Hot keys
@@ -171,7 +168,6 @@ Config
 
 Menu
 ---------------
-[Demo](http://io.cloudcmd.io#/menu "Menu")
 ![Menu](/img/screen/menu.png "Menu")
 Right mouse click button shows context menu with items:
 
