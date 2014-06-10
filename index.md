@@ -12,10 +12,10 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v0.8.4
+Cloud Commander v0.9.0
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![IO][IO_LIVE_IMG] [IO][IOURL], ![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
-[NPM_INFO_IMG]:             https://camo.githubusercontent.com/254a020afe689842501ef5a79c04ba909f9b29d2/68747470733a2f2f6e6f6465692e636f2f6e706d2f636c6f7564636d642e706e673f646f776e6c6f6164733d7472756526267374617273 "npm install cloudcmd"
+[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
 [MainURL]:                  http://cloudcmd.io "Main"
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
 [IOURL]:                    http://io.cloudcmd.io "IO"
@@ -103,9 +103,25 @@ Hot keys
 | `End`                 | to end of list
 | `Space`               | select current file (and get size of directory)
 | `Insert`              | select current file (and move to next)
-| `Shift + F10`         | context menu
+| `F9`                  | context menu
 | `~`                   | console
 | `Ctrl + Click`        | open file on new tab
+
+View
+---------------
+![View](/img/screen/view.png "View")
+
+### Features
+- View images.
+- View text files.
+- Playing audio.
+- Playing video.
+
+###Hot keys
+|Key                    |Operation
+|:----------------------|:--------------------------------------------
+| `F3`                  | open
+| `Esc`                 | close
 
 Edit
 ---------------
@@ -117,6 +133,7 @@ Edit
 - Build in `emmet` (for html files)
 - Drag n drop (drag file from desktop to editor).
 - Build in `jshint` (with options in `.jshintrc` file)
+- Configurable options (could be edited in `json/edit.json`)
 
 ###Hot keys
 |Key                    |Operation
@@ -124,7 +141,7 @@ Edit
 |`F4`                   | open
 | `Ctrl + s`            | save
 | `Ctrl + f`            | find
-| `Ctrl + f + f`        | replace
+| `Ctrl + h`            | replace
 | `Ctrl + g`            | go to line
 | `Esc`                 | close
 
@@ -184,9 +201,8 @@ All main configuration could be done via `json/config.json`.
     "auth"              : false,    /* enable http authentication               */
     "username"          : "root",   /* username for authentication              */
     "password"          : "toor",   /* password hash in sha-1 for authentication*/
-    "apiURL"            :"/api/v1",
     "appCache"          : false,    /* cache files for offline use              */
-    "analytics"         : true,     /* google analytics support                  */
+    "analytics"         : true,     /* google analytics support                 */
     "diff"              : true,     /* when save - send patch, not whole file   */
     "zip"               : true,     /* zip text before send / unzip before save */
     "notifications"     : false,    /* show notifications when tab is not active*/
@@ -327,7 +343,7 @@ do something like this:
 
 Update
 ---------------
-**Cloud Commander** is very often updates.
+**Cloud Commander** is very often updated.
 Update is doing automagically but it could be done also manualy
 by typing a few commands in cloudcmd directory:
 
@@ -346,9 +362,9 @@ Additional modules list
 To extend capabilities of file manager next modules used:
 
 - [Ace]                     [AceURL]
+- [Diff-Match-Patch]        [Diff-Match-PatchURL]
 - [Minify]                  [MinifyURL]
 - [FancyBox]                [FancyBoxURL]
-- [jQuery-contextMenu]      [jQuery-contextMenuURL]
 - [jq-console]              [jq-consoleURL]
 - [github]                  [githubURL]
 - [dropbox-js]              [dropbox-jsURL]
@@ -359,9 +375,9 @@ To extend capabilities of file manager next modules used:
 - [mkdirp]                  [mkdirpURL]
 
 [AceURL]:                   http://ace.ajax.org/ "Ace"
+[Diff-Match-PatchURL]:      https://code.google.com/p/google-diff-match-patch/ "Diff-Match-Patch"
 [MinifyURL]:                http://coderaiser.github.io/minify "Minify"
 [FancyBoxURL]:              //github.com/fancyapps/fancyBox "FancyBox"
-[jQuery-contextMenuURL]:    //github.com/medialize/jQuery-contextMenu "jQuery-contextMenu"
 [jq-consoleURL]:            //github.com/replit/jq-console "jq-console"
 [githubURL]:                //github.com/michael/github "github"
 [dropbox-jsURL]:            //github.com/dropbox/dropbox-js "dropbox-js"
@@ -373,19 +389,12 @@ To extend capabilities of file manager next modules used:
 
 Contributing
 ---------------
-If you would like to contribute - send pull request to dev branch.
+If you would like to contribute - read [guide](https://github.com/coderaiser/cloudcmd/blob/master/CONTRIBUTING.md) and send pull requests to dev branch.
 Getting dev version of **Cloud Commander**:
 
     git clone git://github.com/coderaiser/cloudcmd.git
-    git checkout dev
+    cd cloudcmd && git checkout dev
 
-It is possible that dev version of Cloud Commander will needed dev version of Minify,
-so to get it you should type a couple more commands:
-
-    cd node_modules
-    rm -rf minify
-    git clone git://github.com/coderaiser/minify
-    git checkout dev
 
 Version history
 ---------------
