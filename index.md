@@ -1,27 +1,11 @@
----
-layout: default
-sitemap: false
-lang:
- - name: English
-   link: http://cloudcmd.io
- 
- - name: Ukrainian
-   link: http://ua.cloudcmd.io
- 
- - name: Russian
-   link: http://ru.cloudcmd.io
----
-
-Cloud Commander v0.9.2
+Cloud Commander v1.0.0
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
-[NPM_INFO_IMG]:             https://camo.githubusercontent.com/254a020afe689842501ef5a79c04ba909f9b29d2/68747470733a2f2f6e6f6465692e636f2f6e706d2f636c6f7564636d642e706e673f646f776e6c6f6164733d7472756526267374617273 "npm install cloudcmd"
+[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
 [MainURL]:                  http://cloudcmd.io "Main"
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
-[IOURL]:                    http://io.cloudcmd.io "IO"
 [JitSuURL]:                 http://cloudcmd.jit.su "JitSu"
 [HerokuURL]:                http://cloudcmd.herokuapp.com/ "Heroku"
-[IO_LIVE_IMG]:              https://status-ok.cloudcmd.io/host/io.cloudcmd.io/img/txt.png "IO"
 [JitSu_LIVE_IMG]:           https://status-ok.cloudcmd.io/host/cloudcmd.jit.su/img/txt.png "JitSu"
 [HEROKU_LIVE_IMG]:          https://status-ok.cloudcmd.io/host/cloudcmd.herokuapp.com/img/txt.png "Heroku"
 
@@ -68,6 +52,21 @@ To start work type in address bar of your browser:
 
     http://127.0.0.1:8000
 
+Update
+---------------
+**Cloud Commander** is very often updated.
+
+Update is doing automagically but it could be done also manualy.
+If you cloned repository you could get last changes with:
+
+    git pull
+
+If you installed Cloud Commander with `npm` just re-install it:
+
+    npm i cloudcmd -g
+
+After that clear cache of your browser, restart application and reload page.
+
 Hot keys
 ---------------
 
@@ -76,7 +75,7 @@ Hot keys
 | `F1`                  | help
 | `F2`                  | rename
 | `F3`                  | view
-| `Shift` + `F3`        | view as `markdown`
+| `Shift + F3`          | view as `markdown`
 | `F4`                  | edit
 | `F5`                  | copy
 | `F6`                  | rename/move
@@ -154,6 +153,8 @@ Console
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `~`                   | open
+| `Ctrl + p`            | paste path of current directory
+| `Ctrl + z`            | cancel current prompt
 | `Esc`                 | close
 
 Config
@@ -337,22 +338,6 @@ do something like this:
     
     nohup node cloudcmd
 
-Update
----------------
-**Cloud Commander** is very often updated.
-Update is doing automagically but it could be done also manualy
-by typing a few commands in cloudcmd directory:
-
-    git pull
-or check new version on npm
-
-    npm info cloudcmd
-
-and then, if there is new version
-
-    npm r cloudcmd
-    npm i cloudcmd
-
 Additional modules list
 ---------------
 To extend capabilities of file manager next modules used:
@@ -394,6 +379,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.07.03*, **[v1.0.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.0.0.zip)**
 - *2014.06.16*, **[v0.9.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.9.2.zip)**
 - *2014.06.11*, **[v0.9.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.9.1.zip)**
 - *2014.06.10*, **[v0.9.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.9.0.zip)**
