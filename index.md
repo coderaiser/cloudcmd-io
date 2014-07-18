@@ -12,7 +12,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v1.1.0
+Cloud Commander v1.1.1
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
@@ -47,16 +47,26 @@ Install
 The installation of file manager is very simple.
 
 - install [node.js](http://nodejs.org/ "node.js") if you still have not.
-- install ```cloudcmd``` via ```npm``` with one simple command.
+- install ```cloudcmd``` via ```npm``` with:
+
+
+    npm install cloudcmd    #local install
+
+or
+
+    npm install cloudcmd -g #global install
+
 
 ![NPM_INFO][NPM_INFO_IMG]
 
 Start
 ---------------
-To start **Cloud Commander** only one command needed:
-    
-    node cloudcmd
-or if you install with `-g` flag just type:
+To start **Cloud Commander** change directory to `node_modules/cloudcmd` and
+run command:
+
+    node bin/cloudcmd
+
+or if you install with `-g` flag just type in any directory:
 
     cloudcmd
 
@@ -394,6 +404,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.07.18*, **[v1.1.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.1.1.zip)**
 - *2014.07.10*, **[v1.1.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.1.0.zip)**
 - *2014.07.03*, **[v1.0.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.0.0.zip)**
 - *2014.06.16*, **[v0.9.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v0.9.2.zip)**
