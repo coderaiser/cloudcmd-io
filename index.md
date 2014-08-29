@@ -12,7 +12,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v1.1.1
+Cloud Commander v1.2.0
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
@@ -67,11 +67,26 @@ or if you install with `-g` flag just type in any directory:
 
     cloudcmd
 
-Cloud Commander reads port information from config file `json/config.json` and start server
-on default port (`8000`), if none of port variables (`cloud9`, `cloudfoundry` and `nodester`) isn't exist.
-To start work type in address bar of your browser:
+Cloud Commander supports command line parameters:
 
-    http://127.0.0.1:8000
+|Parameter              |Operation
+|:----------------------|:--------------------------------------------
+| `-h, --help`          | display help and exit
+| `-v, --version`       | output version information and exit
+| `-p, --port`          | set port number and start
+
+If no parameters given Cloud Commander reads information from `json/config.json` and use
+port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
+
+To begin use, type in address bar of your browser:
+
+    http://localhost:<port>
+
+
+With default settings it would be:
+    
+    http://localhost:8000
+
 
 Update
 ---------------
@@ -81,7 +96,8 @@ Update is doing automagically but it could be done also manualy.
 If you cloned repository you could get last changes with:
 
     git pull
-
+    npm i
+    
 If you installed Cloud Commander with `npm` just re-install it:
 
     npm i cloudcmd -g
@@ -109,6 +125,10 @@ Hot keys
 | `*`                   | select/unselect all
 | `+`                   | expand selection
 | `-`                   | shrink selection
+| `Ctrl + x`            | cut to buffer
+| `Ctrl + с`            | copy to buffer
+| `Ctrl + v`            | paste from buffer
+| `Ctrl + z`            | clear buffer
 | `Ctrl + r`            | refresh
 | `Ctrl + d`            | clear local storage
 | `Alt  + q`            | disable key bindings
@@ -200,10 +220,13 @@ Right mouse click button shows context menu with items:
 - Delete
 - Zip file
 - Unzip file
-- (Un)Select All
 - Upload to (Dropbox, Github, GDrive, FilePicker)
 - Download
 - New (File, Dir, from FilePicker)
+- Cut
+- Copy
+- Paste
+- (Un)Select All
 
 ###Hot keys
 |Key                    |Operation
@@ -220,24 +243,24 @@ All main configuration could be done via `json/config.json`.
     "auth"              : false,    /* enable http authentication               */
     "username"          : "root",   /* username for authentication              */
     "password"          : "toor",   /* password hash in sha-1 for authentication*/
-    "appCache"          : false,    /* cache files for offline use              */
     "analytics"         : true,     /* google analytics support                 */
     "diff"              : true,     /* when save - send patch, not whole file   */
     "zip"               : true,     /* zip text before send / unzip before save */
     "notifications"     : false,    /* show notifications when tab is not active*/
     "localStorage"      : true,     /* cache directory data                     */
-    "minify"            : true      /* minification of js,css,html and img      */
+    "buffer"            : true,     /* buffer for copying files                 */
+    "dirStorage"        : true,     /* store directory listing to localStorage  */
+    "minify"            : true,     /* minification of js,css,html and img      */
     "online"            : true,     /* load js files from cdn or local path     */
     "cache"             : true,     /* add cache-control                        */
     "logs"              : false,    /* logs or console ouput                    */
     "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
     "server"            : true,     /* server mode or testing mode              */
-    "socket"            : true      /* enable web sockets                       */
+    "socket"            : true,     /* enable web sockets                       */
     "port"              : 8000,     /* http port                                */
     "sslPort"           : 443,      /* https port                               */
     "ip"                : null,     /* ip or null(default)                      */
     "ssl"               : false     /* should use https?                        */
-    "rest"              : true      /* enable rest interface                    */
 }
 ```
 
@@ -401,6 +424,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.08.29*, **[v1.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.2.0.zip)**
 - *2014.07.18*, **[v1.1.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.1.1.zip)**
 - *2014.07.10*, **[v1.1.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.1.0.zip)**
 - *2014.07.03*, **[v1.0.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.0.0.zip)**
