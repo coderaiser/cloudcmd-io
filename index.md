@@ -12,7 +12,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v1.2.0
+Cloud Commander v1.3.0
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
@@ -23,7 +23,7 @@ Cloud Commander v1.2.0
 [JitSu_LIVE_IMG]:           https://status-ok.cloudcmd.io/host/cloudcmd.jit.su/img/txt.png "JitSu"
 [HEROKU_LIVE_IMG]:          https://status-ok.cloudcmd.io/host/cloudcmd.herokuapp.com/img/txt.png "Heroku"
 
-**Cloud Commander** web based orthodox file manager with console and editor. Will help you manage the server and work with files, folders and programs in browser from any computer, mobile or tablet device.
+**Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, folders and programs in browser from any computer, mobile or tablet device.
 
 ![Cloud Commander](/img/logo/cloudcmd.png "Cloud Commander")
 
@@ -132,7 +132,7 @@ Hot keys
 | `Ctrl + r`            | refresh
 | `Ctrl + d`            | clear local storage
 | `Alt  + q`            | disable key bindings
-| `Alt  + s`            | get all key bindings back
+| `Alt  + s`            | enable key bindings
 | `Ctrl + a`            | select all files in a panel
 | `Up`, `Down`, `Enter` | filesystem navigation
 | `Ctrl + \`            | go to the root directory
@@ -218,8 +218,8 @@ Right mouse click button shows context menu with items:
 - Edit
 - Rename
 - Delete
-- Zip file
-- Unzip file
+- Pack
+- Unpack
 - Upload to (Dropbox, Github, GDrive, FilePicker)
 - Download
 - New (File, Dir, from FilePicker)
@@ -253,14 +253,11 @@ All main configuration could be done via `json/config.json`.
     "minify"            : true,     /* minification of js,css,html and img      */
     "online"            : true,     /* load js files from cdn or local path     */
     "cache"             : true,     /* add cache-control                        */
-    "logs"              : false,    /* logs or console ouput                    */
     "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
     "server"            : true,     /* server mode or testing mode              */
     "socket"            : true,     /* enable web sockets                       */
     "port"              : 8000,     /* http port                                */
-    "sslPort"           : 443,      /* https port                               */
     "ip"                : null,     /* ip or null(default)                      */
-    "ssl"               : false     /* should use https?                        */
 }
 ```
 
@@ -424,6 +421,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.09.18*, **[v1.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.0.zip)**
 - *2014.08.29*, **[v1.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.2.0.zip)**
 - *2014.07.18*, **[v1.1.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.1.1.zip)**
 - *2014.07.10*, **[v1.1.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.1.0.zip)**
