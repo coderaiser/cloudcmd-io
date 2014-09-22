@@ -1,18 +1,4 @@
----
-layout: default
-sitemap: false
-lang:
- - name: English
-   link: http://cloudcmd.io
- 
- - name: Ukrainian
-   link: http://ua.cloudcmd.io
- 
- - name: Russian
-   link: http://ru.cloudcmd.io
----
-
-Cloud Commander v1.3.0
+Cloud Commander v1.3.1
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
@@ -255,7 +241,6 @@ All main configuration could be done via `json/config.json`.
     "cache"             : true,     /* add cache-control                        */
     "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
     "server"            : true,     /* server mode or testing mode              */
-    "socket"            : true,     /* enable web sockets                       */
     "port"              : 8000,     /* http port                                */
     "ip"                : null,     /* ip or null(default)                      */
 }
@@ -421,6 +406,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.09.22*, **[v1.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.1.zip)**
 - *2014.09.18*, **[v1.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.0.zip)**
 - *2014.08.29*, **[v1.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.2.0.zip)**
 - *2014.07.18*, **[v1.1.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.1.1.zip)**
