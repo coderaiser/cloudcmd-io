@@ -1,3 +1,17 @@
+---
+layout: default
+sitemap: false
+lang:
+ - name: English
+   link: http://cloudcmd.io
+ 
+ - name: Ukrainian
+   link: http://ua.cloudcmd.io
+ 
+ - name: Russian
+   link: http://ru.cloudcmd.io
+---
+
 Cloud Commander v1.3.1
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
