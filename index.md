@@ -12,7 +12,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v1.3.1
+Cloud Commander v1.3.2
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
@@ -90,14 +90,6 @@ With default settings it would be:
 
 Update
 ---------------
-**Cloud Commander** is very often updated.
-
-Update is doing automagically but it could be done also manualy.
-If you cloned repository you could get last changes with:
-
-    git pull
-    npm i
-    
 If you installed Cloud Commander with `npm` just re-install it:
 
     npm i cloudcmd -g
@@ -220,6 +212,7 @@ Right mouse click button shows context menu with items:
 - Delete
 - Pack
 - Unpack
+- Upload
 - Upload to (Dropbox, Github, GDrive, FilePicker)
 - Download
 - New (File, Dir, from FilePicker)
@@ -420,6 +413,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.10.2*, **[v1.3.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.2.zip)**
 - *2014.09.22*, **[v1.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.1.zip)**
 - *2014.09.18*, **[v1.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.0.zip)**
 - *2014.08.29*, **[v1.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.2.0.zip)**
