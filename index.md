@@ -58,6 +58,7 @@ npm i cloudcmd -g
 Start
 ---------------
 For starting just type in console:
+
 ```sh
 cloudcmd
 ```
@@ -74,11 +75,13 @@ If no parameters given Cloud Commander reads information from `~/.cloudcmd.json`
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
 
 To begin use, type in address bar of your browser:
+
 ```
 http://localhost:<port>
 ```
 
 With default settings it would be:
+
 ```
 http://localhost:8000
 ```
