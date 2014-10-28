@@ -12,7 +12,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v1.3.2
+Cloud Commander v1.4.0
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
@@ -20,8 +20,8 @@ Cloud Commander v1.3.2
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
 [JitSuURL]:                 http://cloudcmd.jit.su "JitSu"
 [HerokuURL]:                http://cloudcmd.herokuapp.com/ "Heroku"
-[JitSu_LIVE_IMG]:           https://status-ok.cloudcmd.io/host/cloudcmd.jit.su/img/txt.png "JitSu"
-[HEROKU_LIVE_IMG]:          https://status-ok.cloudcmd.io/host/cloudcmd.herokuapp.com/img/txt.png "Heroku"
+[JitSu_LIVE_IMG]:           https://status-io.cloudcmd.io/host/cloudcmd.jit.su/img/txt.png "JitSu"
+[HEROKU_LIVE_IMG]:          https://status-io.cloudcmd.io/host/cloudcmd.herokuapp.com/img/txt.png "Heroku"
 
 **Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, folders and programs in browser from any computer, mobile or tablet device.
 
@@ -50,22 +50,17 @@ The installation of file manager is very simple.
 - install ```cloudcmd``` via ```npm``` with:
 
 ```sh
-npm install cloudcmd    #local install or
-npm install cloudcmd -g #global install
+npm i cloudcmd -g
 ```
 
 ![NPM_INFO][NPM_INFO_IMG]
 
 Start
 ---------------
-To start **Cloud Commander** change directory to `node_modules/cloudcmd` and
-run command:
-
-    node bin/cloudcmd
-
-or if you install with `-g` flag just type in any directory:
-
-    cloudcmd
+For starting just type in console:
+```sh
+cloudcmd
+```
 
 Cloud Commander supports command line parameters:
 
@@ -75,26 +70,29 @@ Cloud Commander supports command line parameters:
 | `-v, --version`       | output version information and exit
 | `-p, --port`          | set port number and start
 
-If no parameters given Cloud Commander reads information from `json/config.json` and use
+If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
 
 To begin use, type in address bar of your browser:
-
-    http://localhost:<port>
-
+```
+http://localhost:<port>
+```
 
 With default settings it would be:
-    
-    http://localhost:8000
-
+```
+http://localhost:8000
+```
 
 Update
 ---------------
-If you installed Cloud Commander with `npm` just re-install it:
+If you installed Cloud Commander with `npm`, stop application and
+re-install it:
 
-    npm i cloudcmd -g
+```sh
+npm i cloudcmd -g
+```
 
-After that clear cache of your browser, restart application and reload page.
+Then start it again, clear cache of your browser and reload page.
 
 Hot keys
 ---------------
@@ -123,8 +121,6 @@ Hot keys
 | `Ctrl + z`            | clear buffer
 | `Ctrl + r`            | refresh
 | `Ctrl + d`            | clear local storage
-| `Alt  + q`            | disable key bindings
-| `Alt  + s`            | enable key bindings
 | `Ctrl + a`            | select all files in a panel
 | `Up`, `Down`, `Enter` | filesystem navigation
 | `Ctrl + \`            | go to the root directory
@@ -161,9 +157,10 @@ Edit
 
 ### Features
 - Syntax highlighting based on extension of file for over 110 languages.
-- Build in `emmet` (for html files)
+- Built-in `emmet` (for html files)
 - Drag n drop (drag file from desktop to editor).
-- Build in `jshint` (with options in `.jshintrc` file)
+- Built-in `jshint` (with options in `.jshintrc` file)
+- Built-in `beautifier` (with options in `json/beautify.json`, could be overriden in `~/.beautify.json`)
 - Configurable options (could be edited in `json/edit.json`)
 
 ###Hot keys
@@ -174,6 +171,8 @@ Edit
 | `Ctrl + f`            | find
 | `Ctrl + h`            | replace
 | `Ctrl + g`            | go to line
+| `Ctrl + b`            | beautify js, css or html
+| `Ctrl + m`            | minify js, css or html
 | `Esc`                 | close
 
 For more details see [Ace keyboard shortcuts](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts "Ace keyboard shortcuts").
@@ -191,15 +190,42 @@ Console
 | `Ctrl + l`            | clear
 | `Esc`                 | close
 
+For more details see [Jq-console keyboard shortcuts](https://github.com/replit/jq-console#default-key-config).
+
 Config
 ---------------
-![Console](/img/screen/config.png "Config")
+![Config](/img/screen/config.png "Config")
 
 ###Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F10`                 | open
 | `Esc`                 | close
+
+When you change one of options file `~/.cloudcmd.json` would be saved.
+It could be edited manually with any text editor.
+Here is description of options:
+
+```js
+{
+    "auth"              : false,    /* enable http authentication               */
+    "username"          : "root",   /* username for authentication              */
+    "password"          : "toor",   /* password hash in sha-1 for authentication*/
+    "analytics"         : true,     /* google analytics support                 */
+    "diff"              : true,     /* when save - send patch, not whole file   */
+    "zip"               : true,     /* zip text before send / unzip before save */
+    "notifications"     : false,    /* show notifications when tab is not active*/
+    "localStorage"      : true,     /* cache directory data                     */
+    "buffer"            : true,     /* buffer for copying files                 */
+    "dirStorage"        : true,     /* store directory listing to localStorage  */
+    "minify"            : true,     /* minification of js,css,html and img      */
+    "online"            : true,     /* load js files from cdn or local path     */
+    "cache"             : true,     /* add cache-control                        */
+    "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
+    "port"              : 8000,     /* http port                                */
+    "ip"                : null,     /* ip or null(default)                      */
+}
+```
 
 Menu
 ---------------
@@ -226,45 +252,6 @@ Right mouse click button shows context menu with items:
 |:----------------------|:--------------------------------------------
 | `F9`                  | open
 | `Esc`                 | close
-
-Configuration
----------------
-All main configuration could be done via `json/config.json`.
-
-```js
-{
-    "auth"              : false,    /* enable http authentication               */
-    "username"          : "root",   /* username for authentication              */
-    "password"          : "toor",   /* password hash in sha-1 for authentication*/
-    "analytics"         : true,     /* google analytics support                 */
-    "diff"              : true,     /* when save - send patch, not whole file   */
-    "zip"               : true,     /* zip text before send / unzip before save */
-    "notifications"     : false,    /* show notifications when tab is not active*/
-    "localStorage"      : true,     /* cache directory data                     */
-    "buffer"            : true,     /* buffer for copying files                 */
-    "dirStorage"        : true,     /* store directory listing to localStorage  */
-    "minify"            : true,     /* minification of js,css,html and img      */
-    "online"            : true,     /* load js files from cdn or local path     */
-    "cache"             : true,     /* add cache-control                        */
-    "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
-    "server"            : true,     /* server mode or testing mode              */
-    "port"              : 8000,     /* http port                                */
-    "ip"                : null,     /* ip or null(default)                      */
-}
-```
-
-If you had changed **config** and want to keep updating via git,
-you should execute next command in root directory of **Cloud Commander**:
-
-```
-git update-index --assume-unchanged json/config.json
-```
-
-To get back to tracking:
-
-```
-git update-index --no-assume-unchanged json/config.json
-```
 
 Server
 ---------------
@@ -380,7 +367,7 @@ To extend capabilities of file manager next modules used:
 - [Diff-Match-Patch]        [Diff-Match-PatchURL]
 - [Minify]                  [MinifyURL]
 - [FancyBox]                [FancyBoxURL]
-- [jq-console]              [jq-consoleURL]
+- [console-io]              [console-ioURL]
 - [github]                  [githubURL]
 - [dropbox-js]              [dropbox-jsURL]
 - [jquery]                  [jqueryURL]
@@ -393,7 +380,7 @@ To extend capabilities of file manager next modules used:
 [Diff-Match-PatchURL]:      https://code.google.com/p/google-diff-match-patch/ "Diff-Match-Patch"
 [MinifyURL]:                http://coderaiser.github.io/minify "Minify"
 [FancyBoxURL]:              //github.com/fancyapps/fancyBox "FancyBox"
-[jq-consoleURL]:            //github.com/replit/jq-console "jq-console"
+[console-ioURL]:            //github.com/cloudcmd/console "console-io"
 [githubURL]:                //github.com/michael/github "github"
 [dropbox-jsURL]:            //github.com/dropbox/dropbox-js "dropbox-js"
 [jqueryURL]:                //jquery.com
@@ -413,6 +400,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.10.28*, **[v1.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.4.0.zip)**
 - *2014.10.02*, **[v1.3.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.2.zip)**
 - *2014.09.22*, **[v1.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.1.zip)**
 - *2014.09.18*, **[v1.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.0.zip)**
