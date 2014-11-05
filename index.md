@@ -1,18 +1,4 @@
----
-layout: default
-sitemap: false
-lang:
- - name: English
-   link: http://cloudcmd.io
- 
- - name: Ukrainian
-   link: http://ua.cloudcmd.io
- 
- - name: Russian
-   link: http://ru.cloudcmd.io
----
-
-Cloud Commander v1.4.0
+Cloud Commander v1.4.1
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://camo.githubusercontent.com/254a020afe689842501ef5a79c04ba909f9b29d2/68747470733a2f2f6e6f6465692e636f2f6e706d2f636c6f7564636d642e706e673f646f776e6c6f6164733d7472756526267374617273 "npm install cloudcmd"
@@ -214,7 +200,6 @@ Here is description of options:
     "auth"              : false,    /* enable http authentication               */
     "username"          : "root",   /* username for authentication              */
     "password"          : "toor",   /* password hash in sha-1 for authentication*/
-    "analytics"         : true,     /* google analytics support                 */
     "diff"              : true,     /* when save - send patch, not whole file   */
     "zip"               : true,     /* zip text before send / unzip before save */
     "notifications"     : false,    /* show notifications when tab is not active*/
@@ -403,6 +388,7 @@ Getting dev version of **Cloud Commander**:
 
 Version history
 ---------------
+- *2014.11.05*, **[v1.4.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.4.1.zip)**
 - *2014.10.28*, **[v1.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.4.0.zip)**
 - *2014.10.02*, **[v1.3.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.2.zip)**
 - *2014.09.22*, **[v1.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.3.1.zip)**
