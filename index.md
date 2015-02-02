@@ -12,16 +12,16 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v2.0.0
+Cloud Commander v2.1.0
 ===============
 ###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
-[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars "npm install cloudcmd"
+[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
 [MainURL]:                  http://cloudcmd.io "Main"
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
 [JitSuURL]:                 http://cloudcmd.jit.su "JitSu"
 [HerokuURL]:                http://cloudcmd.herokuapp.com/ "Heroku"
-[JitSu_LIVE_IMG]:           http://status-io.cloudcmd.io/host/cloudcmd.jit.su/img/txt.png "JitSu"
-[HEROKU_LIVE_IMG]:          http://status-io.cloudcmd.io/host/cloudcmd.herokuapp.com/img/txt.png "Heroku"
+[JitSu_LIVE_IMG]:           https://status-io.cloudcmd.io/host/cloudcmd.jit.su/img/txt.png "JitSu"
+[HEROKU_LIVE_IMG]:          https://status-io.cloudcmd.io/host/cloudcmd.herokuapp.com/img/txt.png "Heroku"
 
 **Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, folders and programs in browser from any computer, mobile or tablet device.
 
@@ -46,7 +46,7 @@ Install
 
 The installation of file manager is very simple.
 
-- install [node.js](http://nodejs.org/ "node.js") if you still have not.
+- install [node.js](http://nodejs.org/ "node.js") or [io.js](https://iojs.org/ "io.js") if you still have not.
 - install ```cloudcmd``` via ```npm``` with:
 
 ```sh
@@ -158,27 +158,13 @@ Edit
 ---------------
 ![Edit](/img/screen/edit.png "Edit")
 
-### Features
-- Syntax highlighting based on extension of file for over 110 languages.
-- Built-in `emmet` (for html files)
-- Drag n drop (drag file from desktop to editor).
-- Built-in `jshint` (with options in `.jshintrc` file)
-- Built-in `beautifier` (with options in `json/beautify.json`, could be overriden in `~/.beautify.json`)
-- Configurable options (could be edited in `json/edit.json`)
-
 ###Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
-|`F4`                   | open
-| `Ctrl + s`            | save
-| `Ctrl + f`            | find
-| `Ctrl + h`            | replace
-| `Ctrl + g`            | go to line
-| `Ctrl + b`            | beautify js, css or html
-| `Ctrl + m`            | minify js, css or html
+| `F4`                  | open
 | `Esc`                 | close
 
-For more details see [Ace keyboard shortcuts](https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts "Ace keyboard shortcuts").
+For more details see [edward hot keys](https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys").
 
 Console
 ---------------
@@ -189,11 +175,9 @@ Console
 |:----------------------|:--------------------------------------------
 | `~`                   | open
 | `Ctrl + p`            | paste path of current directory
-| `Ctrl + z`            | cancel current prompt
-| `Ctrl + l`            | clear
 | `Esc`                 | close
 
-For more details see [Jq-console keyboard shortcuts](https://github.com/replit/jq-console#default-key-config).
+For more details see [console hot keys](https://github.com/cloudcmd/console#hot-keys "Console Hot Keys).
 
 Config
 ---------------
@@ -358,6 +342,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.02.02*, **[v2.1.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.1.0.zip)**
 - *2014.12.09*, **[v2.0.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.0.0.zip)**
 - *2014.11.21*, **[v1.5.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.5.1.zip)**
 - *2014.11.19*, **[v1.5.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.5.0.zip)**
