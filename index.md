@@ -12,9 +12,9 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v2.1.0
+Cloud Commander v2.2.0
 ===============
-###[Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
+### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
 [MainURL]:                  http://cloudcmd.io "Main"
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
@@ -47,6 +47,7 @@ Install
 The installation of file manager is very simple.
 
 - install [node.js](http://nodejs.org/ "node.js") or [io.js](https://iojs.org/ "io.js") if you still have not.
+- install [bower](http://bower.io "Bower") and [git](http://git-scm.com "Git") ([How to install Git on Windows](https://github.com/bower/bower#windows-users "How to install Git on Windows"))
 - install ```cloudcmd``` via ```npm``` with:
 
 ```sh
@@ -77,12 +78,6 @@ port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't
 To begin use, type in address bar of your browser:
 
 ```
-http://localhost:<port>
-```
-
-With default settings it would be:
-
-```
 http://localhost:8000
 ```
 
@@ -109,7 +104,7 @@ Hot keys
 | `F4`                  | edit
 | `F5`                  | copy
 | `F6`                  | rename/move
-| `F7`                  | new dir
+| `F7`                  | new directory
 | `Shift + F7`          | new file
 | `F8`, `Delete`        | remove
 | `Shift + Delete`      | remove without prompt
@@ -125,7 +120,7 @@ Hot keys
 | `Ctrl + r`            | refresh
 | `Ctrl + d`            | clear local storage
 | `Ctrl + a`            | select all files in a panel
-| `Up`, `Down`, `Enter` | filesystem navigation
+| `Up`, `Down`, `Enter` | file system navigation
 | `Ctrl + \`            | go to the root directory
 | `Tab`                 | move via panels
 | `Page Up`             | up on one page
@@ -148,7 +143,7 @@ View
 - Playing audio.
 - Playing video.
 
-###Hot keys
+### Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F3`                  | open
@@ -158,19 +153,19 @@ Edit
 ---------------
 ![Edit](/img/screen/edit.png "Edit")
 
-###Hot keys
+### Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F4`                  | open
 | `Esc`                 | close
 
-For more details see [edward hot keys](https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys").
+For more details see [Edward hot keys](https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys").
 
 Console
 ---------------
 ![Console](/img/screen/console.png "Console")
 
-###Hot keys
+### Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `~`                   | open
@@ -183,7 +178,7 @@ Config
 ---------------
 ![Config](/img/screen/config.png "Config")
 
-###Hot keys
+### Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F10`                 | open
@@ -198,6 +193,7 @@ Here is description of options:
     "auth"              : false,    /* enable http authentication               */
     "username"          : "root",   /* username for authentication              */
     "password"          : "toor",   /* password hash in sha-1 for authentication*/
+    "editor"            : "edward", /* default, could be "dword" or "edward"    */
     "diff"              : true,     /* when save - send patch, not whole file   */
     "zip"               : true,     /* zip text before send / unzip before save */
     "notifications"     : false,    /* show notifications when tab is not active*/
@@ -227,13 +223,13 @@ Right mouse click button shows context menu with items:
 - Upload
 - Upload to (Dropbox, Github, GDrive, FilePicker)
 - Download
-- New (File, Dir, from FilePicker)
+- New (File, Directory, from FilePicker)
 - Cut
 - Copy
 - Paste
 - (Un)Select All
 
-###Hot keys
+### Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F9`                  | open
@@ -245,7 +241,7 @@ Standard practices say no non-root process gets to talk to
 the Internet on a port less than 1024. Anyway I suggest you
 to start Cloud Commander as non-root. How it could be solved?
 There is a couple easy and fast ways. One of them is port forwarding.
-###Iptables
+### Iptables
 Just run `shell/addtables.sh` for default options.
 
 ```sh
@@ -270,8 +266,8 @@ iptables -t nat -D PREROUTING 2
 iptables -t nat -D PREROUTING 1
 ```
 
-###nginx
-Get [nginx](http://nginx.org/ "nginx"). On linux it could be done this way:
+### nginx
+Get [nginx](http://nginx.org/ "nginx"). On Linux it could be done this way:
 
 ```sh
 sudo apt-get install nginx #for ubuntu and debian
@@ -292,7 +288,7 @@ server {
 }
 ```
 
-If you want add **ssl**, add a couple lines to server block:
+If you want add **SSL**, add a couple lines to server block:
 
 ```sh
 server {
@@ -309,7 +305,7 @@ server {
 }
 ```
 
-For websocket support (nginx >= v1.3.13) modify server block:
+For WebSocket support (nginx >= v1.3.13) modify server block:
 
 ```sh
     location / {
@@ -342,6 +338,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.03.13*, **[v2.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.2.0.zip)**
 - *2015.02.02*, **[v2.1.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.1.0.zip)**
 - *2014.12.09*, **[v2.0.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.0.0.zip)**
 - *2014.11.21*, **[v1.5.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v1.5.1.zip)**
