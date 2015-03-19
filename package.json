@@ -6,7 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "npm run head && npm run update",
     "update" : "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/master/HELP.md >> index.md",
-    "head"  : "cat head.md > index.md"
+    "head" : "cat head.md > index.md",
+    "commit": "git commit -am 'docs(index) update'",
+    "push" : "git push origin gh-pages",
+    "publish": "npm run release && npm run commit && npm run push"
   },
   "repository": {
     "type": "git",
