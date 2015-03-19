@@ -1,0 +1,24 @@
+{
+  "name": "cloudcmd-io",
+  "private": true,
+  "description": "io",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm run head && npm run update",
+    "update" : "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/master/HELP.md >> index.md",
+    "head"  : "cat head.md > index.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudcmd/ru.git"
+  },
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cloudcmd/ru/issues"
+  },
+  "homepage": "https://github.com/cloudcmd/ru",
+  "devDependencies": {
+  },
+  "dependencies": {}
+}
