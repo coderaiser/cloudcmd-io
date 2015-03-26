@@ -12,7 +12,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v2.2.1
+Cloud Commander v2.3.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -74,7 +74,15 @@ Cloud Commander supports command line parameters:
 |:----------------------|:--------------------------------------------
 | `-h, --help`          | display help and exit
 | `-v, --version`       | output version information and exit
-| `-p, --port`          | set port number and start
+| `-s, --save`          | save options
+| `-o, --online`        | load scripts from remote servers
+| `-a, --auth`          | enable authorization
+| `-p, --port`          | set port number
+| `-u, --username`      | set username
+| `-ps, --password`     | set password
+| `--no-auth`            | disable authorization
+| `--no-server`         | do not start server
+| `--no-online`         | load scripts from remote servers
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -197,6 +205,7 @@ Here is description of options:
     "auth"              : false,    /* enable http authentication               */
     "username"          : "root",   /* username for authentication              */
     "password"          : "toor",   /* password hash in sha-1 for authentication*/
+    "algo"              : "sha512WithRSAEncryption", /* cryptographic algorithm */
     "editor"            : "edward", /* default, could be "dword" or "edward"    */
     "diff"              : true,     /* when save - send patch, not whole file   */
     "zip"               : true,     /* zip text before send / unzip before save */
@@ -342,6 +351,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.03.26*, **[v2.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.3.0.tar.gz)**
 - *2015.03.19*, **[v2.2.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.2.1.zip)**
 - *2015.03.13*, **[v2.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.2.0.zip)**
 - *2015.02.02*, **[v2.1.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.1.0.zip)**
