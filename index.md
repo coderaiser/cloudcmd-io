@@ -12,7 +12,7 @@ lang:
    link: http://ru.cloudcmd.io
 ---
 
-Cloud Commander v2.3.1
+Cloud Commander v2.4.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -51,7 +51,6 @@ Install
 The installation of file manager is very simple.
 
 - install [node.js](http://nodejs.org/ "node.js") or [io.js](https://iojs.org/ "io.js") if you still have not.
-- install [bower](http://bower.io "Bower") and [git](http://git-scm.com "Git") ([How to install Git on Windows](https://github.com/bower/bower#windows-users "How to install Git on Windows"))
 - install ```cloudcmd``` via ```npm``` with:
 
 ```sh
@@ -77,10 +76,10 @@ Cloud Commander supports command line parameters:
 | `-s, --save`          | save options
 | `-o, --online`        | load scripts from remote servers
 | `-a, --auth`          | enable authorization
-| `-p, --port`          | set port number
 | `-u, --username`      | set username
-| `-ps, --password`     | set password
-| `--no-auth`            | disable authorization
+| `-p, --password`      | set password
+| `--port`              | set port number
+| `--no-auth`           | disable authorization
 | `--no-server`         | do not start server
 | `--no-online`         | load scripts from remote servers
 
@@ -351,6 +350,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.03.28*, **[v2.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.4.0.tar.gz)**
 - *2015.03.26*, **[v2.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.3.1.tar.gz)**
 - *2015.03.26*, **[v2.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.3.0.tar.gz)**
 - *2015.03.19*, **[v2.2.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.2.1.zip)**
