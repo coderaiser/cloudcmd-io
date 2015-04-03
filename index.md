@@ -406,8 +406,4 @@ Special Thanks
     - config template and style;
     - change order of directories and files;
     - add ability do not hide path and header when files are scrolling;
-
-
-<div style="padding:20px; font-family:arial; font-weight:bold; font-size:20px;
-
-color:darkred;">Sorry, no Host found</div>
+ 
