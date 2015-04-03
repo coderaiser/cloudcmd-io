@@ -9,7 +9,7 @@
     "head" : "cat head.md > index.md",
     "commit": "git add --all && git commit -m 'docs(index) update'",
     "push" : "git push origin gh-pages",
-    "publish": "npm run release && npm run commit && npm run push"
+    "publish": "npm run commit && npm run push"
   },
   "repository": {
     "type": "git",
