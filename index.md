@@ -10,6 +10,8 @@ lang:
  
  - name: Russian
    link: http://ru.cloudcmd.io
+
+hideDownloadButtons: true
 ---
 
 Cloud Commander v2.4.2

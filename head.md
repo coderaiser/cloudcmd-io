@@ -10,5 +10,7 @@ lang:
  
  - name: Russian
    link: http://ru.cloudcmd.io
+
+hideDownloadButtons: true
 ---
 
