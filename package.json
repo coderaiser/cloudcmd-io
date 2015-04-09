@@ -1,15 +1,17 @@
 {
   "name": "cloudcmd-io",
+  "version": "2.5.0",
   "private": true,
+  "changelog": false,
+  "release": false,
+  "branch": "gh-pages",
   "description": "io",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "npm run head && npm run update",
-    "update" : "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/master/HELP.md >> index.md",
-    "head" : "cat head.md > index.md",
-    "commit": "git add --all && git commit -m 'docs(index) update'",
-    "push" : "git push origin gh-pages",
-    "publish": "npm run commit && npm run push"
+    "update": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/master/HELP.md >> index.md",
+    "head": "cat head.md > index.md",
+    "wisdom": "npm run release"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,6 @@
     "url": "https://github.com/cloudcmd/ru/issues"
   },
   "homepage": "https://github.com/cloudcmd/ru",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {}
 }
