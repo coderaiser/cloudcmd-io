@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v2.5.1
+Cloud Commander v2.6.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -81,11 +81,14 @@ Cloud Commander supports command line parameters:
 | `-u, --username`      | set username
 | `-p, --password`      | set password
 | `-c, --config`        | configuration file path
+| `--editor`            | set editor: "dword" or "edward"
 | `--root`              | set root directory
 | `--port`              | set port number
 | `--no-auth`           | disable authorization
 | `--no-server`         | do not start server
 | `--no-online`         | load scripts from local server
+| `--minify`            | enable minification
+| `--no-minify`         | disable minification
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -355,6 +358,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.04.17*, **[v2.6.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.6.0.tar.gz)**
 - *2015.04.14*, **[v2.5.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.5.1.tar.gz)**
 - *2015.04.09*, **[v2.5.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.5.0.tar.gz)**
 - *2015.04.03*, **[v2.4.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.4.2.tar.gz)**
