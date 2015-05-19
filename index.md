@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v2.9.0
+Cloud Commander v2.9.1
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -258,6 +258,13 @@ Right mouse click button shows context menu with items:
 | `F9`                  | open
 | `Esc`                 | close
 
+One panel mode
+---------------
+Cloud Commander could work in one panel mode when screen size can not accommodate second panel.
+It could happen when mobile device, tablet or small window size used to work with file manager.
+
+![One panel mode](/img/screen/one-panel-mode.png "One panel mode")
+
 Server
 ---------------
 Standard practices say no non-root process gets to talk to
@@ -361,6 +368,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.05.19*, **[v2.9.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.9.1.tar.gz)**
 - *2015.05.15*, **[v2.9.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.9.0.tar.gz)**
 - *2015.05.14*, **[v2.8.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.8.0.tar.gz)**
 - *2015.04.24*, **[v2.7.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v2.7.1.tar.gz)**
