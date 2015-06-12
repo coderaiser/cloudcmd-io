@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v3.1.4
+Cloud Commander v3.2.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -254,6 +254,7 @@ Right mouse click button shows context menu with items:
 - Copy
 - Paste
 - (Un)Select All
+- Log Out (available when the `authorization` is enabled)
 
 ### Hot keys
 |Key                    |Operation
@@ -371,6 +372,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.06.12*, **[v3.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.2.0.tar.gz)**
 - *2015.06.11*, **[v3.1.4](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.1.4.tar.gz)**
 - *2015.06.11*, **[v3.1.3](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.1.3.tar.gz)**
 - *2015.06.10*, **[v3.1.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.1.2.tar.gz)**
