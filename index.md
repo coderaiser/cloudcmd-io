@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v3.3.0
+Cloud Commander v3.4.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -224,7 +224,7 @@ Here is description of options:
     "localStorage"      : true,     /* local storage                            */
     "buffer"            : true,     /* buffer for copying files                 */
     "dirStorage"        : true,     /* store directory listing to localStorage  */
-    "minify"            : true,     /* minification of js,css,html and img      */
+    "minify"            : false,    /* minification of js,css,html and img      */
     "online"            : true,     /* load js files from cdn or local path     */
     "cache"             : true,     /* add cache-control                        */
     "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
@@ -268,6 +268,35 @@ Cloud Commander could work in one panel mode when screen size can not accommodat
 It could happen when mobile device, tablet or small window size used to work with file manager.
 
 ![One panel mode](/img/screen/one-panel-mode.png "One panel mode")
+
+Using as Middleware
+---------------
+
+Cloud Commander could be used as middleware for `node.js` applications based on [socket.io](http://socket.io "Socket.IO") and [express](http://expressjs.com "Express"):
+
+```js
+var http        = require('http'),
+    cloudcmd    = require('cloudcmd'),
+    express     = require('express'),
+    io          = require('socket.io'),
+    app         = express(),
+    
+    PORT        = 31337,
+    
+    server,
+    socket;
+    
+server = http.createServer(app);
+socket = io.listen(server);
+
+app.use(cloudcmd({
+    prefix: '/prefix',  /* base URL (optional)                                      */
+    socket: socket,     /* used by Config, Edit (optional) and Console (required)   */
+    config: {}          /* config data (optional)                                   */
+}));
+
+server.listen(PORT);
+```
 
 Server
 ---------------
@@ -372,6 +401,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.06.22*, **[v3.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.4.0.tar.gz)**
 - *2015.06.20*, **[v3.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.3.0.tar.gz)**
 - *2015.06.12*, **[v3.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.2.0.tar.gz)**
 - *2015.06.11*, **[v3.1.4](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.1.4.tar.gz)**
