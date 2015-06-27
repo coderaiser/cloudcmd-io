@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v3.4.0
+Cloud Commander v3.5.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -71,26 +71,26 @@ cloudcmd
 
 Cloud Commander supports command line parameters:
 
-|Parameter              |Operation
-|:--------------------------|:--------------------------------------------
-| `-h, --help`              | display help and exit
-| `-v, --version`           | display version and exit
-| `-s, --save`              | save configuration
-| `-o, --online`            | load scripts from remote servers
-| `-a, --auth`              | enable authorization
-| `-u, --username`          | set username
-| `-p, --password`          | set password
-| `-c, --config`            | configuration file path
-| `--editor`                | set editor: "dword" or "edward"
-| `--root`                  | set root directory
-| `--port`                  | set port number
-| `--no-auth`               | disable authorization
-| `--no-server`             | do not start server
-| `--no-online`             | load scripts from local server
-| `--minify`                | enable minification
-| `--no-minify`             | disable minification
-| `--progress-of-copying`   | show progress of copying
-| `--no-progress-of-copying`| do not show progress of copying
+|Parameter                      |Operation
+|:------------------------------|:------------------------------
+| `-h, --help`                  | display help and exit
+| `-v, --version`               | display version and exit
+| `-s, --save`                  | save configuration
+| `-o, --online`                | load scripts from remote servers
+| `-a, --auth`                  | enable authorization
+| `-u, --username`              | set username
+| `-p, --password`              | set password
+| `-c, --config`                | configuration file path
+| `--editor`                    | set editor: "dword" or "edward"
+| `--root`                      | set root directory
+| `--port`                      | set port number
+| `--no-auth`                   | disable authorization
+| `--no-server`                 | do not start server
+| `--no-online`                 | load scripts from local server
+| `--minify`                    | enable minification
+| `--no-minify`                 | disable minification
+| `--progress`                  | show progress of file operations
+| `--no-progress`               | do not show progress of file operations
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -231,7 +231,7 @@ Here is description of options:
     "port"              : 8000,     /* http port                                */
     "ip"                : null,     /* ip or null(default)                      */
     "root"              : "/"       /* root directory                           */
-    "progressOfCopying" : false     /* show progress of copying                 */
+    "progress"          : false     /* show progress of file operations         */
 }
 ```
 
@@ -281,7 +281,7 @@ var http        = require('http'),
     io          = require('socket.io'),
     app         = express(),
     
-    PORT        = 31337,
+    PORT        = 1337,
     
     server,
     socket;
@@ -290,7 +290,7 @@ server = http.createServer(app);
 socket = io.listen(server);
 
 app.use(cloudcmd({
-    prefix: '/prefix',  /* base URL (optional)                                      */
+    prefix: '/cloudcmd',/* base URL or function which returns base URL (optional)   */
     socket: socket,     /* used by Config, Edit (optional) and Console (required)   */
     config: {}          /* config data (optional)                                   */
 }));
@@ -401,6 +401,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.06.27*, **[v3.5.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.5.0.tar.gz)**
 - *2015.06.22*, **[v3.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.4.0.tar.gz)**
 - *2015.06.20*, **[v3.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.3.0.tar.gz)**
 - *2015.06.12*, **[v3.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v3.2.0.tar.gz)**
