@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v4.3.0
+Cloud Commander v4.3.1
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -85,12 +85,12 @@ Cloud Commander supports command line parameters:
 | `--root`                      | set root directory
 | `--prefix`                    | set url prefix
 | `--port`                      | set port number
-| `--no-auth`                   | disable authorization
-| `--no-server`                 | do not start server
-| `--no-online`                 | load scripts from local server
 | `--minify`                    | enable minification
-| `--no-minify`                 | disable minification
 | `--progress`                  | show progress of file operations
+| `--no-server`                 | do not start server
+| `--no-auth`                   | disable authorization
+| `--no-online`                 | load scripts from local server
+| `--no-minify`                 | disable minification
 | `--no-progress`               | do not show progress of file operations
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
@@ -231,7 +231,7 @@ Here is description of options:
     "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
     "port"              : 8000,     /* http port                                */
     "ip"                : null,     /* ip or null(default)                      */
-    "root"              : "/"       /* root directory                           */
+    "root"              : "/",      /* root directory                           */
     "prefix"            : "",       /* url prefix                               */
     "progress"          : true      /* show progress of file operations         */
 }
@@ -404,6 +404,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.08.13*, **[v4.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.3.1.tar.gz)**
 - *2015.08.11*, **[v4.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.3.0.tar.gz)**
 - *2015.07.24*, **[v4.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.2.0.tar.gz)**
 - *2015.07.23*, **[v4.1.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.1.2.tar.gz)**
