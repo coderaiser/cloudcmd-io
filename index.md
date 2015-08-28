@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v4.5.0
+Cloud Commander v4.5.1
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -248,13 +248,14 @@ Right mouse click button shows context menu with items:
 - Delete
 - Pack
 - Extract
-- Upload to (Dropbox, Github, GDrive, FilePicker)
+- Upload To Cloud
 - Download
 - Cut
 - Copy
 - Paste
-- New (File, Directory, from FilePicker)
+- New (File, Directory)
 - Upload
+- Upload From Cloud
 - (Un)Select All
 - Log Out (available when the `authorization` is enabled)
 
@@ -404,6 +405,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.08.28*, **[v4.5.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.5.1.tar.gz)**
 - *2015.08.26*, **[v4.5.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.5.0.tar.gz)**
 - *2015.08.25*, **[v4.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.4.0.tar.gz)**
 - *2015.08.21*, **[v4.3.5](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.3.5.tar.gz)**
