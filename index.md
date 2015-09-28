@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v4.5.7
+Cloud Commander v4.6.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -87,11 +87,13 @@ Cloud Commander supports command line parameters:
 | `--port`                      | set port number
 | `--minify`                    | enable minification
 | `--progress`                  | show progress of file operations
+| `--html-dialogs`              | show html dialogs
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
 | `--no-minify`                 | disable minification
 | `--no-progress`               | do not show progress of file operations
+| `--no-html-dialogs`           | do not use html dialogs
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -234,6 +236,7 @@ Here is description of options:
     "root"              : "/",      /* root directory                           */
     "prefix"            : "",       /* url prefix                               */
     "progress"          : true      /* show progress of file operations         */
+    "htmlDialogs"       : false     /* show html dialogs                        */
 }
 ```
 
@@ -405,6 +408,7 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 
 Version history
 ---------------
+- *2015.09.28*, **[v4.6.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.6.0.tar.gz)**
 - *2015.09.27*, **[v4.5.7](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.5.7.tar.gz)**
 - *2015.09.24*, **[v4.5.6](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.5.6.tar.gz)**
 - *2015.09.23*, **[v4.5.5](//github.com/cloudcmd/archive/raw/master/cloudcmd-v4.5.5.tar.gz)**
