@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v5.0.3
+Cloud Commander v5.0.4
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -28,6 +28,8 @@ Cloud Commander v5.0.3
 [DWORD]:                    https://github.com/cloudcmd/dword "Editor based on CodeMirror"
 [EDWARD]:                   https://github.com/cloudcmd/edward "Editor based on Ace"
 [EDWARD_KEYS]:              https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys"
+
+[Docker_URL]:                https://docker.io "Docker"
 
 **Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, directories and programs in browser from any computer, mobile or tablet.
 
@@ -412,8 +414,20 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 /etc/init.d/nginx restart
 ```
 
+Docker
+---------------
+`Cloud Commander` could be used as [docker][DOCKER_URL] container this way:
+
+```sh
+docker run -v ~:/root -v /:/mnt/fs -it -p 8000:8000 coderaiser/cloudcmd
+```
+
+Config would be read from home directory, hosts root file system would be mount to `/mnt/fs`,
+`8000` port would be exposed to hosts port. 
+
 Version history
 ---------------
+- *2015.12.26*, **[v5.0.4](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.0.4.tar.gz)**
 - *2015.12.08*, **[v5.0.3](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.0.3.tar.gz)**
 - *2015.12.01*, **[v5.0.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.0.2.tar.gz)**
 - *2015.11.15*, **[v5.0.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.0.1.tar.gz)**
