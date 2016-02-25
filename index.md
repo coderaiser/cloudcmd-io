@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v5.1.3
+Cloud Commander v5.1.4
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -178,6 +178,7 @@ View
 - Playing video.
 
 ### Hot keys
+
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F3`                  | open
@@ -188,6 +189,7 @@ Edit
 ![Edit](/img/screen/edit.png "Edit")
 
 ### Hot keys
+
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F4`                  | open
@@ -200,6 +202,7 @@ Console
 ![Console](/img/screen/console.png "Console")
 
 ### Hot keys
+
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `~`                   | open
@@ -271,6 +274,7 @@ Right mouse click button shows context menu with items:
 - Log Out (available when the `authorization` is enabled)
 
 ### Hot keys
+
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F9`                  | open
@@ -429,6 +433,7 @@ Config would be read from home directory, hosts root file system would be mount 
 
 Version history
 ---------------
+- *2016.02.25*, **[v5.1.4](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.4.tar.gz)**
 - *2016.02.24*, **[v5.1.3](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.3.tar.gz)**
 - *2016.02.21*, **[v5.1.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.2.tar.gz)**
 - *2016.02.21*, **[v5.1.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.1.tar.gz)**
