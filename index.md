@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v5.1.4
+Cloud Commander v5.1.5
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -216,6 +216,7 @@ Config
 ![Config](/img/screen/config.png "Config")
 
 ### Hot keys
+
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F10`                 | open
@@ -325,7 +326,9 @@ Standard practices say no non-root process gets to talk to
 the Internet on a port less than 1024. Anyway I suggest you
 to start Cloud Commander as non-root. How it could be solved?
 There is a couple easy and fast ways. One of them is port forwarding.
+
 ### Iptables
+
 Just run `shell/addtables.sh` for default options.
 
 ```sh
@@ -433,6 +436,7 @@ Config would be read from home directory, hosts root file system would be mount 
 
 Version history
 ---------------
+- *2016.02.26*, **[v5.1.5](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.5.tar.gz)**
 - *2016.02.25*, **[v5.1.4](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.4.tar.gz)**
 - *2016.02.24*, **[v5.1.3](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.3.tar.gz)**
 - *2016.02.21*, **[v5.1.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.2.tar.gz)**
