@@ -31,7 +31,7 @@ Cloud Commander v5.1.5
 
 [Docker_URL]:                https://docker.io "Docker"
 
-**Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, directories and programs in browser from any computer, mobile or tablet.
+**Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, directories and programs in browser from any computer, mobile or tablet
 
 ![Cloud Commander](/img/logo/cloudcmd.png "Cloud Commander")
 
