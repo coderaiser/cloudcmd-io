@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v5.1.5
+Cloud Commander v5.2.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -28,8 +28,6 @@ Cloud Commander v5.1.5
 [DWORD]:                    https://github.com/cloudcmd/dword "Editor based on CodeMirror"
 [EDWARD]:                   https://github.com/cloudcmd/edward "Editor based on Ace"
 [EDWARD_KEYS]:              https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys"
-
-[Docker_URL]:                https://docker.io "Docker"
 
 **Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, directories and programs in browser from any computer, mobile or tablet.
 
@@ -46,7 +44,7 @@ Benefits
 - Could be used local or remotely.
 - Adapting to screen size.
 - **2 built-in editors** with support of **syntax highlighting**: [Dword][DWORD] and [Edward][EDWARD].
-- **Console** with support of default OS command line.
+- [Console](https://github.com/cloudcmd/console "Console") with support of default OS command line.
 - Written in **JavaScript/Node.js**.
 
 Install
@@ -423,19 +421,26 @@ ln -s ./sites-enabled/io.cloudcmd.io ./sites-available
 /etc/init.d/nginx restart
 ```
 
+Deploy
+---------------
+`Cloud Commander` could be easily deployed to [Heroku](https://heroku.com/deploy?template=https://github.com/coderaiser/cloudcmd "Deploy to Heroku").
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png "Deploy to Heroku")]( https://heroku.com/deploy?template=https://github.com/coderaiser/cloudcmd)
+
 Docker
 ---------------
-`Cloud Commander` could be used as [docker][DOCKER_URL] container this way:
+`Cloud Commander` could be used as [docker container](https://hub.docker.com/r/coderaiser/cloudcmd/ "Docker container") this way:
 
 ```sh
 docker run -v ~:/root -v /:/mnt/fs -it -p 8000:8000 coderaiser/cloudcmd
 ```
 
 Config would be read from home directory, hosts root file system would be mount to `/mnt/fs`,
-`8000` port would be exposed to hosts port. 
+`8000` port would be exposed to hosts port.
 
 Version history
 ---------------
+- *2016.03.05*, **[v5.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.2.0.tar.gz)**
 - *2016.02.26*, **[v5.1.5](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.5.tar.gz)**
 - *2016.02.25*, **[v5.1.4](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.4.tar.gz)**
 - *2016.02.24*, **[v5.1.3](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.3.tar.gz)**
