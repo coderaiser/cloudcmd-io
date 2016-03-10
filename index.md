@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v5.2.1
+Cloud Commander v5.2.2
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -438,8 +438,29 @@ docker run -v ~:/root -v /:/mnt/fs -it -p 8000:8000 coderaiser/cloudcmd
 Config would be read from home directory, hosts root file system would be mount to `/mnt/fs`,
 `8000` port would be exposed to hosts port.
 
+Also you could use [docker compose](https://docs.docker.com/compose/ "Docker Compose") with `docker-compose.yml`:
+
+```yml
+version: '2'
+services:
+  web:
+    ports:
+      - 8000:8000
+    volumes:
+      - ~:/root
+      - /:/mnt/fs
+    image: coderaiser/cloudcmd
+```
+
+When you create this file run:
+
+```sh
+    docker-compose up
+```
+
 Version history
 ---------------
+- *2016.03.10*, **[v5.2.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.2.2.tar.gz)**
 - *2016.03.07*, **[v5.2.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.2.1.tar.gz)**
 - *2016.03.05*, **[v5.2.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.2.0.tar.gz)**
 - *2016.02.26*, **[v5.1.5](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.1.5.tar.gz)**
