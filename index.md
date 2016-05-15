@@ -14,7 +14,7 @@ lang:
 hideDownloadButtons: true
 ---
 
-Cloud Commander v5.3.2
+Cloud Commander v5.4.0
 ===============
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 [NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
@@ -94,9 +94,11 @@ Cloud Commander supports command line parameters:
 | `--minify`                    | enable minification
 | `--progress`                  | show progress of file operations
 | `--html-dialogs`              | show html dialogs
+| `--open`                      | open web browser when server started
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
+| `--no-open`                   | do not open web browser when server started
 | `--no-minify`                 | disable minification
 | `--no-progress`               | do not show progress of file operations
 | `--no-html-dialogs`           | do not use html dialogs
@@ -239,6 +241,7 @@ Here is description of options:
     "dirStorage"        : true,     /* store directory listing to localStorage  */
     "minify"            : false,    /* minification of js,css,html and img      */
     "online"            : true,     /* load js files from cdn or local path     */
+    "open"              : false     /* open web browser when server started     */
     "cache"             : true,     /* add cache-control                        */
     "showKeysPanel"     : true,     /* show classic panel with buttons of keys  */
     "port"              : 8000,     /* http port                                */
@@ -460,6 +463,7 @@ docker-compose up
 
 Version history
 ---------------
+- *2016.05.15*, **[v5.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.4.0.tar.gz)**
 - *2016.05.11*, **[v5.3.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.3.2.tar.gz)**
 - *2016.03.28*, **[v5.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.3.1.tar.gz)**
 - *2016.03.28*, **[v5.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.3.0.tar.gz)**
@@ -601,3 +605,4 @@ Special Thanks
     - config template and style;
     - change order of directories and files;
     - add ability do not hide path and header when files are scrolling;
+
