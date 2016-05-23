@@ -3,13 +3,13 @@ layout: default
 sitemap: false
 lang:
  - name: English
-   link: http://cloudcmd.io
+   link: //cloudcmd.io
  
  - name: Ukrainian
-   link: http://ua.cloudcmd.io
+   link: //ua.cloudcmd.io
  
  - name: Russian
-   link: http://ru.cloudcmd.io
+   link: //ru.cloudcmd.io
 
 hideDownloadButtons: true
 ---
