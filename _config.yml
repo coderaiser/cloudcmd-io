@@ -16,5 +16,6 @@ canonical       : cloudcmd.io
 repoName        : coderaiser/cloudcmd/edit/master/HELP.md
 improveText     : "Find typo? Help fix it."
 repoSource      : coderaiser/cloudcmd
-image           : http://cloudcmd.io/img/logo/cloudcmd.png
-favicon         : http://cloudcmd.io/favicon.ico
+image           : //cloudcmd.io/img/logo/cloudcmd.png
+favicon         : //cloudcmd.io/favicon.ico
+
