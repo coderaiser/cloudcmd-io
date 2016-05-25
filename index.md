@@ -3,23 +3,24 @@ layout: default
 sitemap: false
 lang:
  - name: English
-   link: http://cloudcmd.io
+   link: //cloudcmd.io
  
  - name: Ukrainian
-   link: http://ua.cloudcmd.io
+   link: //ua.cloudcmd.io
  
  - name: Russian
-   link: http://ru.cloudcmd.io
+   link: //ru.cloudcmd.io
 
 hideDownloadButtons: true
 ---
 
-Cloud Commander v5.4.0
-===============
+# Cloud Commander v5.4.1
+
 ### [Main][MainURL] [Blog][BlogURL] Live(![JitSu][JitSu_LIVE_IMG] [JitSu][JitSuURL], ![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
-[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
+
 [MainURL]:                  http://cloudcmd.io "Main"
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
+[NPM_INFO_IMG]:             https://nodei.co/npm/cloudcmd.png?downloads=true&&stars&&downloadRank "npm install cloudcmd"
 [JitSuURL]:                 http://cloudcmd.jit.su "JitSu"
 [HerokuURL]:                http://cloudcmd.herokuapp.com/ "Heroku"
 [JitSu_LIVE_IMG]:           https://status-io.cloudcmd.io/host/cloudcmd.jit.su/img/txt.png "JitSu"
@@ -463,10 +464,11 @@ docker-compose up
 
 Version history
 ---------------
+- *2016.05.25*, **[v5.4.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.4.1.tar.gz)**
 - *2016.05.15*, **[v5.4.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.4.0.tar.gz)**
 - *2016.05.11*, **[v5.3.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.3.2.tar.gz)**
 - *2016.03.28*, **[v5.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.3.1.tar.gz)**
-- *2016.03.28*, **[v5.3.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.3.0.tar.gz)**
+- *2016.03.28*, **[v5.3.0](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.3.0.tar.gz)**
 - *2016.03.18*, **[v5.2.3](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.2.3.tar.gz)**
 - *2016.03.10*, **[v5.2.2](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.2.2.tar.gz)**
 - *2016.03.07*, **[v5.2.1](//github.com/cloudcmd/archive/raw/master/cloudcmd-v5.2.1.tar.gz)**
@@ -600,7 +602,7 @@ Version history
 Special Thanks
 ---------------
 - [Polietilena](http://polietilena.github.io/ "Polietilena") for **logo** and **favicon**.
-- [TarZak](https://github.com/tarzak)
+- [TarZak](https://github.com/tarzak "TarZak")
     - Russian and Ukrainian translations;
     - config template and style;
     - change order of directories and files;

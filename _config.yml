@@ -1,6 +1,3 @@
-markdown        : redcarpet
-redcarpet       :
-  extensions    : ["tables"]
 name            : Cloud Commander
 title           : Cloud Commander
 tagLine         : Cloud file manager with console and editor
