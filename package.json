@@ -8,8 +8,14 @@
   "description": "io",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "npm run head && npm run update",
-    "update": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/master/HELP.md >> index.md",
+    "release": "redrun head update:*",
+    "update:index": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/master/HELP.md >> index.md",
+    "update:view": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/img/screen/view.png > img/screen/view.png",
+    "update:edit": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/img/screen/edit.png > img/screen/edit.png",
+    "update:console": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/img/screen/console.png > img/screen/console.png",
+    "update:menu": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/img/screen/menu.png > img/screen/menu.png",
+    "update:one-panel-mode": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/img/screen/view.png > img/screen/one-panel-mode.png",
+    "update:config": "curl https://raw.githubusercontent.com/coderaiser/cloudcmd/img/screen/config.png > img/screen/config.png",
     "head": "cat head.md > index.md",
     "wisdom": "npm run release"
   },
@@ -23,6 +29,8 @@
     "url": "https://github.com/cloudcmd/ru/issues"
   },
   "homepage": "https://github.com/cloudcmd/ru",
-  "devDependencies": {},
+  "devDependencies": {
+    "redrun": "^3.0.1"
+  },
   "dependencies": {}
 }
