@@ -14,7 +14,7 @@ lang:
 scripts:
  - https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js
  - https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js
- - javascripts/view.js
+ - https://files.cloudcmd.io/js/view.js
 
 styles:
  - https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css
