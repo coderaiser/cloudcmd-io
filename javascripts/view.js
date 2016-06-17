@@ -21,21 +21,30 @@
     function fancy() {
         var images = $(selector());
         
-        images.fancybox({
+        var options = {
             openEffect: 'none',
             closeEffect: 'none',
-            fitToView       : true,
-            autoSize        : true,
-            afterClose: function() {
-                images.show();
-            },
-            helpers : {
+            fitToView: true,
+            autoSize: false,
+            padding         : 0,
+            helpers: {
                 overlay : {
                     css : {
                         'background' : 'transparent'
                     }
                 }
             }
+        };
+        
+        images.click(function(event) {
+            var target = event.target;
+            var href = target.src;
+            var title = target.alt;
+            
+            $.fancybox({
+                href: href,
+                title: title
+            }, options);
         });
     };
 })();
