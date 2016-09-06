@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v5.6.0
+# Cloud Commander v5.6.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -35,7 +35,7 @@ hideDownloadButtons: true
 [DWORD]:                    https://github.com/cloudcmd/dword "Editor based on CodeMirror"
 [EDWARD]:                   https://github.com/cloudcmd/edward "Editor based on Ace"
 [EDWARD_KEYS]:              https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys"
-
+[TERMUX]:                   https://termux.com "Termux"
 **Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, directories and programs in browser from any computer, mobile or tablet.
 
 ![Cloud Commander](/img/logo/cloudcmd.png "Cloud Commander")
@@ -47,7 +47,7 @@ Benefits
 - Has 2 classic panels.
 - Optional **authorization**.
 - Client works in web browser.
-- Server works on **Windows**, **Linux** and **Mac OS**.
+- Server works on **Windows**, **Linux**, **Mac OS** and **Android** (with help of [Termux][TERMUX]).
 - Could be used local or remotely.
 - Adapting to screen size.
 - **2 built-in editors** with support of **syntax highlighting**: [Dword][DWORD] and [Edward][EDWARD].
@@ -59,8 +59,8 @@ Install
 
 The installation of file manager is very simple.
 
-- install last version of [node.js](https://nodejs.org/ "node.js").
-- install ```cloudcmd``` via ```npm``` with:
+- install latest version of [node.js](https://nodejs.org/ "node.js").
+- install `cloudcmd` via `npm` with:
 
 ```sh
 npm i cloudcmd -g
@@ -474,6 +474,7 @@ docker-compose up
 
 Version history
 ---------------
+- *2016.09.06*, **[v5.6.1](//github.com/coderaiser/cloudcmd/releases/tag/v5.6.1)**
 - *2016.07.19*, **[v5.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v5.6.0)**
 - *2016.06.29*, **[v5.5.1](//github.com/coderaiser/cloudcmd/releases/tag/v5.5.1)**
 - *2016.06.15*, **[v5.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v5.5.0)**
