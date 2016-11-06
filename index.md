@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v5.7.4
+# Cloud Commander v5.7.5
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -36,7 +36,7 @@ hideDownloadButtons: true
 [DEEPWORD]:                 https://github.com/cloudcmd/deepword "Editor based on Monaco"
 [EDWARD_KEYS]:              https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys"
 [TERMUX]:                   https://termux.com "Termux"
-**Cloud Commander** orthodox web file manager with console and editor. Will help you manage the server and work with files, directories and programs in browser from any computer, mobile or tablet.
+**Cloud Commander** is an orthodox web file manager with console and editor. Will help you manage the server and work with files, directories and programs in browser from any computer, mobile or tablet.
 
 ![Cloud Commander](/img/logo/cloudcmd.png "Cloud Commander")
 
@@ -303,32 +303,47 @@ Using as Middleware
 
 Cloud Commander could be used as middleware for `node.js` applications based on [socket.io](http://socket.io "Socket.IO") and [express](http://expressjs.com "Express"):
 
+Init `package.json`:
+
+```
+npm init -y
+```
+
+Install dependencies:
+
+```
+npm i cloudcmd express socket.io -S
+```
+
+And create `index.js`:
+
 ```js
-var http        = require('http'),
-    cloudcmd    = require('cloudcmd'),
-    express     = require('express'),
-    io          = require('socket.io'),
-    app         = express(),
-    
-    PORT        = 1337,
-    PREFIX      = '/cloudcmd',
-    server,
-    socket;
-    
-server = http.createServer(app);
-socket = io.listen(server, {
-    path: PREFIX + '/socket.io'
+const http = require('http');
+const cloudcmd = require('cloudcmd');
+const io = require('socket.io');
+const app = require('express')();
+
+const port = 1337;
+const prefix = '/cloudcmd';
+
+const server = http.createServer(app);
+const socket = io.listen(server, {
+    path: `${prefix}/socket.io`
 });
 
+const config = {
+    prefix /* base URL or function which returns base URL (optional)   */
+};
+
 app.use(cloudcmd({
-    socket: socket,     /* used by Config, Edit (optional) and Console (required)   */
-    config: {           /* config data (optional)                                   */
-        prefix: PREFIX, /* base URL or function which returns base URL (optional)   */
-    }
+    socket, /* used by Config, Edit (optional) and Console (required)   */
+    config, /* config data (optional)                                   */
 }));
 
-server.listen(PORT);
+server.listen(port);
 ```
+
+And you are ready to go.
 
 Server
 ---------------
@@ -470,8 +485,18 @@ When you create this file run:
 docker-compose up
 ```
 
+Get involved
+---------------
+
+There is a lot ways to be involved in `Cloud Commander` development:
+
+- if you find a bug or got idea to share [create issue](https://github.com/coderaiser/cloudcmd/issues/new "Create issue");
+- if you fixed a bug, typo or implemented new feature [create pull request](https://github.com/coderaiser/cloudcmd/compare "Create pull request");
+- if you know languages you can help with [site translations](https://github.com/coderaiser/cloudcmd/wiki "Cloud Commander community wiki");
+
 Version history
 ---------------
+- *2016.11.06*, **[v5.7.5](//github.com/coderaiser/cloudcmd/releases/tag/v5.7.5)**
 - *2016.10.27*, **[v5.7.4](//github.com/coderaiser/cloudcmd/releases/tag/v5.7.4)**
 - *2016.10.27*, **[v5.7.3](//github.com/coderaiser/cloudcmd/releases/tag/v5.7.3)**
 - *2016.10.24*, **[v5.7.2](//github.com/coderaiser/cloudcmd/releases/tag/v5.7.2)**
