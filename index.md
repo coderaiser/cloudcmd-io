@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v5.8.0
+# Cloud Commander v5.9.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -101,6 +101,7 @@ Cloud Commander supports command line parameters:
 | `--open`                      | open web browser when server started
 | `--one-panel-mode`            | set one panel mode
   `--config-dialog`             | enable config dialog
+  `--console`                   | enable console
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
@@ -109,6 +110,7 @@ Cloud Commander supports command line parameters:
 | `--no-progress`               | do not show progress of file operations
 | `--no-one-panel-mode`         | unset one panel mode
 | `--no-config-dialog`          | disable config dialog
+| `--no-console`                | disable console
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -255,9 +257,10 @@ Here is description of options:
     "ip"                : null,     /* ip or null(default)                      */
     "root"              : "/",      /* root directory                           */
     "prefix"            : "",       /* url prefix                               */
-    "progress"          : true      /* show progress of file operations         */
-    "htmlDialogs"       : true      /* show html dialogs                        */
-    "onePanelMode"      : false     /* set one panel mode                       */
+    "progress"          : true,     /* show progress of file operations         */
+    "onePanelMode"      : false,    /* set one panel mode                       */
+    "configDialog"      : true,     /* enable config dialog                     */
+    "console"           : true      /* enable console                           */
 }
 ```
 
@@ -496,6 +499,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2016.11.10*, **[v5.9.0](//github.com/coderaiser/cloudcmd/releases/tag/v5.9.0)**
 - *2016.11.09*, **[v5.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v5.8.0)**
 - *2016.11.06*, **[v5.7.6](//github.com/coderaiser/cloudcmd/releases/tag/v5.7.6)**
 - *2016.11.06*, **[v5.7.5](//github.com/coderaiser/cloudcmd/releases/tag/v5.7.5)**
