@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v5.10.1
+# Cloud Commander v5.10.2
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -359,9 +359,14 @@ const config = {
     prefix /* base URL or function which returns base URL (optional)   */
 };
 
+const plugins = [
+    __dirname + '/plugin.js'
+];
+
 app.use(cloudcmd({
-    socket, /* used by Config, Edit (optional) and Console (required)   */
-    config, /* config data (optional)                                   */
+    socket,  /* used by Config, Edit (optional) and Console (required)   */
+    config,  /* config data (optional)                                   */
+    plugins, /* optional */
 }));
 
 server.listen(port);
@@ -520,6 +525,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2016.12.01*, **[v5.10.2](//github.com/coderaiser/cloudcmd/releases/tag/v5.10.2)**
 - *2016.11.22*, **[v5.10.1](//github.com/coderaiser/cloudcmd/releases/tag/v5.10.1)**
 - *2016.11.18*, **[v5.10.0](//github.com/coderaiser/cloudcmd/releases/tag/v5.10.0)**
 - *2016.11.10*, **[v5.9.1](//github.com/coderaiser/cloudcmd/releases/tag/v5.9.1)**
