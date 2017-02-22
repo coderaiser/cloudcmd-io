@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v6.5.6
+# Cloud Commander v6.6.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -268,7 +268,6 @@ Here is description of options:
     "packer"            : "tar",    /* default, could be "tar" or "zip"         */
     "diff"              : true,     /* when save - send patch, not whole file   */
     "zip"               : true,     /* zip text before send / unzip before save */
-    "notifications"     : false,    /* show notifications when tab is not active*/
     "localStorage"      : true,     /* local storage                            */
     "buffer"            : true,     /* buffer for copying files                 */
     "dirStorage"        : true,     /* store directory listing to localStorage  */
@@ -529,6 +528,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.02.22*, **[v6.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.6.0)**
 - *2017.02.21*, **[v6.5.6](//github.com/coderaiser/cloudcmd/releases/tag/v6.5.6)**
 - *2017.02.21*, **[v6.5.5](//github.com/coderaiser/cloudcmd/releases/tag/v6.5.5)**
 - *2017.02.17*, **[v6.5.4](//github.com/coderaiser/cloudcmd/releases/tag/v6.5.4)**
