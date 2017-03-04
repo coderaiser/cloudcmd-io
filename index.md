@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v6.6.3
+# Cloud Commander v6.7.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -104,6 +104,8 @@ Cloud Commander supports command line parameters:
 | `--one-panel-mode`            | set one panel mode
   `--config-dialog`             | enable config dialog
   `--console`                   | enable console
+  `--terminal`                  | enable terminal
+  `--terminal-path`             | set terminal path
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
@@ -114,6 +116,7 @@ Cloud Commander supports command line parameters:
 | `--no-one-panel-mode`         | unset one panel mode
 | `--no-config-dialog`          | disable config dialog
 | `--no-console`                | disable console
+| `--no-terminal`               | disable terminal
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -227,9 +230,62 @@ Console
 
 For more details see [console hot keys](https://github.com/cloudcmd/console#hot-keys "Console Hot Keys").
 
-### Environment Variables
+Terminal
+---------------
+![Terminal](/img/screen/terminal.png "Terminal")
 
-Every program executed in `console` has these `environment` variables:
+### Install
+
+`Terminal` disabled and not installed by default. To use it you should install [gritty](https://github.com/cloudcmd/gritty "Gritty") with:
+
+```sh
+npm i gritty -g
+```
+
+And then set the path of a terminal with:
+
+```sh
+cloudcmd --terminal --terminal-path `gritty --path` --save
+```
+
+### Windows
+
+On Windows you need to install `windows-build-tools` before:
+
+```sh
+npm install --global windows-build-tools
+```
+
+Then get path of a `gritty` with:
+
+```sh
+gritty --path
+```
+It will returns something like:
+
+```sh
+C:\Users\coderaiser\AppData\Roaming\npm\node_modules\gritty
+```
+
+Set this path as `--terminal-path` with:
+
+```sh
+cloudcmd --save --terminal --terminal-path "C:\Users\coderaiser\AppData\Roaming\npm\node_modules\gritty"
+```
+
+After that you can use `terminal` in the same way as a `console`.
+
+### Hot keys
+
+|Key                    |Operation
+|:----------------------|:--------------------------------------------
+| `Shift` + `~`         | open
+| `Shift` + `Esc`       | close
+
+Environment Variables
+---------------
+
+Every program executed in `console` or `terminal` has these `environment` variables:
 
 - `ACTIVE_DIR` - directory that contains cursor
 - `PASSIVE_DIR` - directory with no cursor
@@ -284,7 +340,9 @@ Here is description of options:
     "htmlDialogs"       : true,     /* use html dialogs                         */
     "onePanelMode"      : false,    /* set one panel mode                       */
     "configDialog"      : true,     /* enable config dialog                     */
-    "console"           : true      /* enable console                           */
+    "console"           : true,     /* enable console                           */
+    "terminal"          : false,    /* disable terminal                         */
+    "terminalPath"      : '',       /* path of a terminal                       */
 }
 ```
 
@@ -528,6 +586,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.03.04*, **[v6.7.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.7.0)**
 - *2017.02.24*, **[v6.6.3](//github.com/coderaiser/cloudcmd/releases/tag/v6.6.3)**
 - *2017.02.24*, **[v6.6.2](//github.com/coderaiser/cloudcmd/releases/tag/v6.6.2)**
 - *2017.02.24*, **[v6.6.1](//github.com/coderaiser/cloudcmd/releases/tag/v6.6.1)**
