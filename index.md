@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v6.10.1
+# Cloud Commander v6.11.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -353,6 +353,7 @@ Here is description of options:
 
 Some config options can be overridden with `environment variables` such:
 
+- `CLOUDCMD_EDITOR` - set editor
 - `CLOUDCMD_TERMINAL` - enable terminal
 - `CLOUDCMD_TERMINAL_PATH` - set terminal path
 - `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
@@ -609,6 +610,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.05.10*, **[v6.11.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.11.0)**
 - *2017.04.25*, **[v6.10.1](//github.com/coderaiser/cloudcmd/releases/tag/v6.10.1)**
 - *2017.04.24*, **[v6.10.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.10.0)**
 - *2017.04.18*, **[v6.9.3](//github.com/coderaiser/cloudcmd/releases/tag/v6.9.3)**
