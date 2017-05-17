@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v6.13.0
+# Cloud Commander v6.14.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -151,6 +151,7 @@ Hot keys
 | `F3`                  | view
 | `Shift + F3`          | view as `markdown`
 | `F4`                  | edit
+| `Shift + F4`          | edit in `vim` mode
 | `F5`                  | copy
 | `F6`                  | rename/move
 | `F7`                  | new directory
@@ -215,6 +216,7 @@ Edit
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F4`                  | open
+| `Shift + F4`          | open in `vim` mode
 | `Esc`                 | close
 
 For more details see [Edward hot keys][EDWARD_KEYS].
@@ -610,6 +612,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.05.17*, **[v6.14.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.14.0)**
 - *2017.05.15*, **[v6.13.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.13.0)**
 - *2017.05.12*, **[v6.12.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.12.0)**
 - *2017.05.10*, **[v6.11.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.11.0)**
