@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v6.14.4
+# Cloud Commander v6.15.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -95,6 +95,7 @@ Cloud Commander supports command line parameters:
 | `-u, --username`              | set username
 | `-p, --password`              | set password
 | `-c, --config`                | configuration file path
+| `--show-config`               | show config values
 | `--editor`                    | set editor: "dword", "edward" or "deepword"
 | `--packer`                    | set packer: "tar" or "zip"
 | `--root`                      | set root directory
@@ -323,7 +324,7 @@ Here is description of options:
 {
     "auth"              : false,    /* enable http authentication               */
     "username"          : "root",   /* username for authentication              */
-    "password"          : "toor",   /* password hash in sha-1 for authentication*/
+    "password"          : "toor",   /* password hash for authentication*/
     "algo"              : "sha512WithRSAEncryption", /* cryptographic algorithm */
     "editor"            : "edward", /* default, could be "dword" or "edward"    */
     "packer"            : "tar",    /* default, could be "tar" or "zip"         */
@@ -359,6 +360,9 @@ Some config options can be overridden with `environment variables` such:
 - `CLOUDCMD_TERMINAL` - enable terminal
 - `CLOUDCMD_TERMINAL_PATH` - set terminal path
 - `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
+- `CLOUDCMD_AUTH` - enable authentication
+- `CLOUDCMD_USERNAME` - set username
+- `CLOUDCMD_PASSWORD` - set password
 
 Menu
 ---------------
@@ -575,7 +579,7 @@ Docker
 `Cloud Commander` could be used as [docker container](https://hub.docker.com/r/coderaiser/cloudcmd/ "Docker container") this way:
 
 ```sh
-docker run -v ~:/root -v /:/mnt/fs -t -p 8000:8000 coderaiser/cloudcmd
+docker run -t --rm -v ~:/root -v /:/mnt/fs -p 8000:8000 coderaiser/cloudcmd
 ```
 
 Config would be read from home directory, hosts root file system would be mount to `/mnt/fs`,
@@ -612,6 +616,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.06.06*, **[v6.15.0](//github.com/coderaiser/cloudcmd/releases/tag/v6.15.0)**
 - *2017.05.25*, **[v6.14.4](//github.com/coderaiser/cloudcmd/releases/tag/v6.14.4)**
 - *2017.05.22*, **[v6.14.3](//github.com/coderaiser/cloudcmd/releases/tag/v6.14.3)**
 - *2017.05.18*, **[v6.14.2](//github.com/coderaiser/cloudcmd/releases/tag/v6.14.2)**
