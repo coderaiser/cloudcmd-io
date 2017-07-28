@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v7.1.1
+# Cloud Commander v7.2.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -106,6 +106,7 @@ Cloud Commander supports command line parameters:
 | `--open`                      | open web browser when server started
 | `--name`                      | set tab name in web browser
 | `--one-panel-mode`            | set one panel mode
+| `--contact`                   | enable contact
 | `--config-dialog`             | enable config dialog
 | `--console`                   | enable console
 | `--terminal`                  | enable terminal
@@ -117,6 +118,7 @@ Cloud Commander supports command line parameters:
 | `--no-progress`               | do not show progress of file operations
 | `--no-html-dialogs`           | do not use html dialogs
 | `--no-one-panel-mode`         | unset one panel mode
+| `--no-contact`                | disable contact
 | `--no-config-dialog`          | disable config dialog
 | `--no-console`                | disable console
 | `--no-terminal`               | disable terminal
@@ -346,6 +348,7 @@ Here is description of options:
     "progress"          : true,     /* show progress of file operations         */
     "htmlDialogs"       : true,     /* use html dialogs                         */
     "onePanelMode"      : false,    /* set one panel mode                       */
+    "contact"           : true,     /* enable contact                           */
     "configDialog"      : true,     /* enable config dialog                     */
     "console"           : true,     /* enable console                           */
     "terminal"          : false,    /* disable terminal                         */
@@ -359,9 +362,11 @@ Some config options can be overridden with `environment variables` such:
 
 - `CLOUDCMD_NAME` - set tab name in web browser
 - `CLOUDCMD_EDITOR` - set editor
+- `CLOUDCMD_CONTACT` - enable contact
+- `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
+- `CLOUDCMD_CONSOLE` - enable console
 - `CLOUDCMD_TERMINAL` - enable terminal
 - `CLOUDCMD_TERMINAL_PATH` - set terminal path
-- `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
 - `CLOUDCMD_AUTH` - enable authentication
 - `CLOUDCMD_USERNAME` - set username
 - `CLOUDCMD_PASSWORD` - set password
@@ -618,6 +623,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.07.28*, **[v7.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.2.0)**
 - *2017.07.27*, **[v7.1.1](//github.com/coderaiser/cloudcmd/releases/tag/v7.1.1)**
 - *2017.07.27*, **[v7.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.1.0)**
 - *2017.07.14*, **[v7.0.2](//github.com/coderaiser/cloudcmd/releases/tag/v7.0.2)**
