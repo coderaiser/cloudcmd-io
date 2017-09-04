@@ -22,9 +22,9 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v7.3.2
+# Cloud Commander v7.4.0
 
-### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL]))
+### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
 [MainURL]:                  http://cloudcmd.io "Main"
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
@@ -159,12 +159,14 @@ Hot keys
 | `F4`                  | edit
 | `Shift + F4`          | edit in `vim` mode
 | `F5`                  | copy
+| `Alt` + `F5`          | pack
 | `F6`                  | rename/move
 | `F7`                  | new directory
 | `Shift + F7`          | new file
 | `F8`, `Delete`        | remove
 | `Shift + Delete`      | remove without prompt
 | `F9`                  | menu
+| `Alt` + `F9`          | extract
 | `F10`                 | config
 | `*`                   | select/unselect all
 | `+`                   | expand selection
@@ -629,6 +631,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.09.04*, **[v7.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.4.0)**
 - *2017.08.29*, **[v7.3.2](//github.com/coderaiser/cloudcmd/releases/tag/v7.3.2)**
 - *2017.08.14*, **[v7.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v7.3.1)**
 - *2017.08.14*, **[v7.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.3.0)**
