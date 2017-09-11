@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v7.5.2
+# Cloud Commander v7.6.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -215,6 +215,9 @@ When `--vim` option provided, or configuration parameter `vim` set, next hot key
 | `y`                   | copy (selected in visual mode files)
 | `p`                   | paste files
 | `Esc`                 | unselect all
+| `/`                   | find file in current directory
+| `n`                   | navigate to next found file
+| `N`                   | navigate to previous found file
 
 Commands can be joined, for example:
 - `5j` will navigate `5` files below current;
@@ -655,6 +658,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.09.11*, **[v7.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.6.0)**
 - *2017.09.08*, **[v7.5.2](//github.com/coderaiser/cloudcmd/releases/tag/v7.5.2)**
 - *2017.09.08*, **[v7.5.1](//github.com/coderaiser/cloudcmd/releases/tag/v7.5.1)**
 - *2017.09.08*, **[v7.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.5.0)**
