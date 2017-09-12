@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v7.6.0
+# Cloud Commander v7.7.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -403,6 +403,7 @@ Some config options can be overridden with `environment variables` such:
 - `CLOUDCMD_PASSWORD` - set password
 - `CLOUDCMD_ROOT` - set root directory
 - `CLOUDCMD_ONE_PANEL_MODE` - set one panel mode
+- `CLOUDCMD_VIM` - enable vim hot keys
 
 Menu
 ---------------
@@ -658,6 +659,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.09.12*, **[v7.7.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.7.0)**
 - *2017.09.11*, **[v7.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.6.0)**
 - *2017.09.08*, **[v7.5.2](//github.com/coderaiser/cloudcmd/releases/tag/v7.5.2)**
 - *2017.09.08*, **[v7.5.1](//github.com/coderaiser/cloudcmd/releases/tag/v7.5.1)**
