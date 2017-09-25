@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v7.7.3
+# Cloud Commander v7.8.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -223,6 +223,17 @@ Commands can be joined, for example:
 - `5j` will navigate `5` files below current;
 - `d5j` will remove next `5` files;
 - `dG` will remove all files from current to bottom;
+
+Drag and Drop
+---------------
+Next file operations are accessible through `Drag and Drop`.
+
+| Drag Mouse Button | Key       | Origin    | Destination   |Operation
+|:------------------|:----------|:----------|:--------------|:------------------
+| `Left`            |           | `Panel`   | `Panel`       | copy files
+| `Left`            | `Shift`   | `Panel`   | `Panel`       | rename/move files
+| `Left`            |           | `Panel`   | `Desktop`     | download files
+| `Left`            |           | `Desktop` | `Panel`       | upload files
 
 View
 ---------------
@@ -659,6 +670,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.09.25*, **[v7.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.8.0)**
 - *2017.09.22*, **[v7.7.3](//github.com/coderaiser/cloudcmd/releases/tag/v7.7.3)**
 - *2017.09.22*, **[v7.7.2](//github.com/coderaiser/cloudcmd/releases/tag/v7.7.2)**
 - *2017.09.18*, **[v7.7.1](//github.com/coderaiser/cloudcmd/releases/tag/v7.7.1)**
