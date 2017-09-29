@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v7.8.0
+# Cloud Commander v7.9.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -104,6 +104,8 @@ Cloud Commander supports command line parameters:
 | `--prefix`                    | set url prefix
 | `--port`                      | set port number
 | `--progress`                  | show progress of file operations
+| `--confirm-copy`              | confirm copy
+| `--confirm-move`              | confirm move
 | `--html-dialogs`              | use html dialogs
 | `--open`                      | open web browser when server started
 | `--name`                      | set tab name in web browser
@@ -121,6 +123,8 @@ Cloud Commander supports command line parameters:
 | `--no-name`                   | set empty tab name in web browser
 | `--no-one-panel-mode`         | unset one panel mode
 | `--no-progress`               | do not show progress of file operations
+| `--no-confirm-copy`           | do not confirm copy
+| `--no-confirm-move`           | do not confirm move
 | `--no-html-dialogs`           | do not use html dialogs
 | `--no-contact`                | disable contact
 | `--no-config-dialog`          | disable config dialog
@@ -387,6 +391,8 @@ Here is description of options:
     "root"              : "/",      /* root directory                           */
     "prefix"            : "",       /* url prefix                               */
     "progress"          : true,     /* show progress of file operations         */
+    "confirmCopy"       : true,     /* confirm copy                             */
+    "confirmMove"       : true,     /* confirm move                             */
     "htmlDialogs"       : true,     /* use html dialogs                         */
     "onePanelMode"      : false,    /* set one panel mode                       */
     "contact"           : true,     /* enable contact                           */
@@ -415,6 +421,8 @@ Some config options can be overridden with `environment variables` such:
 - `CLOUDCMD_ROOT` - set root directory
 - `CLOUDCMD_ONE_PANEL_MODE` - set one panel mode
 - `CLOUDCMD_VIM` - enable vim hot keys
+- `CLOUDCMD_CONFIRM_COPY` - confirm copy
+- `CLOUDCMD_CONFIRM_MOVE` - confirm move
 
 Menu
 ---------------
@@ -670,6 +678,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.09.29*, **[v7.9.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.9.0)**
 - *2017.09.25*, **[v7.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.8.0)**
 - *2017.09.22*, **[v7.7.3](//github.com/coderaiser/cloudcmd/releases/tag/v7.7.3)**
 - *2017.09.22*, **[v7.7.2](//github.com/coderaiser/cloudcmd/releases/tag/v7.7.2)**
