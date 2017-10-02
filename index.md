@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v7.9.0
+# Cloud Commander v8.0.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -527,6 +527,33 @@ server.listen(port);
 
 And you are ready to go.
 
+### Authorization
+
+If you want to enable `authorization` you can pass credentials in a `config`.
+To generate password you can install `criton` with `npm i criton --save` and use it
+or any other way to generate a `hash` of a `password`.
+
+```js
+const criton = require('criton');
+const algo = 'sha512WithRSAEncryption'; // default
+
+// you can generate hash dynamically
+const password = criton('root', algo);
+
+// or use pregenerated hash as well
+'2b64f2e..ca5d9a9';
+
+const auth = true;
+const username = 'root';
+
+const config = {
+    algo, // optional
+    auth,
+    username,
+    pasword,
+}
+```
+
 Server
 ---------------
 Standard practices say no non-root process gets to talk to
@@ -678,6 +705,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2017.10.02*, **[v8.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v8.0.0)**
 - *2017.09.29*, **[v7.9.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.9.0)**
 - *2017.09.25*, **[v7.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v7.8.0)**
 - *2017.09.22*, **[v7.7.3](//github.com/coderaiser/cloudcmd/releases/tag/v7.7.3)**
