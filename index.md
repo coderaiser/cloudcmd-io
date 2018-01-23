@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v8.2.0
+# Cloud Commander v8.2.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -304,10 +304,10 @@ cloudcmd --terminal --terminal-path `gritty --path` --save
 
 ### Windows
 
-On Windows you need to install `windows-build-tools` first:
+If you can't install `gritty` on Windows try to install `windows-build-tools` first:
 
 ```sh
-npm install --global windows-build-tools
+npm install windows-build-tools -g
 ```
 
 Then get path of a `gritty` with:
@@ -706,6 +706,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.01.23*, **[v8.2.1](//github.com/coderaiser/cloudcmd/releases/tag/v8.2.1)**
 - *2018.01.16*, **[v8.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v8.2.0)**
 - *2017.12.08*, **[v8.1.3](//github.com/coderaiser/cloudcmd/releases/tag/v8.1.3)**
 - *2017.10.23*, **[v8.1.2](//github.com/coderaiser/cloudcmd/releases/tag/v8.1.2)**
