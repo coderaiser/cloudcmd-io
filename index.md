@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v8.2.2
+# Cloud Commander v8.3.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -116,6 +116,7 @@ Cloud Commander supports command line parameters:
 | `--terminal`                  | enable terminal
 | `--terminal-path`             | set terminal path
 | `--vim`                       | enable vim hot keys
+| `--columns`                   | set visible columns
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
@@ -131,7 +132,7 @@ Cloud Commander supports command line parameters:
 | `--no-console`                | disable console
 | `--no-terminal`               | disable terminal
 | `--no-vim`                    | disable vim hot keys
-
+| `--no-columns`                | set visible default columns
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -402,6 +403,7 @@ Here is description of options:
     "terminal"          : false,    /* disable terminal                         */
     "terminalPath"      : '',       /* path of a terminal                       */
     "vim"               : false,    /* disable vim hot keys                     */
+    "columns"           : "name-size-date-owner-mode", /* set visible columns   */
 }
 ```
 
@@ -411,6 +413,7 @@ Some config options can be overridden with `environment variables` such:
 
 - `CLOUDCMD_NAME` - set tab name in web browser
 - `CLOUDCMD_EDITOR` - set editor
+- `CLOUDCMD_COLUMNS` - set visible columns 
 - `CLOUDCMD_CONTACT` - enable contact
 - `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
 - `CLOUDCMD_CONSOLE` - enable console
@@ -706,6 +709,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.03.02*, **[v8.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v8.3.0)**
 - *2018.02.19*, **[v8.2.2](//github.com/coderaiser/cloudcmd/releases/tag/v8.2.2)**
 - *2018.01.23*, **[v8.2.1](//github.com/coderaiser/cloudcmd/releases/tag/v8.2.1)**
 - *2018.01.16*, **[v8.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v8.2.0)**
