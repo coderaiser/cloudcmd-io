@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v9.0.0
+# Cloud Commander v9.1.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -119,6 +119,7 @@ Cloud Commander supports command line parameters:
 | `--vim`                       | enable vim hot keys
 | `--keys-panel`                | show keys panel
 | `--columns`                   | set visible columns
+| `--cache`                     | enable cache
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
@@ -137,6 +138,7 @@ Cloud Commander supports command line parameters:
 | `--no-vim`                    | disable vim hot keys
 | `--no-keys-panel`             | hide keys panel
 | `--no-columns`                | set visible default columns
+| `--no-cache`                  | disable cache
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -389,7 +391,7 @@ Here is description of options:
     "dirStorage"        : true,     /* store directory listing to localStorage  */
     "online"            : true,     /* load js files from cdn or local path     */
     "open"              : false     /* open web browser when server started     */
-    "cache"             : true,     /* add cache-control                        */
+    "cache"             : true,     /* enable cache                             */
     "keysPanel"         : true,     /* show classic panel with buttons of keys  */
     "port"              : 8000,     /* http port                                */
     "ip"                : null,     /* ip or null(default)                      */
@@ -717,6 +719,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.04.02*, **[v9.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.1.0)**
 - *2018.03.30*, **[v9.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.0.0)**
 - *2018.03.24*, **[v8.5.2](//github.com/coderaiser/cloudcmd/releases/tag/v8.5.2)**
 - *2018.03.24*, **[v8.5.1](//github.com/coderaiser/cloudcmd/releases/tag/v8.5.1)**
