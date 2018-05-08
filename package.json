@@ -16,7 +16,7 @@
     "update:image:console": "wget -N https://raw.githubusercontent.com/coderaiser/cloudcmd/master/img/screen/console.png",
     "update:image:terminal": "wget -N https://raw.githubusercontent.com/coderaiser/cloudcmd/master/img/screen/terminal.png",
     "update:image:menu": "wget -N https://raw.githubusercontent.com/coderaiser/cloudcmd/master/img/screen/menu.png",
-    "update:image:one-panel-mode": "wget -N https://raw.githubusercontent.com/coderaiser/cloudcmd/master/img/screen/one-panel-mode.png",
+    "update:image:one-panel-mode": "wget -N https://raw.githubusercontent.com/coderaiser/cloudcmd/master/img/screen/one-file-panel.png",
     "update:image:config": "wget -N -q https://raw.githubusercontent.com/coderaiser/cloudcmd/master/img/screen/config.png",
     "head": "cat head.md > index.md",
     "wisdom": "npm run release"
