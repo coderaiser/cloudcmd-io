@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v9.4.0
+# Cloud Commander v9.5.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -190,6 +190,7 @@ Hot keys
 | `Ctrl + с`            | copy to buffer
 | `Ctrl + v`            | paste from buffer
 | `Ctrl + z`            | clear buffer
+| `Ctrl + p`            | copy path
 | `Ctrl + r`            | refresh
 | `Ctrl + d`            | clear local storage
 | `Ctrl + a`            | select all files in a panel
@@ -430,7 +431,6 @@ Some config options can be overridden with `environment variables` such:
 - `CLOUDCMD_SYNC_CONSOLE_PATH` - sync console path
 - `CLOUDCMD_TERMINAL` - enable terminal
 - `CLOUDCMD_TERMINAL_PATH` - set terminal path
-- `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
 - `CLOUDCMD_KEYS_PANEL` - show keys panel
 - `CLOUDCMD_ONE_PANEL_MODE` - show one file panel (**deprecated**: use `CLOUDCMD_ONE_FILE_PANEL` instead)
 - `CLOUDCMD_ONE_FILE_PANEL` - show one file panel
@@ -724,6 +724,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.05.15*, **[v9.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.5.0)**
 - *2018.05.08*, **[v9.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.4.0)**
 - *2018.05.01*, **[v9.3.2](//github.com/coderaiser/cloudcmd/releases/tag/v9.3.2)**
 - *2018.04.30*, **[v9.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v9.3.1)**
