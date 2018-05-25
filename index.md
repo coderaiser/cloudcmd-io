@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v9.6.0
+# Cloud Commander v10.0.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -106,10 +106,8 @@ Cloud Commander supports command line parameters:
 | `--progress`                  | show progress of file operations
 | `--confirm-copy`              | confirm copy
 | `--confirm-move`              | confirm move
-| `--html-dialogs`              | use html dialogs
 | `--open`                      | open web browser when server started
 | `--name`                      | set tab name in web browser
-| `--one-panel-mode`            | show one file panel (**deprecated**: use `--one-file-panel` instead)
 | `--one-file-panel`            | show one file panel
 | `--keys-panel`                | show keys panel
 | `--contact`                   | enable contact
@@ -120,19 +118,16 @@ Cloud Commander supports command line parameters:
 | `--terminal-path`             | set terminal path
 | `--vim`                       | enable vim hot keys
 | `--columns`                   | set visible columns
-| `--cache`                     | enable cache
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
 | `--no-open`                   | do not open web browser when server started
 | `--no-name`                   | set empty tab name in web browser
 | `--no-one-file-panel`         | show two file panels
-| `--no-one-panel-mode`          | show two file panels (**deprecated**: use `--no-one-file-panel` instead)
 | `--no-keys-panel`             | hide keys panel
 | `--no-progress`               | do not show progress of file operations
 | `--no-confirm-copy`           | do not confirm copy
 | `--no-confirm-move`           | do not confirm move
-| `--no-html-dialogs`           | do not use html dialogs
 | `--no-contact`                | disable contact
 | `--no-config-dialog`          | disable config dialog
 | `--no-console`                | disable console
@@ -140,7 +135,6 @@ Cloud Commander supports command line parameters:
 | `--no-terminal`               | disable terminal
 | `--no-vim`                    | disable vim hot keys
 | `--no-columns`                | set visible default columns
-| `--no-cache`                  | disable cache
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -160,7 +154,7 @@ re-install it:
 npm install cloudcmd -g
 ```
 
-Then start it again, clear cache of your browser and reload page.
+Then start it again and reload the page.
 
 Hot keys
 ---------------
@@ -389,13 +383,10 @@ Here is description of options:
     "packer"            : "tar",    /* default, could be "tar" or "zip"         */
     "diff"              : true,     /* when save - send patch, not whole file   */
     "zip"               : true,     /* zip text before send / unzip before save */
-    "localStorage"      : true,     /* local storage (deprecated)               */
     "buffer"            : true,     /* buffer for copying files                 */
-    "dirStorage"        : true,     /* store directory listing to localStorage  */
+    "dirStorage"        : true,     /* store directory listing                  */
     "online"            : true,     /* load js files from cdn or local path     */
     "open"              : false     /* open web browser when server started     */
-    "cache"             : true,     /* enable cache                             */
-    "onePanelMode"      : false,    /* show one file panel (deprecated)         */
     "oneFilePanel"      : false,    /* show one file panel                      */
     "keysPanel"         : true,     /* show classic panel with buttons of keys  */
     "port"              : 8000,     /* http port                                */
@@ -405,7 +396,6 @@ Here is description of options:
     "progress"          : true,     /* show progress of file operations         */
     "confirmCopy"       : true,     /* confirm copy                             */
     "confirmMove"       : true,     /* confirm move                             */
-    "htmlDialogs"       : true,     /* use html dialogs                         */
     "showConfig"        : false,    /* show config at startap                   */
     "contact"           : true,     /* enable contact                           */
     "configDialog"      : true,     /* enable config dialog                     */
@@ -432,7 +422,6 @@ Some config options can be overridden with `environment variables` such:
 - `CLOUDCMD_TERMINAL` - enable terminal
 - `CLOUDCMD_TERMINAL_PATH` - set terminal path
 - `CLOUDCMD_KEYS_PANEL` - show keys panel
-- `CLOUDCMD_ONE_PANEL_MODE` - show one file panel (**deprecated**: use `CLOUDCMD_ONE_FILE_PANEL` instead)
 - `CLOUDCMD_ONE_FILE_PANEL` - show one file panel
 - `CLOUDCMD_AUTH` - enable authentication
 - `CLOUDCMD_USERNAME` - set username
@@ -441,7 +430,6 @@ Some config options can be overridden with `environment variables` such:
 - `CLOUDCMD_VIM` - enable vim hot keys
 - `CLOUDCMD_CONFIRM_COPY` - confirm copy
 - `CLOUDCMD_CONFIRM_MOVE` - confirm move
-- `CLOUDCMD_CACHE` - enable cache
 
 Menu
 ---------------
@@ -724,6 +712,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.05.25*, **[v10.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.0.0)**
 - *2018.05.24*, **[v9.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.6.0)**
 - *2018.05.15*, **[v9.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.5.0)**
 - *2018.05.08*, **[v9.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.4.0)**
