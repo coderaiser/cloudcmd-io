@@ -22,13 +22,13 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v10.0.1
+# Cloud Commander v10.0.2
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
 [MainURL]:                  http://cloudcmd.io "Main"
 [BlogURL]:                  http://blog.cloudcmd.io "Blog"
-[HerokuURL]:                http://cloudcmd.herokuapp.com/ "Heroku"
+[HerokuURL]:                https://cloudcmd.herokuapp.com/ "Heroku"
 [NowURL]:                   https://cloudcmd.now.sh/ "Now"
 [HEROKU_LIVE_IMG]:          https://status-io.cloudcmd.io/host/cloudcmd.herokuapp.com/img/txt.png "Heroku"
 [NOW_LIVE_IMG]:             https://status-io.cloudcmd.io/host/cloudcmd.now.sh/img/txt.png "Now"
@@ -712,6 +712,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.05.29*, **[v10.0.2](//github.com/coderaiser/cloudcmd/releases/tag/v10.0.2)**
 - *2018.05.29*, **[v10.0.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.0.1)**
 - *2018.05.25*, **[v10.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.0.0)**
 - *2018.05.24*, **[v9.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v9.6.0)**
