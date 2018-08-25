@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v10.5.0
+# Cloud Commander v10.5.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -484,6 +484,7 @@ Here is the log of `export server`:
 url: http://localhost:1234/
 2018.08.23 13:41:45 -> export: try to auth from importer [127.0.0.1:4321]
 2018.08.23 13:41:45 -> export: connected to importer [127.0.0.1:4321]
+2018.08.23 13:41:45 -> export: config send to importer[127.0.0.1:4321]
 2018.08.23 13:41:45 -> export: disconnected importer [127.0.0.1:4321]
 ```
 
@@ -492,7 +493,7 @@ And log of `import client`:
 ```
 2018.08.23 13:47:36 -> import: try to auth to http://127.0.0.1:1234
 2018.08.23 13:47:36 -> import: connected to http://127.0.0.1:1234
-2018.08.23 13:47:36 -> import: config received from http://localhost:1234
+2018.08.23 13:47:36 -> import: config received from http://127.0.0.1:1234
 2018.08.23 13:47:36 -> import: disconnected from http://127.0.0.1:1234
 ```
 
@@ -797,6 +798,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.08.25*, **[v10.5.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.1)**
 - *2018.08.23*, **[v10.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.0)**
 - *2018.07.18*, **[v10.4.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.4.1)**
 - *2018.07.17*, **[v10.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.4.0)**
