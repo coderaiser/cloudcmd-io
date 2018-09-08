@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v10.5.2
+# Cloud Commander v10.5.3
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -421,9 +421,9 @@ Here is description of options:
     "exportToken"       : "root",   /* token used by export server              */
     "import"            : false,    /* enable import of config                  */
     "import-url"        : "http://localhost:8000",   /* url of an export server */
-    "importToken"       : "root", /* token used to connect to export server     */
-    "importListen"      : false, /* listen on config updates from import server */
-    "log"               : true  /* logging                                      */
+    "importToken"       : "root",   /* token used to connect to export server   */
+    "importListen"      : false,    /* listen on config updates                 */
+    "log"               : true      /* logging                                  */
 }
 ```
 
@@ -460,7 +460,7 @@ Some config options can be overridden with `environment variables` such:
 
 Being able to configure `Cloud Commander` remotely opens the doors to using it as microservice and that's what distribute options set out to do.
 There is an `export server` and `import client` and they enabled with `--export` and `--import` accordingly. There is a `token` it should be the same
-in `--import-token` and `export-token`. To use report you should provide `--import-url` to `import client` so it can connect to an `export server`.
+in `--import-token` and `--export-token`. To use report you should provide `--import-url` to `import client` so it can connect to an `export server`.
 There is 2 ways `import client` can receive config from an `export server`:
 
 - full config at startup (default)
@@ -798,6 +798,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.09.08*, **[v10.5.3](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.3)**
 - *2018.08.25*, **[v10.5.2](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.2)**
 - *2018.08.25*, **[v10.5.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.1)**
 - *2018.08.23*, **[v10.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.0)**
