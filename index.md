@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v10.5.3
+# Cloud Commander v10.6.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -98,6 +98,7 @@ Cloud Commander supports command line parameters:
 | `-p, --password`              | set password
 | `-c, --config`                | configuration file path
 | `--show-config`               | show config values
+| `--show-file-name`            | show file name in view and edit
 | `--editor`                    | set editor: "dword", "edward" or "deepword"
 | `--packer`                    | set packer: "tar" or "zip"
 | `--root`                      | set root directory
@@ -125,6 +126,7 @@ Cloud Commander supports command line parameters:
 | `--import-url`                | url of an import server
 | `--import-listen`             | enable listen on config updates from import server
 | `--log`                       | enable logging
+| `--no-show-config`            | do not show config values
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
 | `--no-online`                 | load scripts from local server
@@ -146,6 +148,7 @@ Cloud Commander supports command line parameters:
 | `--no-import`                 | disable import of config
 | `--no-import-listen`          | disable listen on config updates from import server
 | `--no-log`                    | disable logging
+| `--no-show-file-name`         | do not show file name in view and edit
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
 port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
@@ -409,6 +412,7 @@ Here is description of options:
     "confirmCopy"       : true,     /* confirm copy                             */
     "confirmMove"       : true,     /* confirm move                             */
     "showConfig"        : false,    /* show config at startap                   */
+    "showFileName"      : false     /* do not show file name in view and edit   */
     "contact"           : true,     /* enable contact                           */
     "configDialog"      : true,     /* enable config dialog                     */
     "console"           : true,     /* enable console                           */
@@ -449,6 +453,7 @@ Some config options can be overridden with `environment variables` such:
 - `CLOUDCMD_VIM` - enable vim hot keys
 - `CLOUDCMD_CONFIRM_COPY` - confirm copy
 - `CLOUDCMD_CONFIRM_MOVE` - confirm move
+- `CLOUDCMD_SHOW_FILE_NAME` - show file name in view and edit
 - `CLOUDCMD_EXPORT` - enable export of config through a server
 - `CLOUDCMD_EXPORT_TOKEN` - authorization token used by export server
 - `CLOUDCMD_IMPORT` - enable import of config
@@ -798,6 +803,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.09.10*, **[v10.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.6.0)**
 - *2018.09.08*, **[v10.5.3](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.3)**
 - *2018.08.25*, **[v10.5.2](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.2)**
 - *2018.08.25*, **[v10.5.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.5.1)**
