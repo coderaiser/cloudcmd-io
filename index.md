@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v10.8.1
+# Cloud Commander v10.8.2
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -805,6 +805,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.09.21*, **[v10.8.2](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.2)**
 - *2018.09.20*, **[v10.8.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.1)**
 - *2018.09.19*, **[v10.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.0)**
 - *2018.09.14*, **[v10.7.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.7.0)**
