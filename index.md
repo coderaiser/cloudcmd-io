@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v10.8.2
+# Cloud Commander v11.0.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -153,7 +153,7 @@ Cloud Commander supports command line parameters:
 | `--no-show-file-name`         | do not show file name in view and edit
 
 If no parameters given Cloud Commander reads information from `~/.cloudcmd.json` and use
-port from it (`8000` default). if port variables `PORT` or `VCAP_APP_PORT` isn't exist.
+port from it (`8000` default). if port variables `PORT` isn't exist.
 
 To begin use, type in address bar of your browser:
 
@@ -402,8 +402,8 @@ Here is description of options:
     "zip"               : true,     /* zip text before send / unzip before save */
     "buffer"            : true,     /* buffer for copying files                 */
     "dirStorage"        : true,     /* store directory listing                  */
-    "online"            : true,     /* load js files from cdn or local path     */
-    "open"              : false     /* open web browser when server started     */
+    "online"            : false,    /* do not load js files from cdn            */
+    "open"              : true,     /* open web browser when server started     */
     "oneFilePanel"      : false,    /* show one file panel                      */
     "keysPanel"         : true,     /* show classic panel with buttons of keys  */
     "port"              : 8000,     /* http port                                */
@@ -805,6 +805,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.09.26*, **[v11.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.0.0)**
 - *2018.09.21*, **[v10.8.2](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.2)**
 - *2018.09.20*, **[v10.8.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.1)**
 - *2018.09.19*, **[v10.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.0)**
