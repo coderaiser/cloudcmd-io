@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v11.0.0
+# Cloud Commander v11.1.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -119,6 +119,7 @@ Cloud Commander supports command line parameters:
 | `--sync-console-path`         | sync console path
 | `--terminal`                  | enable terminal
 | `--terminal-path`             | set terminal path
+| `--terminal-command`          | set command to run in terminal (shell by default)
 | `--vim`                       | enable vim hot keys
 | `--columns`                   | set visible columns
 | `--export`                    | enable export of config through a server
@@ -144,6 +145,7 @@ Cloud Commander supports command line parameters:
 | `--no-sync-console-path`      | do not sync console path
 | `--no-contact`                | disable contact
 | `--no-terminal`               | disable terminal
+| `--no-terminal-command`       | set default shell to run in terminal
 | `--no-vim`                    | disable vim hot keys
 | `--no-columns`                | set default visible columns
 | `--no-export`                 | disable export config through a server
@@ -421,6 +423,7 @@ Here is description of options:
     "syncConsolePath"   : false     /* do not sync console path                 */
     "terminal"          : false,    /* disable terminal                         */
     "terminalPath"      : '',       /* path of a terminal                       */
+    "terminalCommand"   : '',       /* set command to run in terminal           */
     "vim"               : false,    /* disable vim hot keys                     */
     "columns"           : "name-size-date-owner-mode", /* set visible columns   */
     "export"            : false,    /* enable export of config through a server */
@@ -805,6 +808,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.09.27*, **[v11.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.1.0)**
 - *2018.09.26*, **[v11.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.0.0)**
 - *2018.09.21*, **[v10.8.2](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.2)**
 - *2018.09.20*, **[v10.8.1](//github.com/coderaiser/cloudcmd/releases/tag/v10.8.1)**
