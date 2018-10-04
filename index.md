@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v11.2.2
+# Cloud Commander v11.2.3
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -475,7 +475,7 @@ Some config options can be overridden with `environment variables` such:
 
 Being able to configure `Cloud Commander` remotely opens the doors to using it as microservice and that's what distribute options set out to do.
 There is an `export server` and `import client` and they enabled with `--export` and `--import` accordingly. There is a `token` it should be the same
-in `--import-token` and `--export-token`. To use report you should provide `--import-url` to `import client` so it can connect to an `export server`.
+in `--import-token` and `--export-token`. To use `import` you should provide `--import-url` to `import client` so it can connect to an `export server`.
 There is 2 ways `import client` can receive config from an `export server`:
 
 - full config at startup (default)
@@ -813,6 +813,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.10.04*, **[v11.2.3](//github.com/coderaiser/cloudcmd/releases/tag/v11.2.3)**
 - *2018.09.28*, **[v11.2.2](//github.com/coderaiser/cloudcmd/releases/tag/v11.2.2)**
 - *2018.09.28*, **[v11.2.1](//github.com/coderaiser/cloudcmd/releases/tag/v11.2.1)**
 - *2018.09.28*, **[v11.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.2.0)**
