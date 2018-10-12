@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v11.3.1
+# Cloud Commander v11.4.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -444,6 +444,7 @@ Here is description of options:
 Some config options can be overridden with `environment variables` such:
 
 - `CLOUDCMD_NAME` - set tab name in web browser
+- `CLOUDCMD_OPEN` - open web browser when server started
 - `CLOUDCMD_EDITOR` - set editor
 - `CLOUDCMD_COLUMNS` - set visible columns 
 - `CLOUDCMD_CONTACT` - enable contact
@@ -813,6 +814,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.10.12*, **[v11.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.4.0)**
 - *2018.10.12*, **[v11.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v11.3.1)**
 - *2018.10.11*, **[v11.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.3.0)**
 - *2018.10.04*, **[v11.2.3](//github.com/coderaiser/cloudcmd/releases/tag/v11.2.3)**
