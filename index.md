@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v11.6.0
+# Cloud Commander v11.7.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -105,6 +105,7 @@ Cloud Commander supports command line parameters:
 | `--packer`                    | set packer: "tar" or "zip"
 | `--root`                      | set root directory
 | `--prefix`                    | set url prefix
+| `--prefix-socket`             | set prefix for url connection
 | `--port`                      | set port number
 | `--progress`                  | show progress of file operations
 | `--confirm-copy`              | confirm copy
@@ -416,6 +417,7 @@ Here is description of options:
     "ip"                    : null,     /* ip or null(default)                      */
     "root"                  : "/",      /* root directory                           */
     "prefix"                : "",       /* url prefix                               */
+    "prefixSocket"          : "",       /* prefix for socket connection             */
     "progress"              : true,     /* show progress of file operations         */
     "confirmCopy"           : true,     /* confirm copy                             */
     "confirmMove"           : true,     /* confirm move                             */
@@ -601,6 +603,7 @@ const app = require('express')();
 
 const port = 1337;
 const prefix = '/cloudcmd';
+const socketPrefix = '/cloudcmd-sockets';
 
 const server = http.createServer(app);
 const socket = io.listen(server, {
@@ -608,7 +611,8 @@ const socket = io.listen(server, {
 });
 
 const config = {
-    prefix // base URL or function which returns base URL (optional)
+    prefix, // base URL or function which returns base URL (optional)
+    socketPrefix, // prefix for socket connection
 };
 
 const plugins = [
@@ -818,6 +822,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.10.25*, **[v11.7.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.7.0)**
 - *2018.10.23*, **[v11.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.6.0)**
 - *2018.10.23*, **[v11.5.4](//github.com/coderaiser/cloudcmd/releases/tag/v11.5.4)**
 - *2018.10.19*, **[v11.5.3](//github.com/coderaiser/cloudcmd/releases/tag/v11.5.3)**
