@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v11.7.0
+# Cloud Commander v11.7.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -602,17 +602,15 @@ const io = require('socket.io');
 const app = require('express')();
 
 const port = 1337;
-const prefix = '/cloudcmd';
-const socketPrefix = '/cloudcmd-sockets';
+const prefix = '/';
 
 const server = http.createServer(app);
 const socket = io.listen(server, {
-    path: `${prefix}/socket.io`
+    path: `{prefix}socket.io`
 });
 
 const config = {
-    prefix, // base URL or function which returns base URL (optional)
-    socketPrefix, // prefix for socket connection
+    name: 'cloudcmd :)'
 };
 
 const plugins = [
@@ -632,7 +630,7 @@ const modules = {
     filePicker,
 };
 
-app.use(cloudcmd({
+app.use(prefix, cloudcmd({
     socket,  // used by Config, Edit (optional) and Console (required)
     config,  // config data (optional)
     plugins, // optional
@@ -822,6 +820,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.11.01*, **[v11.7.1](//github.com/coderaiser/cloudcmd/releases/tag/v11.7.1)**
 - *2018.10.25*, **[v11.7.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.7.0)**
 - *2018.10.23*, **[v11.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.6.0)**
 - *2018.10.23*, **[v11.5.4](//github.com/coderaiser/cloudcmd/releases/tag/v11.5.4)**
