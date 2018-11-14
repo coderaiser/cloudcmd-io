@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v11.8.0
+# Cloud Commander v11.8.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -826,7 +826,7 @@ This can look like this:
 cloudcmd --dropbox --dropbox-token your-dropbox-token
 ```
 
-Using `dropbox` remember that there is no remote support of a `console` and `terminal. Progress of file operation also not supported. There is only basic support, but you can do next things with `files` and `directories`:
+Using `dropbox` remember that there is no remote support of a `console` and `terminal`. Progress of file operation also not supported. There is only basic support, but you can do next things with `files` and `directories`:
 
 - create
 - remove
@@ -845,6 +845,7 @@ There is a lot ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2018.11.14*, **[v11.8.1](//github.com/coderaiser/cloudcmd/releases/tag/v11.8.1)**
 - *2018.11.09*, **[v11.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.8.0)**
 - *2018.11.01*, **[v11.7.1](//github.com/coderaiser/cloudcmd/releases/tag/v11.7.1)**
 - *2018.10.25*, **[v11.7.0](//github.com/coderaiser/cloudcmd/releases/tag/v11.7.0)**
