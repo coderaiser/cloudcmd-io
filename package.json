@@ -34,5 +34,8 @@
   "devDependencies": {
     "redrun": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "access": "restricted"
+  }
 }
