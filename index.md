@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v11.8.5
+# Cloud Commander v12.0.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -187,7 +187,7 @@ Hot keys
 |:----------------------|:--------------------------------------------
 | `F1`                  | help
 | `F2`                  | rename
-| `F3`                  | view
+| `F3`                  | view, change directory
 | `Shift + F3`          | view as markdown
 | `F4`                  | edit
 | `Shift + F4`          | edit in "vim" mode
@@ -218,7 +218,8 @@ Hot keys
 | `Ctrl + F3`           | sort by name
 | `Ctrl + F5`           | sort by date
 | `Ctrl + F6`           | sort by size
-| `Up`, `Down`, `Enter` | file system navigation
+| `Up`, `Down`          | file system navigation
+| `Enter`               | change directory/view file
 | `Alt + Left/Right`    | show content of directory under cursor in target panel
 | `Alt + G`             | go to directory
 | `Ctrl + \`            | go to the root directory
@@ -838,6 +839,8 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.04.01*, **[v12.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.0.0)**
+- *2019.03.27*, **[v11.8.6](//github.com/coderaiser/cloudcmd/releases/tag/v11.8.6)**
 - *2019.02.20*, **[v11.8.5](//github.com/coderaiser/cloudcmd/releases/tag/v11.8.5)**
 - *2019.02.15*, **[v11.8.4](//github.com/coderaiser/cloudcmd/releases/tag/v11.8.4)**
 - *2018.12.04*, **[v11.8.3](//github.com/coderaiser/cloudcmd/releases/tag/v11.8.3)**
