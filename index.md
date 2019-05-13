@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v12.1.0
+# Cloud Commander v12.2.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -133,6 +133,7 @@ Cloud Commander supports the following command-line parameters:
 | `--dropbox`                   | enable dropbox integration
 | `--dropbox-token`             | set dropbox token
 | `--log`                       | enable logging
+| `--user-menu`                 | enable user menu
 | `--no-show-config`            | do not show config values
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
@@ -161,6 +162,7 @@ Cloud Commander supports the following command-line parameters:
 | `--no-dropbox`                | disable dropbox integration
 | `--no-dropbox-token`          | unset dropbox token
 | `--no-log`                    | disable logging
+| `--no-user-menu`              | disable user menu
 
 For options not specified by command-line parameters, Cloud Commander then reads configuration data from `~/.cloudcmd.json`. It uses port `8000` by default.
 
@@ -186,7 +188,7 @@ Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F1`                  | help
-| `F2`                  | rename
+| `F2`                  | rename or show `user menu`
 | `F3`                  | view, change directory
 | `Shift + F3`          | view as markdown
 | `F4`                  | edit
@@ -194,6 +196,7 @@ Hot keys
 | `F5`                  | copy
 | `Alt` + `F5`          | pack
 | `F6`                  | rename/move
+| `Shift` + `F6`        | rename current file
 | `F7`                  | new directory
 | `Shift + F7`          | new file
 | `F8`, `Delete`        | remove
@@ -445,7 +448,8 @@ Here's a description of all options:
     "importListen"          : false,    // listen on config updates
     "dropbox"               : false,    // disable dropbox integration
     "dropboxToken"          : "",       // unset dropbox token
-    "log"                   : true      // logging
+    "log"                   : true,     // logging
+    "userMenu"              : false     // do not show user menu
 }
 ```
 
@@ -482,6 +486,52 @@ Some config options can be overridden with environment variables, such as:
 - `CLOUDCMD_IMPORT_TOKEN` - authorization  token used to connect to export server
 - `CLOUDCMD_IMPORT_URL` - url of an import server
 - `CLOUDCMD_IMPORT_LISTEN`- enable listen on config updates from import server
+- `CLOUDCMD_USER_MENU`- enable `user menu`
+
+### User Menu
+
+You can enable `user menu` with help of a flag `--user-menu` (consider that file rename using `F2` will be disabled). 
+When you press `F2` Cloud Commander will a file `.cloudcmd.menu.js` by walking up parent directories, if can't read it will try to read `~/.cloudcmd.menu.js`.
+Let's consider example `user menu` works file:
+
+```js
+module.exports = {
+    'F2 - Rename file': async ({DOM}) => {
+        await DOM.renameCurrent();
+    },
+    'D - Build Dev': async ({CloudCmd}) => {
+        await CloudCmd.TerminalRun.show({
+            command: 'npm run build:client:dev',
+            autoClose: false,
+            closeMessage: 'Press any button to close Terminal',
+        });
+        
+        CloudCmd.refresh();
+    },
+    'P - Build Prod': async ({CloudCmd}) => {
+        await CloudCmd.TerminalRun.show({
+            command: 'npm run build:client',
+            autoClose: true,
+        });
+        
+        CloudCmd.refresh();
+    },
+};
+```
+
+You will have ability to run one of this 3 commands with help of double click, enter, or binded key (`F2`, `D` or `P` in this example). Also you can run commands in terminal, or execute any built-in function of `Cloud Commander` extended it's interface.
+
+#### User Menu API
+
+Here you can find `API` that can be used in **User Menu**. **DOM** and **CloudCmd** to main objects you receive in arguments list using destructuring.
+
+**DOM** contains all base functions of `Cloud Commander` (rename, remove, download etc);
+
+- `renameCurrent` - shows renames current file dialog, and does renaming.
+
+**CloudCmd** contains all modules (`Terminal`, `View`, `Edit`, `Config`, `Console` etc);
+
+- `TerminalRun` - module that shows `Terminal` with a `command` from options and closes terminal when everything is done.
 
 ### Distribute
 
@@ -839,6 +889,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.05.13*, **[v12.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.2.0)**
 - *2019.04.15*, **[v12.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.1.0)**
 - *2019.04.04*, **[v12.0.2](//github.com/coderaiser/cloudcmd/releases/tag/v12.0.2)**
 - *2019.04.04*, **[v12.0.1](//github.com/coderaiser/cloudcmd/releases/tag/v12.0.1)**
