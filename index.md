@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v12.3.0
+# Cloud Commander v12.3.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -517,7 +517,40 @@ module.exports = {
         
         CloudCmd.refresh();
     },
+    'C - Create User Menu File': async ({DOM, CloudCmd}) => {
+        const {CurrentInfo} = DOM;
+        
+        const {dirPath} = CurrentInfo;
+        const path = `${dirPath}.cloudcmd.menu.js`;
+        const {prefix} = CloudCmd;
+        
+        const data = await readDefaultMenu({prefix});
+        await createDefaultMenu({
+            path,
+            data,
+            DOM,
+            CloudCmd,
+        });
+    },
 };
+
+async function createDefaultMenu({path, data, DOM, CloudCmd}) {
+    const {IO} = DOM;
+    
+    await IO.write(path, data);
+    await CloudCmd.refresh();
+    
+    DOM.setCurrentByName('.cloudcmd.menu.js');
+    
+    await CloudCmd.EditFile.show();
+}
+
+async function readDefaultMenu({prefix}) {
+    const res = await fetch(`${prefix}/api/v1/user-menu/default`);
+    const data = await res.text();
+    
+    return data;
+}
 ```
 
 You will have ability to run one of this 3 commands with help of double click, enter, or binded key (`F2`, `D` or `P` in this example). Also you can run commands in terminal, or execute any built-in function of `Cloud Commander` extended it's interface.
@@ -890,6 +923,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.05.24*, **[v12.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v12.3.1)**
 - *2019.05.24*, **[v12.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.3.0)**
 - *2019.05.13*, **[v12.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.2.0)**
 - *2019.04.15*, **[v12.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.1.0)**
