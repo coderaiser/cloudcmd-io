@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v12.2.0
+# Cloud Commander v12.3.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -490,8 +490,9 @@ Some config options can be overridden with environment variables, such as:
 
 ### User Menu
 
-You can enable `user menu` with help of a flag `--user-menu` (consider that file rename using `F2` will be disabled). 
-When you press `F2` Cloud Commander will a file `.cloudcmd.menu.js` by walking up parent directories, if can't read it will try to read `~/.cloudcmd.menu.js`.
+You can enable `user menu` with help of a flag `--user-menu` (bear in mind that file rename using `F2` will be disabled, but you can use `Shift` + `F6` or `F2` + `F2`).
+When you press `F2` Cloud Commander will read a file `.cloudcmd.menu.js` by walking up parent directories, if can't read it will try to read `~/.cloudcmd.menu.js`.
+
 Let's consider example `user menu` works file:
 
 ```js
@@ -502,8 +503,8 @@ module.exports = {
     'D - Build Dev': async ({CloudCmd}) => {
         await CloudCmd.TerminalRun.show({
             command: 'npm run build:client:dev',
-            autoClose: false,
-            closeMessage: 'Press any button to close Terminal',
+            autoClose: false, // optional
+            closeMessage: 'Press any button to close Terminal', // optional
         });
         
         CloudCmd.refresh();
@@ -511,7 +512,7 @@ module.exports = {
     'P - Build Prod': async ({CloudCmd}) => {
         await CloudCmd.TerminalRun.show({
             command: 'npm run build:client',
-            autoClose: true,
+            autoClose: true, // optional
         });
         
         CloudCmd.refresh();
@@ -523,7 +524,7 @@ You will have ability to run one of this 3 commands with help of double click, e
 
 #### User Menu API
 
-Here you can find `API` that can be used in **User Menu**. **DOM** and **CloudCmd** to main objects you receive in arguments list using destructuring.
+Here you can find `API` that can be used in **User Menu**. **DOM** and **CloudCmd** two main objects you receive in arguments list using destructuring.
 
 **DOM** contains all base functions of `Cloud Commander` (rename, remove, download etc);
 
@@ -690,7 +691,7 @@ const modules = {
 app.use(prefix, cloudcmd({
     socket,  // used by Config, Edit (optional) and Console (required)
     config,  // config data (optional)
-    plugins, // optional
+    plugins, // DEPRECATED, use User Menu instead
     modules, // optional
 }));
 
@@ -889,6 +890,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.05.24*, **[v12.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.3.0)**
 - *2019.05.13*, **[v12.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.2.0)**
 - *2019.04.15*, **[v12.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.1.0)**
 - *2019.04.04*, **[v12.0.2](//github.com/coderaiser/cloudcmd/releases/tag/v12.0.2)**
