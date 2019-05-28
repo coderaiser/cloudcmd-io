@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v12.4.0
+# Cloud Commander v12.5.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -731,10 +731,6 @@ app.use(prefix, cloudcmd({
 server.listen(port);
 ```
 
-Now you're ready to go!
-
-### Authorization
-
 If you want to enable authorization, you can pass credentials to Cloud Commander with a config. To generate a password, you can install `criton` with `npm i criton --save`, and use it (or any other way) to generate a hash of a password.
 
 ```js
@@ -757,6 +753,20 @@ const config = {
     pasword,
 }
 ```
+
+Now you're ready to go!
+
+## Authorization
+
+`~/.cloudcmd.json` contains [password hash](https://github.com/coderaiser/cloudcmd/blob/v11.8.3/json/config.json#L5) because of security reason, if someone steal your config, he wouldn't know your password, because hash is [very strong](https://github.com/coderaiser/cloudcmd/blob/v11.8.3/json/config.json#L6) and can be customized.
+
+You should never write your password as plain text to `~/.cloudcmd.json`, you can generate password using `cloudcmd` itself:
+
+```
+cloudcmd --username name --password password --auth --save --no-server
+```
+
+This command will create hash of your password and write it to `~/.cloudcmd.json`.
 
 Server
 ---------------
@@ -923,6 +933,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.05.28*, **[v12.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.5.0)**
 - *2019.05.27*, **[v12.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.4.0)**
 - *2019.05.24*, **[v12.3.2](//github.com/coderaiser/cloudcmd/releases/tag/v12.3.2)**
 - *2019.05.24*, **[v12.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v12.3.1)**
