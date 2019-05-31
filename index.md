@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v12.5.0
+# Cloud Commander v12.6.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -507,7 +507,7 @@ module.exports = {
             closeMessage: 'Press any button to close Terminal', // optional
         });
         
-        CloudCmd.refresh();
+        await CloudCmd.refresh();
     },
     'P - Build Prod': async ({CloudCmd}) => {
         await CloudCmd.TerminalRun.show({
@@ -515,7 +515,7 @@ module.exports = {
             autoClose: true, // optional
         });
         
-        CloudCmd.refresh();
+        await CloudCmd.refresh();
     },
     'C - Create User Menu File': async ({DOM, CloudCmd}) => {
         const {CurrentInfo} = DOM;
@@ -695,6 +695,8 @@ const app = require('express')();
 const port = 1337;
 const prefix = '/';
 
+const {createConfigManager} = cloudcmd;
+
 const server = http.createServer(app);
 const socket = io.listen(server, {
     path: `{prefix}socket.io`
@@ -726,6 +728,7 @@ app.use(prefix, cloudcmd({
     config,  // config data (optional)
     plugins, // DEPRECATED, use User Menu instead
     modules, // optional
+    configManager: createConfigManager(), //optional
 }));
 
 server.listen(port);
@@ -933,6 +936,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.05.31*, **[v12.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.0)**
 - *2019.05.28*, **[v12.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.5.0)**
 - *2019.05.27*, **[v12.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.4.0)**
 - *2019.05.24*, **[v12.3.2](//github.com/coderaiser/cloudcmd/releases/tag/v12.3.2)**
