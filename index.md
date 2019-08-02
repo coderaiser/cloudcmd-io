@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v12.6.1
+# Cloud Commander v12.6.3
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -697,7 +697,7 @@ const prefix = '/';
 
 const server = http.createServer(app);
 const socket = io.listen(server, {
-    path: `{prefix}socket.io`
+    path: `${prefix}socket.io`
 });
 
 const config = {
@@ -737,6 +737,48 @@ app.use(prefix, cloudcmd({
     modules, // optional
     configManager, // optional
 ));
+
+server.listen(port);
+```
+
+Here is example with two `Config Managers`:
+
+```js
+const http = require('http');
+const cloudcmd = require('cloudcmd');
+const io = require('socket.io');
+const app = require('express')();
+
+const port = 8000;
+const prefix1 = '/1';
+const prefix2 = '/2';
+
+const {createConfigManager} = cloudcmd;
+
+const server = http.createServer(app);
+const socket1 = io.listen(server, {
+    path: `${prefix1}/socket.io`
+});
+
+const socket2 = io.listen(server, {
+    path: `${prefix2}/socket.io`
+});
+
+const configManager1 = createConfigManager();
+configManager1('name', '1');
+
+const configManager2 = createConfigManager();
+configManager2('name', '2');
+
+app.use(prefix1, cloudcmd({
+    socket: socket1,
+    configManager: configManager1,
+}));
+
+app.use(prefix2, cloudcmd({
+    socket: socket2,
+    configManager: configManager2,
+}));
 
 server.listen(port);
 ```
@@ -943,6 +985,8 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.08.02*, **[v12.6.3](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.3)**
+- *2019.06.06*, **[v12.6.2](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.2)**
 - *2019.06.04*, **[v12.6.1](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.1)**
 - *2019.05.31*, **[v12.6.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.0)**
 - *2019.05.28*, **[v12.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v12.5.0)**
