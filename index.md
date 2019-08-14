@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v13.0.0
+# Cloud Commander v13.0.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -133,7 +133,6 @@ Cloud Commander supports the following command-line parameters:
 | `--dropbox`                   | enable dropbox integration
 | `--dropbox-token`             | set dropbox token
 | `--log`                       | enable logging
-| `--user-menu`                 | enable user menu
 | `--no-show-config`            | do not show config values
 | `--no-server`                 | do not start server
 | `--no-auth`                   | disable authorization
@@ -162,7 +161,6 @@ Cloud Commander supports the following command-line parameters:
 | `--no-dropbox`                | disable dropbox integration
 | `--no-dropbox-token`          | unset dropbox token
 | `--no-log`                    | disable logging
-| `--no-user-menu`              | disable user menu
 
 For options not specified by command-line parameters, Cloud Commander then reads configuration data from `~/.cloudcmd.json`. It uses port `8000` by default.
 
@@ -449,7 +447,6 @@ Here's a description of all options:
     "dropbox"               : false,    // disable dropbox integration
     "dropboxToken"          : "",       // unset dropbox token
     "log"                   : true,     // logging
-    "userMenu"              : false     // do not show user menu
 }
 ```
 
@@ -979,6 +976,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.08.14*, **[v13.0.1](//github.com/coderaiser/cloudcmd/releases/tag/v13.0.1)**
 - *2019.08.14*, **[v13.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v13.0.0)**
 - *2019.08.02*, **[v12.6.3](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.3)**
 - *2019.06.06*, **[v12.6.2](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.2)**
