@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v12.6.3
+# Cloud Commander v13.0.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -188,7 +188,7 @@ Hot keys
 |Key                    |Operation
 |:----------------------|:--------------------------------------------
 | `F1`                  | help
-| `F2`                  | rename or show `user menu`
+| `F2`                  | show `user menu`
 | `F3`                  | view, change directory
 | `Shift + F3`          | view as markdown
 | `F4`                  | edit
@@ -490,7 +490,6 @@ Some config options can be overridden with environment variables, such as:
 
 ### User Menu
 
-You can enable `user menu` with help of a flag `--user-menu` (bear in mind that file rename using `F2` will be disabled, but you can use `Shift` + `F6` or `F2` + `F2`).
 When you press `F2` Cloud Commander will read a file `.cloudcmd.menu.js` by walking up parent directories, if can't read it will try to read `~/.cloudcmd.menu.js`.
 
 Let's consider example `user menu` works file:
@@ -704,10 +703,6 @@ const config = {
     name: 'cloudcmd :)'
 };
 
-const plugins = [
-    __dirname + '/plugin.js'
-];
-
 const filePicker = {
     data: {
         FilePicker: {
@@ -733,7 +728,6 @@ const configManager = createConfigManager({
 app.use(prefix, cloudcmd({
     socket,  // used by Config, Edit (optional) and Console (required)
     config,  // config data (optional)
-    plugins, // DEPRECATED, use User Menu instead
     modules, // optional
     configManager, // optional
 ));
@@ -985,6 +979,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.08.14*, **[v13.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v13.0.0)**
 - *2019.08.02*, **[v12.6.3](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.3)**
 - *2019.06.06*, **[v12.6.2](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.2)**
 - *2019.06.04*, **[v12.6.1](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.1)**
