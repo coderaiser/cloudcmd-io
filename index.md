@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v13.0.1
+# Cloud Commander v13.1.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -483,7 +483,6 @@ Some config options can be overridden with environment variables, such as:
 - `CLOUDCMD_IMPORT_TOKEN` - authorization  token used to connect to export server
 - `CLOUDCMD_IMPORT_URL` - url of an import server
 - `CLOUDCMD_IMPORT_LISTEN`- enable listen on config updates from import server
-- `CLOUDCMD_USER_MENU`- enable `user menu`
 
 ### User Menu
 
@@ -976,6 +975,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.08.16*, **[v13.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v13.1.0)**
 - *2019.08.14*, **[v13.0.1](//github.com/coderaiser/cloudcmd/releases/tag/v13.0.1)**
 - *2019.08.14*, **[v13.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v13.0.0)**
 - *2019.08.02*, **[v12.6.3](//github.com/coderaiser/cloudcmd/releases/tag/v12.6.3)**
