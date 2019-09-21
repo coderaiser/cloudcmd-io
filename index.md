@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v13.4.1
+# Cloud Commander v13.4.2
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -213,7 +213,7 @@ Hot keys
 | `Ctrl + R`            | refresh
 | `Ctrl + D`            | clear local storage
 | `Ctrl + A`            | select all files in a panel
-| `Ctrl + M`            | [rename selected files](https://github.com/coderaiser/cloudcmd/releases/tag/v12.0.0) in editor
+| `Ctrl + M`            | [rename selected files](https://github.com/coderaiser/cloudcmd/releases/tag/v12.1.0) in editor
 | `Shift + Ctrl + M`    | rename selected files in vim mode of editor
 | `Ctrl + U`            | swap panels
 | `Ctrl + F3`           | sort by name
@@ -975,6 +975,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.09.21*, **[v13.4.2](//github.com/coderaiser/cloudcmd/releases/tag/v13.4.2)**
 - *2019.09.20*, **[v13.4.1](//github.com/coderaiser/cloudcmd/releases/tag/v13.4.1)**
 - *2019.09.03*, **[v13.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v13.4.0)**
 - *2019.08.28*, **[v13.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v13.3.0)**
