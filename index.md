@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v13.4.2
+# Cloud Commander v14.0.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL], ![Now][NOW_LIVE_IMG] [Now][NowURL])
 
@@ -106,7 +106,6 @@ Cloud Commander supports the following command-line parameters:
 | `--prefix`                    | set url prefix
 | `--prefix-socket`             | set prefix for url connection
 | `--port`                      | set port number
-| `--progress`                  | show progress of file operations
 | `--confirm-copy`              | confirm copy
 | `--confirm-move`              | confirm move
 | `--open`                      | open web browser when server starts
@@ -141,7 +140,6 @@ Cloud Commander supports the following command-line parameters:
 | `--no-name`                   | set default tab name in web browser
 | `--no-keys-panel`             | hide keys panel
 | `--no-one-file-panel`         | show two file panels
-| `--no-progress`               | do not show progress of file operations
 | `--no-confirm-copy`           | do not confirm copy
 | `--no-confirm-move`           | do not confirm move
 | `--no-config-dialog`          | disable config dialog
@@ -422,7 +420,6 @@ Here's a description of all options:
     "root"                  : "/",      // root directory
     "prefix"                : "",       // url prefix
     "prefixSocket"          : "",       // prefix for socket connection
-    "progress"              : true,     // show progress of file operations
     "confirmCopy"           : true,     // confirm copy
     "confirmMove"           : true,     // confirm move
     "showConfig"            : false,    // show config at startup
@@ -975,6 +972,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.09.22*, **[v14.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v14.0.0)**
 - *2019.09.21*, **[v13.4.2](//github.com/coderaiser/cloudcmd/releases/tag/v13.4.2)**
 - *2019.09.20*, **[v13.4.1](//github.com/coderaiser/cloudcmd/releases/tag/v13.4.1)**
 - *2019.09.03*, **[v13.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v13.4.0)**
