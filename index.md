@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v14.1.2
+# Cloud Commander v14.2.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -467,6 +467,7 @@ Some config options can be overridden with environment variables, such as:
 - `CLOUDCMD_AUTH` - enable authentication
 - `CLOUDCMD_USERNAME` - set username
 - `CLOUDCMD_PASSWORD` - set password
+- `CLOUDCMD_PREFIX` - set url prefix
 - `CLOUDCMD_ROOT` - set root directory
 - `CLOUDCMD_VIM` - enable vim hot keys
 - `CLOUDCMD_CONFIRM_COPY` - confirm copy
@@ -588,7 +589,7 @@ Here's the log output from the *export server*:
 url: http://localhost:1234/
 2018.08.23 13:41:45 -> export: try to auth from importer [127.0.0.1:4321]
 2018.08.23 13:41:45 -> export: connected to importer [127.0.0.1:4321]
-2018.08.23 13:41:45 -> export: config send to importer[127.0.0.1:4321]
+2018.08.23 13:41:45 -> export: config send to importer [127.0.0.1:4321]
 2018.08.23 13:41:45 -> export: disconnected importer [127.0.0.1:4321]
 ```
 
@@ -970,6 +971,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2019.11.15*, **[v14.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v14.2.0)**
 - *2019.10.16*, **[v14.1.2](//github.com/coderaiser/cloudcmd/releases/tag/v14.1.2)**
 - *2019.10.09*, **[v14.1.1](//github.com/coderaiser/cloudcmd/releases/tag/v14.1.1)**
 - *2019.10.02*, **[v14.1.0](//github.com/coderaiser/cloudcmd/releases/tag/v14.1.0)**
@@ -1320,5 +1322,5 @@ Special Thanks
     - Russian and Ukrainian translations;
     - config template and style;
     - change order of directories and files;
-    - add ability to not hide path and header when files are scrolling;
+    - add ability to keep path and header when files are scrolling;
 
