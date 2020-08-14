@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v14.8.0
+# Cloud Commander v14.9.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -240,8 +240,8 @@ When the `--vim` option is provided, or the configuration parameter `vim` is set
 | `j`                   | navigate to next file
 | `k`                   | navigate to previous file
 | `dd`                  | remove current file
-| `G`                   | navigate to bottom file
-| `gg`                  | navigate to top file
+| `G` or `$`            | navigate to bottom file
+| `gg` or `^`           | navigate to top file
 | `v`                   | visual mode
 | `y`                   | copy (selected in visual mode files)
 | `p`                   | paste files
@@ -569,6 +569,8 @@ Here you can find `API` that can be used in **User Menu**. **DOM** and **CloudCm
 **IO** Files API
 
 - `rename(from, to)` - rename `from` into `to`
+- `move(from, to, names)` - rename files with a `names` `from` into `to`;
+- `copy(from, to, names)` - copy files with a `names` `from` into `to`;
 
 ### Distribute
 
@@ -983,6 +985,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 Version history
 ---------------
+- *2020.08.14*, **[v14.9.0](//github.com/coderaiser/cloudcmd/releases/tag/v14.9.0)**
 - *2020.08.14*, **[v14.8.0](//github.com/coderaiser/cloudcmd/releases/tag/v14.8.0)**
 - *2020.08.11*, **[v14.7.2](//github.com/coderaiser/cloudcmd/releases/tag/v14.7.2)**
 - *2020.08.11*, **[v14.7.1](//github.com/coderaiser/cloudcmd/releases/tag/v14.7.1)**
