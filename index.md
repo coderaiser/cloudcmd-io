@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v15.3.3
+# Cloud Commander v15.4.0
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
