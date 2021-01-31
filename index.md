@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v15.5.0
+# Cloud Commander v15.5.1
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -690,8 +690,9 @@ And create `index.js`:
 import http from 'http';
 import cloudcmd from 'cloudcmd';
 import io from 'socket.io';
-const app = require('express')();
+import express from 'express';
 
+const app = express();
 const port = 1337;
 const prefix = '/';
 
