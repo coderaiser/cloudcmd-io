@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v15.9.5
+# Cloud Commander v15.9.6
 
 ### [Main][MainURL] [Blog][BlogURL] Live(![Heroku][Heroku_LIVE_IMG] [Heroku][HerokuURL])
 
@@ -972,7 +972,7 @@ While using Dropbox remember that there is no remote support for the console/ter
 - view
 - edit
 
-## Automatically start cloudcmd on boot (for systemd users)
+## Automatically start cloudcmd on boot for `systemd`
 
 First, locate the command to run cloudcmd
 
@@ -1009,7 +1009,7 @@ You may now enable cloudcmd and set it to autostart on boot by running:
 sudo systemctl enable --now cloudcmd
 ```
 
-## Automatically start cloudcmd on (for FreeBSD users)
+## Automatically start cloudcmd on boot for `FreeBSD`
 
 First, locate the command to run cloudcmd
 
