@@ -22,12 +22,14 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v16.3.1
+# Cloud Commander v16.4.0
 
-### [Main][MainURL] [Blog][BlogURL]
+### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo](DemoURL)
 
-[MainURL]: http://cloudcmd.io "Main"
-[BlogURL]: http://blog.cloudcmd.io "Blog"
+[MainURL]: https://cloudcmd.io "Main"
+[BlogURL]: https://blog.cloudcmd.io "Blog"
+[SupportURL]: https://patreon.com/coderaiser "Patreon"
+[DemoURL]: https://cloudcmd.onrender.com/
 [DWORD]: https://github.com/cloudcmd/dword "Editor based on CodeMirror"
 [EDWARD]: https://github.com/cloudcmd/edward "Editor based on Ace"
 [DEEPWORD]: https://github.com/cloudcmd/deepword "Editor based on Monaco"
@@ -1106,6 +1108,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2022.07.11*, **[v16.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.4.0)**
 - *2022.07.02*, **[v16.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v16.3.1)**
 - *2022.07.01*, **[v16.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.3.0)**
 - *2022.06.17*, **[v16.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.2.0)**
