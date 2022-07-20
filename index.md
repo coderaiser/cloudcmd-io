@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v16.4.0
+# Cloud Commander v16.4.1
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -473,7 +473,7 @@ Some config options can be overridden with environment variables, such as:
 - `CLOUDCMD_IMPORT` - enable import of config
 - `CLOUDCMD_IMPORT_TOKEN` - authorization  token used to connect to export server
 - `CLOUDCMD_IMPORT_URL` - url of an import server
-- `CLOUDCMD_IMPORT_LISTEN`- enable listen on config updates from import server
+- `CLOUDCMD_IMPORT_LISTEN` - enable listen on config updates from import server
 
 ### User Menu
 
@@ -1108,6 +1108,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2022.07.20*, **[v16.4.1](//github.com/coderaiser/cloudcmd/releases/tag/v16.4.1)**
 - *2022.07.11*, **[v16.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.4.0)**
 - *2022.07.02*, **[v16.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v16.3.1)**
 - *2022.07.01*, **[v16.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.3.0)**
