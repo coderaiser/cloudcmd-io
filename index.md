@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v16.4.1
+# Cloud Commander v16.5.0
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -196,6 +196,7 @@ Then, start the server again with `cloudcmd` and reload the page.
 | `*`                   | select/unselect all
 | `+`                   | expand selection
 | `-`                   | shrink selection
+| `:`                   | open Command Line
 | `Ctrl + X`            | cut to buffer
 | `Ctrl + C`            | copy to buffer
 | `Ctrl + V`            | paste from buffer
@@ -1108,6 +1109,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2022.08.06*, **[v16.5.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.5.0)**
 - *2022.07.20*, **[v16.4.1](//github.com/coderaiser/cloudcmd/releases/tag/v16.4.1)**
 - *2022.07.11*, **[v16.4.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.4.0)**
 - *2022.07.02*, **[v16.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v16.3.1)**
