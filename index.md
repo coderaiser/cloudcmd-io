@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v16.12.0
+# Cloud Commander v16.13.0
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -246,6 +246,8 @@ When the `--vim` option is provided, or the configuration parameter `vim` is set
 | `N`                   | navigate to previous found file
 | `md`                  | make directory
 | `mf`                  | make file
+| `tt`                  | show terminal
+| `e`                   | edit file
 
 Commands can be joined, for example:
 
@@ -1111,6 +1113,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2023.01.29*, **[v16.13.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.13.0)**
 - *2023.01.29*, **[v16.12.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.12.0)**
 - *2023.01.22*, **[v16.11.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.11.0)**
 - *2023.01.19*, **[v16.10.0](//github.com/coderaiser/cloudcmd/releases/tag/v16.10.0)**
