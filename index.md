@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v17.2.1
+# Cloud Commander v17.3.1
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -117,7 +117,8 @@ Cloud Commander supports the following command-line parameters:
 | `--terminal-command`          | set command to run in terminal (shell by default)
 | `--terminal-auto-restart`     | restart command on exit
 | `--vim`                       | enable vim hot keys
-| `--themes`                   | set visible themes
+| `--columns`                   | set visible columns
+| `--theme`                     | set theme 'light' or 'dark'"
 | `--export`                    | enable export of config through a server
 | `--export-token`              | authorization token used by export server
 | `--import`                    | enable import of config
@@ -453,6 +454,7 @@ Some config options can be overridden with environment variables, such as:
 - `CLOUDCMD_OPEN` - open web browser when server started
 - `CLOUDCMD_EDITOR` - set editor
 - `CLOUDCMD_COLUMNS` - set visible themes
+- `CLOUDCMD_THEME` - set themes "light" or "dark"
 - `CLOUDCMD_CONTACT` - enable contact
 - `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
 - `CLOUDCMD_CONFIG_AUTH` - enable auth change in config dialog
@@ -1117,6 +1119,8 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2024.03.29*, **[v17.3.1](//github.com/coderaiser/cloudcmd/releases/tag/v17.3.1)**
+- *2024.03.29*, **[v17.3.0](//github.com/coderaiser/cloudcmd/releases/tag/v17.3.0)**
 - *2024.03.29*, **[v17.2.1](//github.com/coderaiser/cloudcmd/releases/tag/v17.2.1)**
 - *2024.03.22*, **[v17.2.0](//github.com/coderaiser/cloudcmd/releases/tag/v17.2.0)**
 - *2024.03.21*, **[v17.1.6](//github.com/coderaiser/cloudcmd/releases/tag/v17.1.6)**
@@ -1569,7 +1573,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Special Thanks
 
-- [Olena Zalitok](http://www.linkedin.com/in/olena-zalitok-ux-designer "Olena Zalitok") for **logo** and **favicon**.
+- [Olena Zalitok](https://www.linkedin.com/in/ozalitok-ux-ui/ "Olena Zalitok") for **logo** and **favicon**.
 - [TarZak](https://github.com/tarzak "TarZak")
   - Russian and Ukrainian translations;
   - config template and style;
