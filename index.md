@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v19.0.1
+# Cloud Commander v19.0.2
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -1135,6 +1135,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2025.09.14*, **[v19.0.2](//github.com/coderaiser/cloudcmd/releases/tag/v19.0.2)**
 - *2025.09.14*, **[v19.0.1](//github.com/coderaiser/cloudcmd/releases/tag/v19.0.1)**
 - *2025.09.14*, **[v19.0.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.0.0)**
 - *2025.09.14*, **[v18.8.11](//github.com/coderaiser/cloudcmd/releases/tag/v18.8.11)**
