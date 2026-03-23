@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v19.8.15
+# Cloud Commander v19.9.0
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -112,6 +112,7 @@ Cloud Commander supports the following command-line parameters:
 | `--contact`                  | enable contact
 | `--config-dialog`            | enable config dialog
 | `--config-auth`              | enable auth change in config dialog
+| `--config-port`              | enable port change in config dialog
 | `--console`                  | enable console
 | `--sync-console-path`        | sync console path
 | `--terminal`                 | enable terminal
@@ -142,6 +143,7 @@ Cloud Commander supports the following command-line parameters:
 | `--no-confirm-move`          | do not confirm move
 | `--no-config-dialog`         | disable config dialog
 | `--no-config-auth`           | disable auth change in config dialog
+| `--no-config-port`           | disable port change in config dialog
 | `--no-console`               | disable console
 | `--no-sync-console-path`     | do not sync console path
 | `--no-contact`               | disable contact
@@ -464,6 +466,7 @@ Some config options can be overridden with environment variables, such as:
 - `CLOUDCMD_CONTACT` - enable contact
 - `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
 - `CLOUDCMD_CONFIG_AUTH` - enable auth change in config dialog
+- `CLOUDCMD_CONFIG_PORT` - enable port change in config dialog
 - `CLOUDCMD_CONSOLE` - enable console
 - `CLOUDCMD_SYNC_CONSOLE_PATH` - sync console path
 - `CLOUDCMD_TERMINAL` - enable terminal
@@ -1135,6 +1138,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2026.03.23*, **[v19.9.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.9.0)**
 - *2026.03.23*, **[v19.8.15](//github.com/coderaiser/cloudcmd/releases/tag/v19.8.15)**
 - *2026.03.23*, **[v19.8.14](//github.com/coderaiser/cloudcmd/releases/tag/v19.8.14)**
 - *2026.03.23*, **[v19.8.13](//github.com/coderaiser/cloudcmd/releases/tag/v19.8.13)**
