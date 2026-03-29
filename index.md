@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v19.9.9
+# Cloud Commander v19.9.11
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -39,7 +39,7 @@ hideDownloadButtons: true
 
 **Cloud Commander** is a file manager for the web. It includes a command-line console and a text editor. Cloud Commander helps you manage your server and work with files, directories and programs in a web browser from any computer, mobile or tablet.
 
-![Cloud Commander](/img/logo/cloudcmd.png "Cloud Commander")
+![Cloud Commander](https://cloudcmd.io/img/logo/cloudcmd.png "Cloud Commander")
 
 ## Benefits
 
@@ -1138,6 +1138,8 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2026.03.29*, **[v19.9.11](//github.com/coderaiser/cloudcmd/releases/tag/v19.9.11)**
+- *2026.03.29*, **[v19.9.10](//github.com/coderaiser/cloudcmd/releases/tag/v19.9.10)**
 - *2026.03.29*, **[v19.9.9](//github.com/coderaiser/cloudcmd/releases/tag/v19.9.9)**
 - *2026.03.28*, **[v19.9.8](//github.com/coderaiser/cloudcmd/releases/tag/v19.9.8)**
 - *2026.03.27*, **[v19.9.7](//github.com/coderaiser/cloudcmd/releases/tag/v19.9.7)**
