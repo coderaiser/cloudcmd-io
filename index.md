@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v19.15.0
+# Cloud Commander v19.16.0
 
 ### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
 
@@ -238,26 +238,27 @@ Then, start the server again with `cloudcmd` and reload the page.
 
 When the `--vim` option is provided, or the configuration parameter `vim` is set, the following hotkeys become available:
 
-|Key                    |Operation
-|:----------------------|:--------------------------------------------
-| `j`                   | navigate to next file
-| `k`                   | navigate to previous file
-| `dd`                  | remove current file
-| `G` or `$`            | navigate to bottom file
-| `gg` or `^`           | navigate to top file
-| `v`                   | visual mode
-| `y`                   | copy (selected in visual mode files)
-| `p`                   | paste files
-| `Esc`                 | unselect all
-| `/`                   | find file in current directory
-| `n`                   | navigate to next found file
-| `N`                   | navigate to previous found file
-| `md`                  | make directory
-| `mf`                  | make file
-| `tt`                  | show terminal
-| `e`                   | edit file
-| `cc`                  | copy
-| `mm`                  | move
+| Key         |Operation
+|:------------|:--------------------------------------------
+| `j`         | navigate to next file
+| `k`         | navigate to previous file
+| `dd`        | remove current file
+| `G` or `$`  | navigate to bottom file
+| `gg` or `^` | navigate to top file
+| `v`         | visual mode
+| `y`         | copy (selected in visual mode files)
+| `p`         | paste files
+| `Esc`       | unselect all
+| `/`         | find file in current directory
+| `n`         | navigate to next found file
+| `N`         | navigate to previous found file
+| `md`        | make directory
+| `mf`        | make file
+| `tt`        | show terminal
+| `e`         | edit file
+| `cc`        | copy
+| `mm`        | move
+| `rr`        | rename file
 
 Commands can be joined, for example:
 
@@ -1141,6 +1142,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2026.05.03*, **[v19.16.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.16.0)**
 - *2026.04.28*, **[v19.15.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.15.0)**
 - *2026.04.28*, **[v19.14.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.14.0)**
 - *2026.04.21*, **[v19.13.1](//github.com/coderaiser/cloudcmd/releases/tag/v19.13.1)**
