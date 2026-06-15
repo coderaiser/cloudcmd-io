@@ -22,9 +22,9 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v19.19.0
+# Cloud Commander v19.19.1
 
-### [Main][MainURL] [Blog][BlogURL] [Support][SupportURL] [Demo][DemoURL]
+### [Main][MainURL] [Blog][BlogURL] [Demo][DemoURL] [Deploy](#deploy)
 
 [MainURL]: https://cloudcmd.io "Main"
 [BlogURL]: https://blog.cloudcmd.io "Blog"
@@ -37,6 +37,9 @@ hideDownloadButtons: true
 [EDWARD_KEYS]: https://github.com/cloudcmd/edward/#hot-keys "Edward Hot keys"
 [TERMUX]: https://termux.com "Termux"
 [INLY]: https://github.com/coderaiser/node-inly "Extract archive"
+
+[DeployInstaPodsIMG]: https://img.shields.io/badge/deploy%20on-InstaPods-blue
+[DeployInstaPodsURL]: https://app.instapods.com/dashboard/pods/create?app=cloudcmd&ref=cloudcmd
 
 **Cloud Commander** is a file manager for the web. It includes a command-line console and a text editor. Cloud Commander helps you manage your server and work with files, directories and programs in a web browser from any computer, mobile or tablet.
 
@@ -211,12 +214,12 @@ Then, start the server again with `cloudcmd` and reload the page.
 | `Ctrl + R`           | refresh
 | `Ctrl + D`           | clear local storage
 | `Ctrl + A`           | select all files in a panel
-| `Ctrl + L`           | logout
 | `Ctrl + M`           | [rename selected files](https://github.com/coderaiser/cloudcmd/releases/tag/v12.1.0) in editor
 | `Ctrl + U`           | swap panels
 | `Ctrl + F3`          | sort by name
 | `Ctrl + F5`          | sort by date
 | `Ctrl + F6`          | sort by size
+| `Ctrl + Shift + L`   | logout
 | `Ctrl + Command + .` | show/hide dot files
 | `Up`                 | move cursor up
 | `Down`               | move cursor down
@@ -954,9 +957,9 @@ ln -s ./sites-available/io.cloudcmd.io ./sites-enabled
 
 ## Deploy
 
-`Cloud Commander` can be easily deployed to [Heroku](https://heroku.com/deploy?template=https://github.com/coderaiser/cloudcmd "Deploy to Heroku").
+`Cloud Commander` can be easily deployed to [InstaPods][DeployInstaPodsURL]. After deploy you receive email with credentials.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png "Deploy to Heroku")](https://heroku.com/deploy?template=https://github.com/coderaiser/cloudcmd)
+[![Deploy on InstaPods](https://instapods.com/deploy-button.svg)](https://app.instapods.com/dashboard/pods/create?app=cloudcmd&ref=cloudcmd)
 
 ## Docker
 
@@ -1143,6 +1146,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2026.06.15*, **[v19.19.1](//github.com/coderaiser/cloudcmd/releases/tag/v19.19.1)**
 - *2026.05.26*, **[v19.19.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.19.0)**
 - *2026.05.26*, **[v19.18.1](//github.com/coderaiser/cloudcmd/releases/tag/v19.18.1)**
 - *2026.05.26*, **[v19.18.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.18.0)**
