@@ -22,7 +22,7 @@ styles:
 hideDownloadButtons: true
 ---
 
-# Cloud Commander v19.21.4
+# Cloud Commander v19.22.0
 
 ### [Main][MainURL] [Blog][BlogURL] [Demo][DemoURL] [Deploy](#deploy)
 
@@ -110,7 +110,7 @@ Cloud Commander supports the following command-line parameters:
 | `--confirm-move`             | confirm move
 | `--open`                     | open web browser when server starts
 | `--name`                     | set tab name in web browser
-| `--menu`                     | set menu: "supermenu" or "aleman"
+| `--menu`                     | set menu: "supermenu", "aleman" or "lunes"
 | `--one-file-panel`           | show one file panel
 | `--keys-panel`               | show keys panel
 | `--contact`                  | enable contact
@@ -470,7 +470,7 @@ Some config options can be overridden with environment variables, such as:
 - `CLOUDCMD_EDITOR` - set editor
 - `CLOUDCMD_COLUMNS` - set visible themes
 - `CLOUDCMD_THEME` - set themes "light" or "dark"
-- `CLOUDCMD_MENU` - set menu "supermenu" or "aleman"
+- `CLOUDCMD_MENU` - set menu "supermenu", "aleman" or "lunes"
 - `CLOUDCMD_CONTACT` - enable contact
 - `CLOUDCMD_CONFIG_DIALOG` - enable config dialog
 - `CLOUDCMD_CONFIG_AUTH` - enable auth change in config dialog
@@ -1146,6 +1146,7 @@ There are a lot of ways to be involved in `Cloud Commander` development:
 
 ## Version history
 
+- *2026.11.08*, **[v19.22.0](//github.com/coderaiser/cloudcmd/releases/tag/v19.22.0)**
 - *2026.10.25*, **[v19.21.4](//github.com/coderaiser/cloudcmd/releases/tag/v19.21.4)**
 - *2026.10.24*, **[v19.21.3](//github.com/coderaiser/cloudcmd/releases/tag/v19.21.3)**
 - *2026.10.13*, **[v19.21.2](//github.com/coderaiser/cloudcmd/releases/tag/v19.21.2)**
